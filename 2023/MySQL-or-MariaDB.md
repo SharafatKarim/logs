@@ -24,6 +24,11 @@ but first systemd service
 ```bash
 sudo systemctl start mariadb
 ```
+also don't forget to enable it
+```bash
+sudo systemctl enable mariadb
+```
+
 And then perhaps security!
 ```bash
 sudo mariadb-secure-installation
