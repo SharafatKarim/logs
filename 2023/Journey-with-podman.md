@@ -67,3 +67,17 @@ And to list all,
 ```bash
 podman images
 ```
+
+### Getting rid of it?
+
+Just list first,
+
+```bash
+podman ps -a
+```
+
+and then,
+
+```bash
+podman rm <container-id>
+```
