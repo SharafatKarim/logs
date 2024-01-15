@@ -12,3 +12,4 @@ Just bear with it, LOL.
 ## 2024
 
 - [Git ignored files remove](./2024/Git-ignored-files-remove.md)
+- [Pacman delete multiple using text file](./2024/Pacman-delete-multiple-using-text-file.md)
