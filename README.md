@@ -13,3 +13,5 @@ Just bear with it, LOL.
 
 - [Git ignored files remove](./2024/Git-ignored-files-remove.md)
 - [Pacman delete multiple using text file](./2024/Pacman-delete-multiple-using-text-file.md)
+- [Tkinter - Day one](./2024/Tkinter.md)
+- [Tkinter - Day two](./2024/Tkinter2.md)
