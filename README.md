@@ -15,3 +15,4 @@ Just bear with it, LOL.
 - [Pacman delete multiple using text file](./2024/Pacman-delete-multiple-using-text-file.md)
 - [Tkinter - Day one](./2024/Tkinter.md)
 - [Tkinter - Day two](./2024/Tkinter2.md)
+- [Makefile - make (c/ cpp)](./2024/Makefile-1.md)
