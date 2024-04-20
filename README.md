@@ -16,3 +16,4 @@ Just bear with it, LOL.
 - [Tkinter - Day one](./2024/Tkinter.md)
 - [Tkinter - Day two](./2024/Tkinter2.md)
 - [Makefile - make (c/ cpp)](./2024/Makefile-1.md)
+- [CI/CD with GitHub Actions](./2024/CI-CD-with-GitHub-Actions.md)
