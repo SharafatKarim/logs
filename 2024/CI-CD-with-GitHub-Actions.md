@@ -82,3 +82,7 @@ jobs:
 ```
 
 This is a simple example of a GitHub Actions workflow that builds, tests, and deploys a project. The workflow is triggered on a push event. The workflow consists of three jobs: build, test, and deploy. The build job checks out the repository code, installs the dependencies, and builds the project. The test job checks out the repository code, installs the dependencies, and runs the tests. The deploy job checks out the repository code, installs the dependencies, builds the project, uploads the artifacts, and deploys the project to GitHub Pages.
+
+Read more here,
+
+- [Essentials of automated application deployment with GitHub Actions and GitHub Pages](https://resources.github.com/learn/pathways/automation/essentials/automated-application-deployment-with-github-actions-and-pages/)
