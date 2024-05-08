@@ -17,3 +17,4 @@ Just bear with it, LOL.
 - [Tkinter - Day two](./2024/Tkinter2.md)
 - [Makefile - make (c/ cpp)](./2024/Makefile-1.md)
 - [CI/CD with GitHub Actions](./2024/CI-CD-with-GitHub-Actions.md)
+- [Getting started with c#](./2024/Getting-started-with-csharp.md)
