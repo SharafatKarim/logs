@@ -18,3 +18,4 @@ Just bear with it, LOL.
 - [Makefile - make (c/ cpp)](./2024/Makefile-1.md)
 - [CI/CD with GitHub Actions](./2024/CI-CD-with-GitHub-Actions.md)
 - [Getting started with c#](./2024/Getting-started-with-csharp.md)
+- [CI with C++ this time](./2024/CI-with-CPP.md)
