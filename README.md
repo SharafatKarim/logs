@@ -19,3 +19,4 @@ Just bear with it, LOL.
 - [CI/CD with GitHub Actions](./2024/CI-CD-with-GitHub-Actions.md)
 - [Getting started with c#](./2024/Getting-started-with-csharp.md)
 - [CI with C++ this time](./2024/CI-with-CPP.md)
+- [Tinkering with Cmake](./2024/Tinkering-with-Cmake.md)
