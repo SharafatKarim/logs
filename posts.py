@@ -25,6 +25,7 @@ def generate_posts():
     # for root, dirs, files in os.walk("src"):
             for file in files:
                 if file.endswith(".md"):
+                    print(file)
                     with open(os.path.join(root, file), "r") as src:
                         src_md = src.read()
                         if not os.path.exists("content/posts"):
