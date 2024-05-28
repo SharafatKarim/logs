@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Tkinter2 :: Sharafat Karim | Logs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="```python" />
+<meta name="keywords" content="logs" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://sharafat.is-a.dev/logs/tkinter2/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://sharafat.is-a.dev/logs/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+  <link rel="apple-touch-icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="sharafat2004" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Tkinter2">
+<meta property="og:description" content="```python" />
+<meta property="og:url" content="https://sharafat.is-a.dev/logs/tkinter2/" />
+<meta property="og:site_name" content="Sharafat Karim | Logs" />
+
+  
+    <meta property="og:image" content="https://sharafat.is-a.dev/logs/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Sharafat Karim | Logs
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://github.com/SharafatKarim/">GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs">Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/">My Blogs</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="https://github.com/SharafatKarim/" >GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs" >Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/" >My Blogs</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://sharafat.is-a.dev/logs/tkinter2/">Tkinter2</a>
+  </h1>
+  <div class="post-meta"><span class="post-reading-time">1 Min read (211 words)</span></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="tkinter---day-two">Tkinter - Day two<a href="#tkinter---day-two" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="icon-and-image">Icon and image<a href="#icon-and-image" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> Label, Tk, Button, Entry, PhotoImage
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image, ImageTk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root<span style="color:#f92672">=</span> Tk()
+</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Simple GUI with pythonian&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># root.iconbitmap(&#34;/home/sharafat/Desktop/test/python/tkinter/logo.png&#34;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>iconphoto(<span style="color:#66d9ef">False</span>, PhotoImage(file<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;logo.png&#39;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>button_quit <span style="color:#f92672">=</span> Button(root, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Exit Program&#34;</span>, command<span style="color:#f92672">=</span>root<span style="color:#f92672">.</span>quit)
+</span></span><span style="display:flex;"><span>button_quit<span style="color:#f92672">.</span>pack()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>my_img <span style="color:#f92672">=</span> ImageTk<span style="color:#f92672">.</span>PhotoImage(Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;logo.png&#34;</span>))
+</span></span><span style="display:flex;"><span>Label(root, image<span style="color:#f92672">=</span>my_img)<span style="color:#f92672">.</span>pack()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>mainloop() <span style="color:#75715e"># Keep the window open</span>
+</span></span></code></pre></div><h2 id="image-viewer">Image viewer<a href="#image-viewer" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> Label, Tk, Button, Entry, PhotoImage, DISABLED
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image, ImageTk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root<span style="color:#f92672">=</span> Tk()
+</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Simple GUI with pythonian&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># root.iconbitmap(&#34;/home/sharafat/Desktop/test/python/tkinter/logo.png&#34;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>button_quit <span style="color:#f92672">=</span> Button(root, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Exit Program&#34;</span>, command<span style="color:#f92672">=</span>root<span style="color:#f92672">.</span>quit)
+</span></span><span style="display:flex;"><span>button_quit<span style="color:#f92672">.</span>grid(row<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, column<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>button_next <span style="color:#f92672">=</span> Button(root, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Next&#34;</span>, command<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span>: next(<span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>button_next<span style="color:#f92672">.</span>grid(row<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, column<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>button_back <span style="color:#f92672">=</span> Button(root, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Back&#34;</span>, command<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span>: back(<span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>button_back<span style="color:#f92672">.</span>grid(row<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, column<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>my_img_1 <span style="color:#f92672">=</span> ImageTk<span style="color:#f92672">.</span>PhotoImage(Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;1.png&#34;</span>))
+</span></span><span style="display:flex;"><span>my_img_2 <span style="color:#f92672">=</span> ImageTk<span style="color:#f92672">.</span>PhotoImage(Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;2.png&#34;</span>))
+</span></span><span style="display:flex;"><span>my_img_3 <span style="color:#f92672">=</span> ImageTk<span style="color:#f92672">.</span>PhotoImage(Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;3.png&#34;</span>))
+</span></span><span style="display:flex;"><span>my_img_4 <span style="color:#f92672">=</span> ImageTk<span style="color:#f92672">.</span>PhotoImage(Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;4.png&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>my_img_list <span style="color:#f92672">=</span> [my_img_1, my_img_2, my_img_3, my_img_4]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Label(root, image=my_img_list[0]).grid(row=1, column=0, columnspan=3)</span>
+</span></span><span style="display:flex;"><span>my_label <span style="color:#f92672">=</span> Label(image<span style="color:#f92672">=</span>my_img_list[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>my_label<span style="color:#f92672">.</span>grid(row<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, column<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, columnspan<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">next</span>(image_number):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">global</span> my_label
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">global</span> button_next
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">global</span> button_back
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    my_label<span style="color:#f92672">.</span>grid_forget()
+</span></span><span style="display:flex;"><span>    my_label <span style="color:#f92672">=</span> Label(image<span style="color:#f92672">=</span>my_img_list[image_number<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>    button_next <span style="color:#f92672">=</span> Button(root, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Next&#34;</span>, command<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span>: next(image_number<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>    button_back <span style="color:#f92672">=</span> Button(root, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Back&#34;</span>, command<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span>: back(image_number<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> image_number <span style="color:#f92672">==</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>        button_next <span style="color:#f92672">=</span> Button(root, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Next&#34;</span>, state<span style="color:#f92672">=</span>DISABLED)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    my_label<span style="color:#f92672">.</span>grid(row<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, column<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, columnspan<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>    button_back<span style="color:#f92672">.</span>grid(row<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, column<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    button_next<span style="color:#f92672">.</span>grid(row<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, column<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">back</span>(image_number):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">global</span> my_label
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">global</span> button_next
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">global</span> button_back
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    my_label<span style="color:#f92672">.</span>grid_forget()
+</span></span><span style="display:flex;"><span>    my_label <span style="color:#f92672">=</span> Label(image<span style="color:#f92672">=</span>my_img_list[image_number<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>    button_next <span style="color:#f92672">=</span> Button(root, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Next&#34;</span>, command<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span>: next(image_number<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>    button_back <span style="color:#f92672">=</span> Button(root, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Back&#34;</span>, command<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span>: back(image_number<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> image_number <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        button_back <span style="color:#f92672">=</span> Button(root, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Back&#34;</span>, state<span style="color:#f92672">=</span>DISABLED)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    my_label<span style="color:#f92672">.</span>grid(row<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, column<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, columnspan<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>    button_back<span style="color:#f92672">.</span>grid(row<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, column<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    button_next<span style="color:#f92672">.</span>grid(row<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, column<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root<span style="color:#f92672">.</span>mainloop() <span style="color:#75715e"># Keep the window open</span>
+</span></span></code></pre></div>
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>Creative common CC-0</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/logs/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

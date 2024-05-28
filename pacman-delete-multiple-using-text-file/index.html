@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Pacman-delete-multiple-using-text-file :: Sharafat Karim | Logs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="This command did the trick, but it&#39;s not perfect. It will fail if the package is a dependency of another package." />
+<meta name="keywords" content="logs" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://sharafat.is-a.dev/logs/pacman-delete-multiple-using-text-file/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://sharafat.is-a.dev/logs/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+  <link rel="apple-touch-icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="sharafat2004" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Pacman-delete-multiple-using-text-file">
+<meta property="og:description" content="This command did the trick, but it&#39;s not perfect. It will fail if the package is a dependency of another package." />
+<meta property="og:url" content="https://sharafat.is-a.dev/logs/pacman-delete-multiple-using-text-file/" />
+<meta property="og:site_name" content="Sharafat Karim | Logs" />
+
+  
+    <meta property="og:image" content="https://sharafat.is-a.dev/logs/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Sharafat Karim | Logs
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://github.com/SharafatKarim/">GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs">Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/">My Blogs</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="https://github.com/SharafatKarim/" >GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs" >Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/" >My Blogs</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://sharafat.is-a.dev/logs/pacman-delete-multiple-using-text-file/">Pacman-delete-multiple-using-text-file</a>
+  </h1>
+  <div class="post-meta"><span class="post-reading-time">1 Min read (129 words)</span></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="pacman-delete-multiple-using-text-file">Pacman delete multiple using text file<a href="#pacman-delete-multiple-using-text-file" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>This command did the trick, but it&rsquo;s not perfect. It will fail if the package is a dependency of another package.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> read -r package version; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    sudo pacman -Rns --noconfirm <span style="color:#e6db74">&#34;</span>$package<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span> &lt; Desktop/fonts.txt
+</span></span></code></pre></div><p>My text file was,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ttf-agave-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-anonymouspro-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-arimo-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-bigblueterminal-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-bitstream-vera-mono-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-cascadia-code-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-cousine-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-daddytime-mono-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-dejavu-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-fantasque-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-go-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-heavydata-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-iawriter-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-ibmplex-mono-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-inconsolata-go-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-inconsolata-lgc-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-inconsolata-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-iosevka-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-iosevkaterm-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-lekton-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-liberation 2.1.5-1
+</span></span><span style="display:flex;"><span>ttf-liberation-mono-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-lilex-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-meslo-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-monofur-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-monoid-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-mononoki-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-mplus-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-nerd-fonts-symbols 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-nerd-fonts-symbols-common 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-nerd-fonts-symbols-mono 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-noto-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-opensans 1.101-2
+</span></span><span style="display:flex;"><span>ttf-profont-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-proggyclean-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-roboto-mono-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-sharetech-mono-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-sourcecodepro-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-space-mono-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-terminus-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-tinos-nerd 3.1.1-1
+</span></span><span style="display:flex;"><span>ttf-victor-mono-nerd 3.1.1-1
+</span></span></code></pre></div>
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>Creative common CC-0</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/logs/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

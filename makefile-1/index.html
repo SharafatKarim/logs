@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Makefile-1 :: Sharafat Karim | Logs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="For the repo," />
+<meta name="keywords" content="logs" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://sharafat.is-a.dev/logs/makefile-1/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://sharafat.is-a.dev/logs/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+  <link rel="apple-touch-icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="sharafat2004" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Makefile-1">
+<meta property="og:description" content="For the repo," />
+<meta property="og:url" content="https://sharafat.is-a.dev/logs/makefile-1/" />
+<meta property="og:site_name" content="Sharafat Karim | Logs" />
+
+  
+    <meta property="og:image" content="https://sharafat.is-a.dev/logs/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Sharafat Karim | Logs
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://github.com/SharafatKarim/">GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs">Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/">My Blogs</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="https://github.com/SharafatKarim/" >GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs" >Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/" >My Blogs</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://sharafat.is-a.dev/logs/makefile-1/">Makefile-1</a>
+  </h1>
+  <div class="post-meta"><span class="post-reading-time">2 Min read (317 words)</span></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="its-time-to-make-a-makefile">It&rsquo;s time to make a Makefile<a href="#its-time-to-make-a-makefile" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>For the repo,
+<a href="https://github.com/sr-tamim/entropy-calculator/">https://github.com/sr-tamim/entropy-calculator/</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-make" data-lang="make"><span style="display:flex;"><span><span style="color:#75715e"># if $CXX is not set, guess default `cxx&#39;. It has to be in system
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>CXX <span style="color:#f92672">?=</span> cxx
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># compile options
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>CXXFLAGS <span style="color:#f92672">?=</span> -Os -Wall -Wpedantic -Wextra
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># link options
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>LDFLAGS <span style="color:#f92672">?=</span> -s
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>target      <span style="color:#f92672">?=</span> debug
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">&lt;&lt;targets&gt;&gt; </span><span style="color:#f92672">:</span>= debug release
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># addons
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>with     <span style="color:#f92672">?=</span> gmp
+</span></span><span style="display:flex;"><span>without  <span style="color:#f92672">?=</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">&lt;&lt;addons&gt;&gt; </span><span style="color:#f92672">:</span>= gmp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Echo function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">&lt;&lt; </span><span style="color:#f92672">:</span>= echo
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">ifneq</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#66d9ef">$(</span>shell eval &#39;echo -e&#39;<span style="color:#66d9ef">)</span><span style="color:#960050;background-color:#1e0010">,-e)</span>
+</span></span><span style="display:flex;"><span> <span style="color:#960050;background-color:#1e0010">&lt;&lt;</span> <span style="color:#960050;background-color:#1e0010">+=</span> <span style="color:#960050;background-color:#1e0010">-e</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">endif</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &lt;&lt;debug-dir&gt;   = Debug
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># &lt;&lt;release-dir&gt;&gt;= Release
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">&lt;&lt;target&gt;&gt;</span>     <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#66d9ef">$(</span>firstword <span style="color:#66d9ef">$(</span>filter <span style="color:#66d9ef">$(</span>&lt;&lt;targets&gt;&gt;<span style="color:#66d9ef">)</span>,<span style="color:#66d9ef">$(</span>target<span style="color:#66d9ef">)))</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">ifeq</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#66d9ef">$(</span>&lt;&lt;target&gt;&gt;<span style="color:#66d9ef">)</span><span style="color:#960050;background-color:#1e0010">,release)</span>
+</span></span><span style="display:flex;"><span> <span style="color:#960050;background-color:#1e0010">&lt;&lt;tdir&gt;&gt;</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#960050;background-color:#1e0010">Release</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">else</span>
+</span></span><span style="display:flex;"><span> <span style="color:#960050;background-color:#1e0010">&lt;&lt;tdir&gt;&gt;</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#960050;background-color:#1e0010">Debug</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">endif</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># optional addons
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">&lt;&lt;with&gt;&gt;</span>       <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#66d9ef">$(</span>sort <span style="color:#66d9ef">$(</span>filter-out <span style="color:#66d9ef">$(</span>without<span style="color:#66d9ef">)</span>,<span style="color:#66d9ef">$(</span>filter <span style="color:#66d9ef">$(</span>&lt;&lt;addons&gt;&gt;<span style="color:#66d9ef">)</span>,<span style="color:#66d9ef">$(</span>with<span style="color:#66d9ef">))))</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># project configs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>CXXFLAGS <span style="color:#f92672">+=</span> -I<span style="color:#66d9ef">$(</span>PWD<span style="color:#66d9ef">)</span>/headers -I<span style="color:#66d9ef">$(</span>PWD<span style="color:#66d9ef">)</span>/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># rebuild on optional deps change
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">ifneq</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#66d9ef">$(</span>filter gmp,<span style="color:#66d9ef">$(</span>&lt;&lt;with&gt;&gt;<span style="color:#66d9ef">))</span><span style="color:#960050;background-color:#1e0010">,)</span>
+</span></span><span style="display:flex;"><span> <span style="color:#960050;background-color:#1e0010">ifneq</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#66d9ef">$(</span>shell pkg-config --exists gmp gmpxx &amp;&amp; echo exists<span style="color:#66d9ef">)</span><span style="color:#960050;background-color:#1e0010">,)</span>
+</span></span><span style="display:flex;"><span>  PKGS <span style="color:#f92672">+=</span> gmpxx gmp
+</span></span><span style="display:flex;"><span>  CFLAGS <span style="color:#f92672">+=</span> -D_USE_GMP
+</span></span><span style="display:flex;"><span> endif
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">endif</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">ifneq</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#66d9ef">$(</span>PKGS<span style="color:#66d9ef">)</span><span style="color:#960050;background-color:#1e0010">,)</span>
+</span></span><span style="display:flex;"><span> CXXFLAGS <span style="color:#f92672">+=</span> <span style="color:#66d9ef">$(</span>shell pkg-config --cflags <span style="color:#66d9ef">$(</span>PKGS<span style="color:#66d9ef">))</span>
+</span></span><span style="display:flex;"><span> LDFLAGS <span style="color:#f92672">+=</span> <span style="color:#66d9ef">$(</span>shell pkg-config --libs <span style="color:#66d9ef">$(</span>PKGS<span style="color:#66d9ef">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">endif</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">&lt;&lt;sources&gt;&gt; </span><span style="color:#f92672">:</span>= \
+</span></span><span style="display:flex;"><span> main.cpp \
+</span></span><span style="display:flex;"><span> headers/allElements.cpp \
+</span></span><span style="display:flex;"><span> headers/readElementState.cpp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">&lt;&lt;objects&gt;&gt; </span><span style="color:#f92672">:</span>= <span style="color:#66d9ef">$(</span>&lt;&lt;sources&gt;&gt;:%=obj/<span style="color:#66d9ef">$(</span>&lt;&lt;tdir&gt;&gt;<span style="color:#66d9ef">)</span>/%.o<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Output file name
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">ifeq</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#66d9ef">$(</span>filter <span style="color:#66d9ef">$(</span>shell uname -o<span style="color:#66d9ef">)</span>,Msys Cygwin<span style="color:#66d9ef">)</span><span style="color:#960050;background-color:#1e0010">,)</span>
+</span></span><span style="display:flex;"><span> BINARY <span style="color:#f92672">?=</span> entropy-calculator
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">else</span>
+</span></span><span style="display:flex;"><span> <span style="color:#960050;background-color:#1e0010">ifeq</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#66d9ef">$(</span>MSYSTEM_CARCH<span style="color:#66d9ef">)</span><span style="color:#960050;background-color:#1e0010">,i686)</span>
+</span></span><span style="display:flex;"><span>  BINARY <span style="color:#f92672">?=</span> entropy-calculator.exe
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>  BINARY ?<span style="color:#f92672">=</span> entropy-calculator64.exe
+</span></span><span style="display:flex;"><span> endif
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">endif</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;&lt;bindep&gt;&gt;</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#960050;background-color:#1e0010">bin/</span><span style="color:#66d9ef">$(</span>&lt;&lt;tdir&gt;&gt;<span style="color:#66d9ef">)</span><span style="color:#960050;background-color:#1e0010">/.</span><span style="color:#66d9ef">$(</span>BINARY<span style="color:#66d9ef">)</span><span style="color:#960050;background-color:#1e0010">.dep</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;&lt;binpth&gt;&gt;</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#960050;background-color:#1e0010">bin/</span><span style="color:#66d9ef">$(</span>&lt;&lt;tdir&gt;&gt;<span style="color:#66d9ef">)</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#66d9ef">$(</span>BINARY<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">&lt;&lt;-&gt;&gt; </span><span style="color:#f92672">:</span>= <span style="color:#66d9ef">$(</span>shell mkdir -p <span style="color:#66d9ef">$(</span>dir <span style="color:#66d9ef">$(</span>&lt;&lt;binpth&gt;&gt;<span style="color:#66d9ef">)))</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Use $(&lt;&lt;bindep&gt;&gt;) file to track backend change
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">&lt;&lt;depends&gt;&gt;</span> <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#66d9ef">$(</span>sort <span style="color:#66d9ef">$(</span>&lt;&lt;with&gt;&gt;<span style="color:#66d9ef">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">ifneq</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#66d9ef">$(</span>sort <span style="color:#66d9ef">$(</span>file &lt; <span style="color:#66d9ef">$(</span>&lt;&lt;bindep&gt;&gt;<span style="color:#66d9ef">)))</span><span style="color:#960050;background-color:#1e0010">,</span><span style="color:#66d9ef">$(</span>&lt;&lt;depends&gt;&gt;<span style="color:#66d9ef">)</span><span style="color:#960050;background-color:#1e0010">)</span>
+</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">&lt;&lt;null&gt;&gt; </span><span style="color:#f92672">:</span>= <span style="color:#66d9ef">$(</span>file  &gt; <span style="color:#66d9ef">$(</span>&lt;&lt;bindep&gt;&gt;<span style="color:#66d9ef">)</span>,<span style="color:#66d9ef">$(</span>&lt;&lt;depends&gt;&gt;<span style="color:#66d9ef">))</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">endif</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">undefine</span> <span style="color:#960050;background-color:#1e0010">&lt;&lt;depends&gt;&gt;</span> <span style="color:#960050;background-color:#1e0010">&lt;&lt;null&gt;&gt;</span> <span style="color:#960050;background-color:#1e0010">&lt;&lt;-&gt;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># using some makefile sorcery
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">all</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">$(</span>&lt;&lt;binpth&gt;&gt;<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">obj/$(&lt;&lt;tdir&gt;&gt;)/%.o</span><span style="color:#f92672">:</span> %
+</span></span><span style="display:flex;"><span> @<span style="color:#66d9ef">$(</span>&lt;&lt;<span style="color:#66d9ef">)</span> <span style="color:#e6db74">&#34;  CXX\t&#34;</span> <span style="color:#66d9ef">$(</span>&lt;:src/%<span style="color:#f92672">=</span>%<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span> @mkdir -p <span style="color:#66d9ef">$(</span>shell dirname <span style="color:#66d9ef">$(</span>@<span style="color:#66d9ef">))</span>
+</span></span><span style="display:flex;"><span> @<span style="color:#66d9ef">$(</span>CXX<span style="color:#66d9ef">)</span> -c <span style="color:#66d9ef">$(</span>&lt;<span style="color:#66d9ef">)</span> -o <span style="color:#66d9ef">$(</span>@<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>CXXFLAGS<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$(&lt;&lt;binpth&gt;&gt;)</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">$(</span>&lt;&lt;objects&gt;&gt;<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span> @if test -n <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&lt;&lt;with&gt;&gt;)&#34;; then $(&lt;&lt;) &#34;WITH\t&#34; $(&lt;&lt;with</span>&gt;&gt;<span style="color:#66d9ef">)</span><span style="color:#e6db74">;fi
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> @</span><span style="color:#66d9ef">$(</span>&lt;&lt;<span style="color:#66d9ef">)</span><span style="color:#e6db74"> &#34;</span>LINK<span style="color:#ae81ff">\t</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#66d9ef">$(</span>BINARY<span style="color:#66d9ef">)$(</span>^:obj/%<span style="color:#f92672">=</span><span style="color:#ae81ff">\\</span>n<span style="color:#ae81ff">\\</span>t + %<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> @</span><span style="color:#66d9ef">$(</span>CXX<span style="color:#66d9ef">)</span><span style="color:#e6db74"> </span><span style="color:#66d9ef">$(</span>^<span style="color:#66d9ef">)</span><span style="color:#e6db74"> -o </span><span style="color:#66d9ef">$(</span>@<span style="color:#66d9ef">)</span><span style="color:#e6db74"> </span><span style="color:#66d9ef">$(</span>LDFLAGS<span style="color:#66d9ef">)</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#a6e22e">install</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">$(</span>&lt;&lt;binpth&gt;&gt;<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span> install -Dm0755 <span style="color:#66d9ef">$(</span>&lt;<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>DESTDIR<span style="color:#66d9ef">)$(</span>PREFIX<span style="color:#66d9ef">)</span>/<span style="color:#66d9ef">$(</span>BINDIR<span style="color:#66d9ef">)</span>/<span style="color:#66d9ef">$(</span>BINARY<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">uninstall</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span> sudo <span style="color:#66d9ef">$(</span>RM<span style="color:#66d9ef">)</span> -f <span style="color:#66d9ef">$(</span>DESTDIR<span style="color:#66d9ef">)$(</span>PREFIX<span style="color:#66d9ef">)</span>/<span style="color:#66d9ef">$(</span>BINDIR<span style="color:#66d9ef">)</span>/<span style="color:#66d9ef">$(</span>BINARY<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">clean</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span> @<span style="color:#66d9ef">$(</span>&lt;&lt;<span style="color:#66d9ef">)</span> <span style="color:#e6db74">&#34;  RM\t&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>BINARY<span style="color:#66d9ef">)$(</span><span style="color:#e6db74">&lt;&lt;objects&gt;&gt;:obj/%=\\n\\t + %)&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> @$(RM) -f $(&lt;&lt;objects</span>&gt;&gt;<span style="color:#66d9ef">)</span><span style="color:#e6db74"> </span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&lt;&lt;binpth&gt;&gt;) $(&lt;&lt;bin</span>dep&gt;&gt;<span style="color:#66d9ef">)</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">$(</span>BINARY<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span> ./<span style="color:#66d9ef">$(</span>BINARY<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$(&lt;&lt;objects&gt;&gt;)</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">$(</span>&lt;&lt;bindep&gt;&gt;<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">.PHONY</span><span style="color:#f92672">:</span> all clean install uninstall test
+</span></span></code></pre></div><p>by @ahmubashshir</p>
+<p>And then, found this site,</p>
+<ul>
+<li><a href="https://makefiletutorial.com/">https://makefiletutorial.com/</a></li>
+</ul>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>Creative common CC-0</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/logs/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

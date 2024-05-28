@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Getting-started-with-csharp :: Sharafat Karim | Logs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="- [Dotnet CLI](#dotnet-cli)" />
+<meta name="keywords" content="logs" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://sharafat.is-a.dev/logs/getting-started-with-csharp/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://sharafat.is-a.dev/logs/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+  <link rel="apple-touch-icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="sharafat2004" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Getting-started-with-csharp">
+<meta property="og:description" content="- [Dotnet CLI](#dotnet-cli)" />
+<meta property="og:url" content="https://sharafat.is-a.dev/logs/getting-started-with-csharp/" />
+<meta property="og:site_name" content="Sharafat Karim | Logs" />
+
+  
+    <meta property="og:image" content="https://sharafat.is-a.dev/logs/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Sharafat Karim | Logs
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://github.com/SharafatKarim/">GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs">Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/">My Blogs</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="https://github.com/SharafatKarim/" >GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs" >Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/" >My Blogs</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://sharafat.is-a.dev/logs/getting-started-with-csharp/">Getting-started-with-csharp</a>
+  </h1>
+  <div class="post-meta"><span class="post-reading-time">7 Min read (1485 words)</span></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="getting-started-with-c">Getting started with C#<a href="#getting-started-with-c" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li><a href="#dotnet-cli">Dotnet CLI</a></li>
+<li><a href="#main-method-and-top-level-statement"><code>Main</code> method and Top-level statement</a></li>
+<li><a href="#namespace">Namespace</a></li>
+<li><a href="#class">Class</a></li>
+<li><a href="#record">Record</a></li>
+<li><a href="#struct">Struct</a></li>
+<li><a href="#enum">Enum</a></li>
+<li><a href="#interface">Interface</a></li>
+<li><a href="#anonymous-type">Anonymous Type</a></li>
+<li><a href="#extension-method">Extension method</a></li>
+<li><a href="#type-inference-with-var-keyword">Type inference with <code>var</code> keyword</a></li>
+<li><a href="#object-initializer">Object initializer</a></li>
+<li><a href="#generics">Generics</a></li>
+<li><a href="#type-casting">Type casting</a></li>
+<li><a href="#important-interfaces">Important Interfaces</a></li>
+<li><a href="#lambda">Lambda</a></li>
+<li><a href="#linq">Linq</a></li>
+<li><a href="#asynchronous-programming">Asynchronous programming</a></li>
+</ul>
+<h3 id="dotnet-cli">Dotnet CLI<a href="#dotnet-cli" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># create new solution</span>
+</span></span><span style="display:flex;"><span>dotnet new sln --output &lt;output_location&gt; --name &lt;solution_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># types of project</span>
+</span></span><span style="display:flex;"><span>dotnet new list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># create a project</span>
+</span></span><span style="display:flex;"><span>dotnet new &lt;type&gt; --output &lt;output_location&gt; --name &lt;project_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># add project to solution</span>
+</span></span><span style="display:flex;"><span>dotnet solution add &lt;project_path&gt;.csproj
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># add a nuget pkg</span>
+</span></span><span style="display:flex;"><span>dotnet add package Dumpify
+</span></span></code></pre></div><h3 id="main-method-and-top-level-statement"><code>Main</code> method and Top-level statement<a href="#main-method-and-top-level-statement" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Display the number of command line arguments.</span>
+</span></span><span style="display:flex;"><span>        Console.WriteLine(args.Length);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>
+<p>The Main method is the entry point of an executable C# program; it is where the program control starts and ends.</p>
+</li>
+<li>
+<p>Starting in C# 9, you don&rsquo;t have to explicitly include a Main method in a console application project. Instead, you can use the top-level statements feature to minimize the code you have to write. In this case, the compiler generates a class and Main method entry point for the application.</p>
+</li>
+<li>
+<p>An application must have only one entry point. A project can have only one file with top-level statements.</p>
+</li>
+<li>
+<p>A file with top-level statements can also contain namespaces and type definitions, but they must come after the top-level statements.</p>
+</li>
+</ul>
+<h3 id="namespace">Namespace<a href="#namespace" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>The namespace keyword is used to declare a scope that contains a set of related objects.</li>
+<li>The name of the <code>namespace</code> must be a valid C# identifier name.</li>
+<li>The compiler adds a default namespace. This unnamed namespace, sometimes referred to as the global namespace, is present in every file. It contains declarations not included in a declared namespace. Any identifier in the global namespace is available for use in a named namespace.</li>
+<li>File scoped namespace declarations enable you to declare that all types in a file are in a single namespace. File scoped namespaces can&rsquo;t include additional namespace declarations. You cannot declare a nested namespace or a second file-scoped namespace.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#75715e">// file scoped namespace</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> FileScoped;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BlaBla</span> {}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// block scoped namespace</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> BlockScoped
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BlaBla</span> {}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="class">Class<a href="#class" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><code>readonly</code> means it can only be set either from constructor or by initialization.</li>
+<li><code>const</code> means it can only be set by initialization.</li>
+<li><code>static</code> members has to be accessed by class name.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// const field</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">string</span> Country = <span style="color:#e6db74">&#34;BD&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// static readonly field</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> Star = <span style="color:#e6db74">&#34;Sun&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// readonly field</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> Planet = <span style="color:#e6db74">&#34;Earth&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// field</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">bool</span> _isEmailConfirmed;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// field initializer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> required <span style="color:#66d9ef">string</span> FullName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; } = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// auto property</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> required <span style="color:#66d9ef">string</span> UserName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string?</span> Email { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// property with backing field</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">bool</span> IsEmailConfirmed
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">get</span> =&gt; _isEmailConfirmed;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">set</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">value</span> &amp;&amp; Email <span style="color:#66d9ef">is</span> not <span style="color:#66d9ef">null</span>) _isEmailConfirmed = <span style="color:#66d9ef">value</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">value</span> <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">false</span> &amp;&amp; Email <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">null</span>) _isEmailConfirmed = <span style="color:#66d9ef">value</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="record">Record<a href="#record" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">record</span> <span style="color:#a6e22e">AppUserLoginRequest</span>(<span style="color:#66d9ef">string</span> UserName, <span style="color:#66d9ef">string</span> Password);
+</span></span></code></pre></div><h3 id="struct">Struct<a href="#struct" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><code>struct</code> is value type, that means memory is allocated in stack rather than heap.</li>
+<li>A <code>struct</code> type can&rsquo;t inherit from other class or structure type and it can&rsquo;t be the base of a class. However, a structure type can implement interfaces.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> required <span style="color:#66d9ef">string</span> FullName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Age { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>struct</code> type declarations with field initializers must include an explicitly declared constructor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Person()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> required <span style="color:#66d9ef">string</span> FullName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; } = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Age { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; } = <span style="color:#ae81ff">13</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="enum">Enum<a href="#enum" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> BlogStatus : <span style="color:#66d9ef">byte</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Published = <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>    Draft
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="interface">Interface<a href="#interface" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>An interface defines a contract between user-defined types.</li>
+<li>By convention, an interface name starts with the letter I.</li>
+<li>All the members of an interface are public by default.</li>
+<li>An interface contains members including methods, properties, indexers, and events.</li>
+<li>A user-defined type that implements an interface must provide implementations for the members of the interface.</li>
+<li>A user-defined type can implement multiple interfaces.</li>
+<li>An interface can extend one or more interfaces.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IMyInterface</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> MyMethod();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="anonymous-type">Anonymous Type<a href="#anonymous-type" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>
+<p>Anonymous types allow you to encapsulate a set of read-only properties into a single object without having to define a class first.</p>
+</li>
+<li>
+<p>Behind the scenes, the compiler will generate the type name for the anonymous type.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> products = <span style="color:#66d9ef">new</span>[]
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> { Name = <span style="color:#e6db74">&#34;Phone X&#34;</span>, Price = <span style="color:#ae81ff">999.99</span> },
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> { Name = <span style="color:#e6db74">&#34;Computer Y&#34;</span>, Price = <span style="color:#ae81ff">1999.99</span> },
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> { Name = <span style="color:#e6db74">&#34;Tablet Z&#34;</span>, Price = <span style="color:#ae81ff">2999.99</span> }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="extension-method">Extension method<a href="#extension-method" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Linq;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> LearningCSharp;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StringExtensions</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> IsConstantCase(<span style="color:#66d9ef">this</span> <span style="color:#66d9ef">string</span> text)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> text.All(c =&gt; <span style="color:#66d9ef">char</span>.IsUpper(c));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="type-inference-with-var-keyword">Type inference with <code>var</code> keyword<a href="#type-inference-with-var-keyword" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>Use the <code>var</code> keyword for a variable with initialization from which the compiler can infer a type.</li>
+<li>The motto is: type should be only visible in one side of variable declaration, either right or left. <code>var</code> is used when type is evident in the left side.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>IList&lt;<span style="color:#66d9ef">int</span>&gt; digitsList = [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">66</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> digitsListWithVar = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">int</span>&gt; { <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">66</span> };
+</span></span></code></pre></div><h3 id="object-initializer">Object initializer<a href="#object-initializer" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> user = <span style="color:#66d9ef">new</span> User
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    FullName = <span style="color:#e6db74">&#34;John Doe&#34;</span>,
+</span></span><span style="display:flex;"><span>    UserName = <span style="color:#e6db74">&#34;john-doe&#34;</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>User user = <span style="color:#66d9ef">new</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    FullName = <span style="color:#e6db74">&#34;John Doe&#34;</span>,
+</span></span><span style="display:flex;"><span>    UserName = <span style="color:#e6db74">&#34;john-doe&#34;</span>
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="generics">Generics<a href="#generics" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>Generics allow you to write code that works with more than one type.</li>
+<li>Generic constraints specify constraints on the type used as arguments for type parameters in generic type. Use the <code>where</code> keyword to specify generic constraints.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> TNumber AddTwoNumbers&lt;TNumber&gt;(TNumber a, TNumber b)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">where</span> TNumber : INumber&lt;TNumber&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a + b;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="type-casting">Type casting<a href="#type-casting" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>An object reference can be implicitly upcast to a base class reference. An upcast always succeeds.</li>
+<li>An object reference can also be explicitly downcast to a subclass reference. A downcast succeeds only if the object is compatible typed. Syntax: <code>(T)E</code></li>
+<li>Use the <code>as</code> operator to perform a downcast that evaluates to null rather than throwing an exception.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> employee = <span style="color:#66d9ef">new</span> Employee
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Name = <span style="color:#e6db74">&#34;John Doe&#34;</span>,
+</span></span><span style="display:flex;"><span>    JobTitle = <span style="color:#e6db74">&#34;C# Developer&#34;</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Person person = employee; <span style="color:#75715e">// upcast</span>
+</span></span><span style="display:flex;"><span>Employee employee2 = (Employee)person; <span style="color:#75715e">// downcast</span>
+</span></span><span style="display:flex;"><span>Employee? employee3 = person <span style="color:#66d9ef">as</span> Employee; <span style="color:#75715e">// downcast</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> required <span style="color:#66d9ef">string</span> Name { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> : Person
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> required <span style="color:#66d9ef">string</span> JobTitle { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="important-interfaces">Important Interfaces<a href="#important-interfaces" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><code>IEnumerable&lt;T&gt;</code>: When we need a read-only operation, we can use <code>IEnumerable&lt;T&gt;</code>. It is for looping through the collection in the forward direction only. It supports deferred execution and filtering.</p>
+<p><code>ICollection&lt;T&gt;</code>: <code>ICollection&lt;T&gt;</code> extends <code>IEnumerable&lt;T&gt;</code>. ICollection allows to add or remove elements in the collection which is not possible with IEnumerable. But we still can’t perform any index-related operations. But we still can’t perform any index-related operations.</p>
+<p><code>IList&lt;T&gt;</code>: <code>IList&lt;T&gt;</code> extends <code>ICollection&lt;T&gt;</code>. It allows index-related operations like <code>Insert()</code>, <code>RemoveAt()</code> etc.</p>
+<p><code>IQueryable&lt;T&gt;</code>: Use for working with Database, processing will be done in the DB side. Fetched data can be translated to ICollection or IList easily.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>IEnumerable&lt;<span style="color:#66d9ef">int</span>&gt; digitsEnumerable = [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">66</span>];
+</span></span><span style="display:flex;"><span>ICollection&lt;<span style="color:#66d9ef">int</span>&gt; digitsCollection = [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">66</span>];
+</span></span><span style="display:flex;"><span>IList&lt;<span style="color:#66d9ef">int</span>&gt; digitsList = [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">66</span>];
+</span></span></code></pre></div><h3 id="lambda">Lambda<a href="#lambda" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li>A lambda expression can reference any variables including local variables, parameters, and members that are accessible from the location where you define the lambda expression.</li>
+<li>The variables referenced by a lambda expression are known as captured variables. When a lambda expression has captured variables, it is called a closure.</li>
+<li>When a lambda expression captures variables, the C# compiler needs to create a private class and instantiate it to store a reference to the captured variables. This incurs a small performance. you can use a static keyword to ensure that the lambda expression doesn’t capture any variables.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#75715e">// expression lambda</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> sum1 = (<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) =&gt; a + b;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// statement lambda</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> sum2 = (<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) =&gt;
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> sum = a + b;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> sum;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// avoid capturing outer variable</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> factor = <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> square = <span style="color:#66d9ef">static</span> (<span style="color:#66d9ef">int</span> x) =&gt; x * factor; <span style="color:#75715e">// ERROR</span>
+</span></span></code></pre></div><h3 id="linq">Linq<a href="#linq" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Linq;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1. Data source</span>
+</span></span><span style="display:flex;"><span>IList&lt;<span style="color:#66d9ef">int</span>&gt; digitsEnumerable = [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">66</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. Query creation</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> numberQuerySyntax =
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">from</span> number <span style="color:#66d9ef">in</span> digitsEnumerable
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">where</span> number % <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">select</span> number;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> numberMethodSyntax = digitsEnumerable.Where(x =&gt; x % <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. Query execution</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> number <span style="color:#66d9ef">in</span> numberQuerySyntax)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(number);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">&#34;############&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> number <span style="color:#66d9ef">in</span> numberMethodSyntax)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(number);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="asynchronous-programming">Asynchronous programming<a href="#asynchronous-programming" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Todo</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> UserId { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string?</span> Title { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">bool</span> Completed { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">async</span> Task&lt;IList&lt;Todo&gt;&gt; LoadTodoData()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">using</span> var httpClient = <span style="color:#66d9ef">new</span> HttpClient();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> response = <span style="color:#66d9ef">await</span> httpClient.GetAsync(<span style="color:#e6db74">&#34;https://jsonplaceholder.typicode.com/todos&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> todos = <span style="color:#66d9ef">await</span> response.Content.ReadFromJsonAsync&lt;List&lt;Todo&gt;&gt;();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> todos ?? [];
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div>
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>Creative common CC-0</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/logs/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

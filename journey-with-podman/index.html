@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Journey-with-podman :: Sharafat Karim | Logs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="With pacman, it&#39;s easy," />
+<meta name="keywords" content="logs" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://sharafat.is-a.dev/logs/journey-with-podman/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://sharafat.is-a.dev/logs/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+  <link rel="apple-touch-icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="sharafat2004" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Journey-with-podman">
+<meta property="og:description" content="With pacman, it&#39;s easy," />
+<meta property="og:url" content="https://sharafat.is-a.dev/logs/journey-with-podman/" />
+<meta property="og:site_name" content="Sharafat Karim | Logs" />
+
+  
+    <meta property="og:image" content="https://sharafat.is-a.dev/logs/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Sharafat Karim | Logs
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://github.com/SharafatKarim/">GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs">Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/">My Blogs</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="https://github.com/SharafatKarim/" >GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs" >Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/" >My Blogs</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://sharafat.is-a.dev/logs/journey-with-podman/">Journey-with-podman</a>
+  </h1>
+  <div class="post-meta"><span class="post-reading-time">2 Min read (284 words)</span></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="journey-with-podman">Journey with podman<a href="#journey-with-podman" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="lets-start">Let&rsquo;s start<a href="#lets-start" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="installation">Installation<a href="#installation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>With pacman, it&rsquo;s easy,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S podman
+</span></span></code></pre></div><h3 id="first-pull">First pull<a href="#first-pull" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="alpine">Alpine<a href="#alpine" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman pull docker.io/library/alpine
+</span></span></code></pre></div><h4 id="first-run">First run<a href="#first-run" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman run -it --rm docker.io/library/alpine
+</span></span></code></pre></div><h5 id="-it-these-are-two-options-combined">-it: These are two options combined<a href="#-it-these-are-two-options-combined" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<ul>
+<li>i stands for interactive, and it allows you to interact with the container&rsquo;s stdin.</li>
+<li>t allocates a pseudo-TTY, which enables a terminal inside the container.</li>
+</ul>
+<p>So, -it together is often used when you want to run an interactive session inside the container</p>
+<h5 id="or-perhaps-you-want-to-run">or, perhaps you want to run<a href="#or-perhaps-you-want-to-run" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman run --name test --rm docker.io/library/alpine <span style="color:#e6db74">&#34;cat&#34;</span> /etc/os-release
+</span></span></code></pre></div><p>Here&rsquo;s the breakdown of the command:</p>
+<ul>
+<li>podman run: This is the command to run a container with Podman.</li>
+<li>&ndash;name test: This option assigns the name &ldquo;test&rdquo; to the running container. This allows you to reference the container by this name instead of using its container ID.</li>
+<li>&ndash;rm: This option instructs Podman to automatically remove the container when it exits. This is useful for temporary containers.</li>
+<li>docker.io/library/alpine: This is the name of the Docker image from which to create the container. In this case, it&rsquo;s the official Alpine Linux image from Docker Hub.</li>
+<li>&ldquo;cat&rdquo; /etc/os-release: This is the command that will be executed within the container. It runs the cat command to display the contents of the /etc/os-release file, which contains information about the operating system.</li>
+</ul>
+<h4 id="exited-want-to-return">Exited? Want to return?<a href="#exited-want-to-return" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker start -a -i <span style="color:#e6db74">`</span>docker ps -q -l<span style="color:#e6db74">`</span>
+</span></span></code></pre></div><p>Explanation:</p>
+<ul>
+<li>docker start start a container (requires name or ID)</li>
+<li>-a attach to container</li>
+<li>-i interactive mode</li>
+<li>docker ps List containers</li>
+<li>-q list only container IDs</li>
+<li>-l list only last created container</li>
+</ul>
+<h4 id="and-then-to-list-all">And then, to list all<a href="#and-then-to-list-all" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>And to list all,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman images
+</span></span></code></pre></div><h3 id="getting-rid-of-it">Getting rid of it?<a href="#getting-rid-of-it" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Just list first,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman ps -a
+</span></span></code></pre></div><p>and then,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman rm &lt;container-id&gt;
+</span></span></code></pre></div>
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>Creative common CC-0</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/logs/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
