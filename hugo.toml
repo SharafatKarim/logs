@@ -1,0 +1,110 @@
+baseurl = "https://sharafat.is-a.dev/logs/"
+
+languageCode = "en-us"
+# Add it only if you keep the theme in the `themes` directory.
+# Remove it if you use the theme as a remote Hugo Module.
+theme = "terminal"
+paginate = 500
+
+[params]
+  # dir name of your main content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = ""
+
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "green"
+
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 3
+
+  # show selector to switch language
+  showLanguageSelector = false
+
+  # set theme to full screen width
+  fullWidthTheme = false
+
+  # center theme with default width
+  centerTheme = true
+
+  # if your resource directory contains an image called `cover.(jpg|png|webp)`,
+  # then the file will be used as a cover automatically.
+  # With this option you don't have to put the `cover` param in a front-matter.
+  autoCover = true
+
+  # set post to show the last updated
+  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+  showLastUpdated = true
+
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
+
+  # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+  updatedDatePrefix = "Last Updated"
+
+  # set all headings to their default size (depending on browser settings)
+  # oneHeadingSize = true # default
+
+  # whether to show a page's estimated reading time
+  readingTime = true # default
+
+  # whether to show a table of contents
+  # can be overridden in a page's front-matter
+  # Toc = false # default
+
+  # set title for the table of contents
+  # can be overridden in a page's front-matter
+  # TocTitle = "Table of Contents" # default
+
+[permalinks]
+  posts = "/:title"
+
+[params.twitter]
+  # set Twitter handles for Twitter cards
+  # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
+  # do not include @
+  creator = "sharafat2004"
+  site = "sharafat2004"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Sharafat Karim | Logs"
+    subtitle = "A simple site for viewing logs..."
+    owner = "Sharafat Karim"
+    keywords = "logs"
+    copyright = "Creative common CC-0"
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    missingContentMessage = "Page not found..."
+    missingBackButtonLabel = "Back to home page"
+    minuteReadingTime = "Min read"
+    words = "words"
+
+    [languages.en.params.logo]
+      logoText = "Sharafat Karim | Logs"
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "My Blogs"
+        name = "My Blogs"
+        url = "https://sharafat.pages.dev/"
+      [[languages.en.menu.main]]
+        identifier = "GitHub Profile"
+        name = "GitHub Profile"
+        url = "https://github.com/SharafatKarim/"
+      [[languages.en.menu.main]]
+        identifier = "Logs Repository"
+        name = "Logs Repository"
+        url = "https://github.com/SharafatKarim/logs"
+
+# [module]
+  # In case you would like to make changes to the theme and keep it locally in you repository,
+  # uncomment the line below (and correct the local path if necessary).
+  # --
+  # replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
+# [[module.imports]]
+  # path = 'github.com/panr/hugo-theme-terminal'
