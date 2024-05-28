@@ -4,31 +4,17 @@
   <url>
     <loc>https://sharafat.is-a.dev/logs/a-bit-of-pacman/</loc>
   </url><url>
-    <loc>https://sharafat.is-a.dev/logs/about/</loc>
-  </url><url>
-    <loc>https://sharafat.is-a.dev/logs/bug_report/</loc>
-  </url><url>
     <loc>https://sharafat.is-a.dev/logs/categories/</loc>
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/ci-cd-with-github-actions/</loc>
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/ci-with-cpp/</loc>
   </url><url>
-    <loc>https://sharafat.is-a.dev/logs/community-features/</loc>
-  </url><url>
-    <loc>https://sharafat.is-a.dev/logs/default/</loc>
-  </url><url>
-    <loc>https://sharafat.is-a.dev/logs/feature_request/</loc>
-  </url><url>
     <loc>https://sharafat.is-a.dev/logs/getting-started-with-csharp/</loc>
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/git-ignored-files-remove/</loc>
   </url><url>
-    <loc>https://sharafat.is-a.dev/logs/hello/</loc>
-  </url><url>
     <loc>https://sharafat.is-a.dev/logs/journey-with-podman/</loc>
-  </url><url>
-    <loc>https://sharafat.is-a.dev/logs/license/</loc>
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/makefile-1/</loc>
   </url><url>
@@ -38,13 +24,7 @@
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/posts/</loc>
   </url><url>
-    <loc>https://sharafat.is-a.dev/logs/posts/</loc>
-  </url><url>
-    <loc>https://sharafat.is-a.dev/logs/readme/</loc>
-  </url><url>
     <loc>https://sharafat.is-a.dev/logs/</loc>
-  </url><url>
-    <loc>https://sharafat.is-a.dev/logs/showcase/</loc>
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/tags/</loc>
   </url><url>
@@ -53,7 +33,5 @@
     <loc>https://sharafat.is-a.dev/logs/tkinter/</loc>
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/tkinter2/</loc>
-  </url><url>
-    <loc>https://sharafat.is-a.dev/logs/users/</loc>
   </url>
 </urlset>
