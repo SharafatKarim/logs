@@ -17,6 +17,7 @@ def read_first_line(file):
             str = f.readline()
             if not(str.startswith("#") or str == "\n"):
                 break
+        str += f.readline()
         return str.strip()
 
 def generate_posts():
