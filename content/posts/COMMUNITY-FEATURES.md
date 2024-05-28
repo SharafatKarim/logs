@@ -1,7 +1,6 @@
 +++
 title = "COMMUNITY-FEATURES"
-description = "<!--
-Did a cool thing with the theme and want to share it with rest of the Hello Friend theme users? Jump in!"
+description = "<!--"
 +++
 
 # Community features

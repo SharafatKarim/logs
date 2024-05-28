@@ -1,7 +1,6 @@
 +++
 title = "Makefile-1"
-description = "For the repo,
-<https://github.com/sr-tamim/entropy-calculator/>"
+description = "For the repo,"
 +++
 
 # It's time to make a Makefile

@@ -1,7 +1,6 @@
 +++
 title = "feature_request"
-description = "---
-name: Feature request"
+description = "---"
 +++
 
 ---

@@ -1,7 +1,6 @@
 +++
 title = "default"
-description = "+++
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'"
+description = "+++"
 +++
 
 +++

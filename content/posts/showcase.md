@@ -1,7 +1,6 @@
 +++
 title = "showcase"
-description = "---
-title: "Showcase""
+description = "---"
 +++
 
 ---

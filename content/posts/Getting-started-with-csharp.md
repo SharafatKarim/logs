@@ -1,7 +1,6 @@
 +++
 title = "Getting-started-with-csharp"
-description = "- [Dotnet CLI](#dotnet-cli)
-- [`Main` method and Top-level statement](#main-method-and-top-level-statement)"
+description = "- [Dotnet CLI](#dotnet-cli)"
 +++
 
 # Getting started with C#

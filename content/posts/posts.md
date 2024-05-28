@@ -1,7 +1,6 @@
 +++
 title = "posts"
-description = "+++
-title = "{{ replace .TranslationBaseName "-" " " | title }}""
+description = "+++"
 +++
 
 +++

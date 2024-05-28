@@ -1,7 +1,6 @@
 +++
 title = "about"
-description = "+++
-title = "About""
+description = "+++"
 +++
 
 +++
