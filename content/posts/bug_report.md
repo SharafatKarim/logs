@@ -1,6 +1,7 @@
 +++
 title = "bug_report"
-description = "---"
+description = "---
+name: Bug report"
 +++
 
 ---

@@ -1,6 +1,7 @@
 +++
 title = "Tkinter"
-description = "```python"
+description = "```python
+from tkinter import Label, Tk"
 +++
 
 # Tkinter

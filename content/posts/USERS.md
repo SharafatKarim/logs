@@ -1,6 +1,7 @@
 +++
 title = "USERS"
-description = "- https://xicode.se **magistern** (Teacher)"
+description = "- https://xicode.se **magistern** (Teacher)
+- https://devmaster64.com **devmaster64** (Software Developer)"
 +++
 
 # Meet the users of Terminal theme!

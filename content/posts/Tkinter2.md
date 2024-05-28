@@ -1,6 +1,7 @@
 +++
 title = "Tkinter2"
-description = "```python"
+description = "```python
+from tkinter import Label, Tk, Button, Entry, PhotoImage"
 +++
 
 # Tkinter - Day two

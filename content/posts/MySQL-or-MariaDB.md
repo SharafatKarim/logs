@@ -1,6 +1,7 @@
 +++
 title = "MySQL-or-MariaDB"
-description = "As I'm on archlinux,"
+description = "As I'm on archlinux,
+let's try to initialize a server, I guess."
 +++
 
 As I'm on archlinux,
