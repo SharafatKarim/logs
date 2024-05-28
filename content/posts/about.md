@@ -1,5 +1,10 @@
 +++
 title = "about"
+description = ""
++++
+
++++
+title = "about"
 description = "+++"
 +++
 
@@ -25,4 +30,5 @@ The theme includes:
 - mobile friendly layout
 
 So, there you have it... enjoy!
+
 

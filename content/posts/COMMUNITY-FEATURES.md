@@ -1,5 +1,10 @@
 +++
 title = "COMMUNITY-FEATURES"
+description = ""
++++
+
++++
+title = "COMMUNITY-FEATURES"
 description = "<!--"
 +++
 
@@ -28,4 +33,5 @@ eg:
 - **Single Page Website** (https://github.com/justinnuwin/hugo-theme-terminal)
   - A layout where the homepage can render lists of pages and the navigation menu can link to sections on the homepage.
   - Justin Nguyen, software and hardware developer.
+
 
