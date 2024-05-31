@@ -42,8 +42,37 @@ Installing packages sudo pacman -S &amp;lt;package&amp;gt; Removing packages sud
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://sharafat.is-a.dev/logs/an-article-about-vscode-vscodium-and-code-oss/</guid>
-      <description>vscode, vscodium and code OSS </description>
+      <description>vscode, vscodium and code OSS আসসালমু আলাইকুম। আশা করি ভালোই আছেন আপনারা। সত্য বলতে তাড়াহুড়ো করে লেখা, তাই ভুলগুলো ক্ষমাসুন্দর দৃষ্টিতে দেখার অনুরোধ রইলো।
+VS CODE কথা না বাড়িয়ে চলে আসি vscode (visual studio code) নিয়ে। এটা একটা টেক্সট এডিটর। আসলেই কি তাই?
+যখন আপনাকে সিম্পল একটা টেক্সট ফাইল এডিট করতে বলা হবে, হয়তো নোটপ্যাড আছে। যতটুকু দরকার প্রায় সবই করা যাবে, তাই না? যারা একটু প্রোগ্রামিং সম্পর্কে ধারণা রাখেন, তারা হয়তো বলবে vscode এর কথা। তাহলে নোডপ্যাড আর vscode তো একই কাজের জন্য, তাই না?</description>
       <content>&lt;h1 id=&#34;vscode-vscodium-and-code-oss&#34;&gt;vscode, vscodium and code OSS&lt;/h1&gt;
+&lt;p&gt;আসসালমু আলাইকুম। আশা করি ভালোই আছেন আপনারা। সত্য বলতে তাড়াহুড়ো করে লেখা, তাই ভুলগুলো ক্ষমাসুন্দর দৃষ্টিতে দেখার অনুরোধ রইলো।&lt;/p&gt;
+&lt;h2 id=&#34;vs-code&#34;&gt;VS CODE&lt;/h2&gt;
+&lt;p&gt;কথা না বাড়িয়ে চলে আসি vscode (visual studio code) নিয়ে। এটা একটা টেক্সট এডিটর। আসলেই কি তাই?&lt;/p&gt;
+&lt;p&gt;যখন আপনাকে সিম্পল একটা টেক্সট ফাইল এডিট করতে বলা হবে, হয়তো নোটপ্যাড আছে। যতটুকু দরকার প্রায় সবই করা যাবে, তাই না? যারা একটু প্রোগ্রামিং সম্পর্কে ধারণা রাখেন, তারা হয়তো বলবে vscode এর কথা। তাহলে নোডপ্যাড আর vscode তো একই কাজের জন্য, তাই না?&lt;/p&gt;
+&lt;p&gt;যারা নিয়মিত ব্যবহার করেন vscode, কেউ কেউ উত্তরস্বরূপ উপস্থাপন করতে পারেন, বিভিন্ন প্রোগ্রামিং ভাষার কোডের বিভিন্ন অংশ বিভিন্ন বর্ণে রঙিন হয়ে থাকে, এক কথায় syntax highligting। আবার কেউ বা অন্যান্য কিছূ সুবিধা যেমন, snippet, auto suggestion এর কথা স্মরণ করিয়ে দিবেন। আর কেউ বা extension এর কথাও বলতে পারেন। তবে আমি সেদিকে যাচ্ছি না আজ।&lt;/p&gt;
+&lt;p&gt;যারা একেবারেই, vscode নিয়ে জানেন না তাদের জন্য একটি লিংক রেখে যাচ্ছি,
+&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;https://code.visualstudio.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-question&#34;&gt;The Question&lt;/h2&gt;
+&lt;p&gt;তাহলে এতটুকু ধারণা করা যায়, যে এটার মাধ্যমে আমরা সহজে কোড তো লিখতে পারবো। কিন্তু যেহেতু কোড বলে কথা, একটু তো প্রাইভেসি এর দরকার আছে তাই না? আপনি নিশ্চয়ই চাইবেন না যেনো, আপনার হাড়ভাঙা পরিশ্রমের লেখা কোড অন্য কোনো তৃতীয় পক্ষ তাদের মেশিন লার্নিং এ ব্যবহার করে। তাই না?&lt;/p&gt;
+&lt;p&gt;এই প্রাইভেসি সমস্যা সমাধানে, বেশ কয়েকটি উপায়ের মধ্যে, আমার দৃষ্টিতে সেরা উপায়টা হলো open source সফটওয়্যার ব্যবহার। আর vs code বলা যায় open source software। তাহলে সমস্যা সমাধান তো হয়েই গেলো। তাই না?&lt;/p&gt;
+&lt;h2 id=&#34;the-twist&#34;&gt;The Twist&lt;/h2&gt;
+&lt;p&gt;মজার ব্যাপার টা এখানে, যে আসলে সত্য বলতে কিছুই সমাধান হয় নি। vs code সম্পূর্ণরূপে open source না। কিছুটা proprietery এর ছোঁয়া রয়েই গেছে (source code)। আর আপনি এটাও জানেন না যে GitHub থেকে তারা exact code নিয়ে build করে নাকি কিছূ পরিবর্তন করে build করে। তাহলে উপায়?&lt;/p&gt;
+&lt;p&gt;এই প্রসঙ্গে পরিচয় করিয়ে দেই, দুটো বেশ জনপ্রিয় vs code এর open source alternative যাদের উৎপত্তি vs code থেকেই। তাহলে আমরা যদি এদেরকে vs code এর derivative বা সন্তান ধরি, আশা করি আমি ভুল নই। আমি দুটো বলেছি, তার মানে আবার এটা আপনারা ধরে নিয়েন না যে কেবল দুটোই আছে।&lt;/p&gt;
+&lt;h2 id=&#34;vscodium&#34;&gt;VSCODIUM&lt;/h2&gt;
+&lt;p&gt;Vscodium বলা যায় vscode এর উপর ভিত্তি করা সবচেয়ে জনপ্রিয় বিল্ড। এখানে microsoft এর টেলিমেট্রি গুলো ছাঁটাই করা হয়েছে, অপ্রয়োজনীয় dependency আর ঝামেলা মুক্ত। একেবারেই open source। বেশ মজার, তাই না?&lt;/p&gt;
+&lt;p&gt;এর website টা হলো, &lt;a href=&#34;https://vscodium.com/&#34;&gt;https://vscodium.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;এখানে ভিজিট করে আপনারা হয়তো নিশ্চয়ই এর বৈশিষ্ট্য গুলো জেনে নিয়েছে। সেদিকে আমি না হয় নাই বললাম, আমি বরং সমস্যাগুলোতে ফোকাস করি। সমস্যার কথা যদি বলতেই হয়, তাহলে যেটা আপনাকে চিন্তিত করার জন্য যথেষ্ঠ সেটা হলো extension!&lt;/p&gt;
+&lt;p&gt;হ্যাঁ, আপনি সব vs code এর extension পাবেন না। পাবেন না বলতে আমি বলতে চাচ্ছি বাম পাশের (by deafault তো বামেই থাকে তাই না?) extension এর store থেকে পাবেন না। তবে হ্যাঁ, আপনি চাইলে vs code এর official website থেকে extension bundle নামিয়ে তারপর install করতেই পারবেন। আর চাইলে vs code এর extension source entry ও করে নিতে পারবেন। বাকিটা আর বললাম না, কারণ আপনি নিশ্চয়ই এতোক্ষণে সার্চ ইঞ্জিনে এতোক্ষণে অনেক কিছূ খুঁজে নিয়েছেন। একটা লিংক রেখে গেলাম একপলকে step গুলো দেখে নিতে পারেন, &lt;a href=&#34;https://milicendev.netlify.app/article/install-vs-codium-and-integrate-vs-code-extensions/&#34;&gt;https://milicendev.netlify.app/article/install-vs-codium-and-integrate-vs-code-extensions/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;আরেকটা হয়তো ছোটখাটো চিন্তা মাথায় আপনার ক্রস করতে পারে, setting and account sync? সত্য বলতে vscodium এর setting.json টা আপনি backup রাখুন। extension এর বেলাতেও একই কথা প্রযোজ্য। একটা লিংক রেখে যাচ্ছি, &lt;a href=&#34;https://superuser.com/questions/1080682/how-do-i-back-up-my-vs-code-settings-and-list-of-installed-extensions&#34;&gt;https://superuser.com/questions/1080682/how-do-i-back-up-my-vs-code-settings-and-list-of-installed-extensions&lt;/a&gt; । আশা করি আপনারা নিজেরাই বুৃঝে গেছেন এতোক্ষনে।&lt;/p&gt;
+&lt;h2 id=&#34;code-oss&#34;&gt;Code OSS&lt;/h2&gt;
+&lt;p&gt;এটাও আরেকটা alternative vscode build। এটা তাদের জন্য যারা একটু সিকিউরিটি নিয়ে বেশীই concerned। আমি লিংক রেখে যাচ্ছি, &lt;a href=&#34;https://github.com/code-oss-dev/code&#34;&gt;https://github.com/code-oss-dev/code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;সাধারণত বিভিন্ন লিনাক্স ডিস্ট্রোগুলো by default এই package ship করে, যেমন, Arch Linux. এটা একটু বেশীই lightweight এবং হয়তো এখানে বেশ কিছূ proprietery extension একেবারেই কাজ নাও করতে পারে। একদম bare minimal বলে যদি কিছূ একটা থাকে তাহলে এর প্রকৃষ্ঠ উদাহারণ হতে পারে এই প্রজেক্ট। খুব সুন্দর একটা বিষয়, তাই না?&lt;/p&gt;
+&lt;p&gt;তাহলে কি আমরা এখানেও vscodium এর মতো extension যুক্ত করতে পারবো। অবশ্যই। বলা যায় একই প্রসেস। তবে যেহেতু code oss লিনাক্সে বেশী প্রচলিত তাই আপনি vs code এর marketplace যুক্ত করার জন্য আলাদা package ই পেয়ে যাবেন আশা করি। তাহলে তো কষ্ট কমে গেলো, তাই না?&lt;/p&gt;
+&lt;p&gt;যেমন, Archlinux এ আপনারা এই package পেয়ে যাবেন, Arch user repository তে, &lt;a href=&#34;https://aur.archlinux.org/packages/code-marketplace&#34;&gt;https://aur.archlinux.org/packages/code-marketplace&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;সত্য বলতে, ঠিক এইধরণের pacakge আপনারা vscodium এর জন্যও পেয়ে যাবেন। এবার পছন্দ আপনার!&lt;/p&gt;
+&lt;h2 id=&#34;wrapping-up&#34;&gt;Wrapping up!&lt;/h2&gt;
+&lt;p&gt;এবার বিদায়ের পালা। আশা করি আপনার পোষ্ট টা উপভোগ করেছেন। তবে হ্যাঁ, আমি details এ কিছূই লেখি নি। আশা করি বাকি পথ আপনারা আপনার পছন্দের সার্চ ইঞ্জিনের সাথে চলতে পারবেন। আর প্রয়োজন হলে জানাতে পারেন। বিস্তারিত যদি কোনো স্টেপ জানার প্রয়োজন হয়। যেকোনো ভুল জন্য ক্ষমা করবেন। আজকের মতো এখানেই বিদায় নিলাম।&lt;/p&gt;
 </content>
     </item>
     
