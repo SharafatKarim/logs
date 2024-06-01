@@ -77,6 +77,22 @@ VS CODE কথা না বাড়িয়ে চলে আসি vscode (visual s
     </item>
     
     <item>
+      <title>Chaging-dns-server</title>
+      <link>https://sharafat.is-a.dev/logs/chaging-dns-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/chaging-dns-server/</guid>
+      <description>DNS server change Changing in ArchLinux mainly, let&amp;rsquo;s take a look here,
+Arch Wiki </description>
+      <content>&lt;h1 id=&#34;dns-server-change&#34;&gt;DNS server change&lt;/h1&gt;
+&lt;p&gt;Changing in ArchLinux mainly, let&amp;rsquo;s take a look here,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.archlinux.org/title/Domain_name_resolution#Overwriting_of_/etc/resolv.conf&#34;&gt;Arch Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
       <title>CI-CD-with-GitHub-Actions</title>
       <link>https://sharafat.is-a.dev/logs/ci-cd-with-github-actions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
