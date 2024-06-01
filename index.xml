@@ -59,6 +59,7 @@ VS CODE কথা না বাড়িয়ে চলে আসি vscode (visual s
 &lt;h2 id=&#34;the-twist&#34;&gt;The Twist&lt;/h2&gt;
 &lt;p&gt;মজার ব্যাপার টা এখানে, যে আসলে সত্য বলতে কিছুই সমাধান হয় নি। vs code সম্পূর্ণরূপে open source না। কিছুটা proprietery এর ছোঁয়া রয়েই গেছে (source code)। আর আপনি এটাও জানেন না যে GitHub থেকে তারা exact code নিয়ে build করে নাকি কিছূ পরিবর্তন করে build করে। তাহলে উপায়?&lt;/p&gt;
 &lt;p&gt;এই প্রসঙ্গে পরিচয় করিয়ে দেই, দুটো বেশ জনপ্রিয় vs code এর open source alternative যাদের উৎপত্তি vs code থেকেই। তাহলে আমরা যদি এদেরকে vs code এর derivative বা সন্তান ধরি, আশা করি আমি ভুল নই। আমি দুটো বলেছি, তার মানে আবার এটা আপনারা ধরে নিয়েন না যে কেবল দুটোই আছে।&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/SharafatKarim/logs/assets/93897936/d1e828ac-7f47-4ed4-9311-8eca30901b92&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;vscodium&#34;&gt;VSCODIUM&lt;/h2&gt;
 &lt;p&gt;Vscodium বলা যায় vscode এর উপর ভিত্তি করা সবচেয়ে জনপ্রিয় বিল্ড। এখানে microsoft এর টেলিমেট্রি গুলো ছাঁটাই করা হয়েছে, অপ্রয়োজনীয় dependency আর ঝামেলা মুক্ত। একেবারেই open source। বেশ মজার, তাই না?&lt;/p&gt;
 &lt;p&gt;এর website টা হলো, &lt;a href=&#34;https://vscodium.com/&#34;&gt;https://vscodium.com/&lt;/a&gt;&lt;/p&gt;
