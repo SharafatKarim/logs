@@ -23,3 +23,4 @@ Just bear with it, LOL.
 - [CI with C++ this time](./2024/CI-with-CPP.md)
 - [Tinkering with Cmake](./2024/Tinkering-with-Cmake.md)
 - [An article about Vscode, vscodium and code oss](./2024/An-article-about-Vscode-vscodium-and-code-oss.md)
+- [Chaging dns server](./2024/Chaging-dns-server.md)
