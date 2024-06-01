@@ -31,6 +31,8 @@ https://code.visualstudio.com/
 
 এই প্রসঙ্গে পরিচয় করিয়ে দেই, দুটো বেশ জনপ্রিয় vs code এর open source alternative যাদের উৎপত্তি vs code থেকেই। তাহলে আমরা যদি এদেরকে vs code এর derivative বা সন্তান ধরি, আশা করি আমি ভুল নই। আমি দুটো বলেছি, তার মানে আবার এটা আপনারা ধরে নিয়েন না যে কেবল দুটোই আছে।
 
+![image](https://github.com/SharafatKarim/logs/assets/93897936/d1e828ac-7f47-4ed4-9311-8eca30901b92)
+
 ## VSCODIUM
 
 Vscodium বলা যায় vscode এর উপর ভিত্তি করা সবচেয়ে জনপ্রিয় বিল্ড। এখানে microsoft এর টেলিমেট্রি গুলো ছাঁটাই করা হয়েছে, অপ্রয়োজনীয় dependency আর ঝামেলা মুক্ত। একেবারেই open source। বেশ মজার, তাই না?
