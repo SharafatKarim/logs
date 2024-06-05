@@ -24,3 +24,4 @@ Just bear with it, LOL.
 - [Tinkering with Cmake](./2024/Tinkering-with-Cmake.md)
 - [An article about Vscode, vscodium and code oss](./2024/An-article-about-Vscode-vscodium-and-code-oss.md)
 - [Chaging dns server](./2024/Chaging-dns-server.md)
+- [A taste of tailwindcss](./2024/A-taste-of-tailwindcss.md)
