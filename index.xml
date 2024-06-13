@@ -730,9 +730,9 @@ sudo pacman -S podman First pull Alpine podman pull docker.io/library/alpine Fir
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://sharafat.is-a.dev/logs/location-in-a-matrix-1-to-n/</guid>
-      <description>Location in a matrix For 1D array, we can easily find the location of an element in the array. But for 2D array, it is a bit tricky. Let&amp;rsquo;s see how we can find the location of an element in a 2D array.</description>
+      <description>Location in a matrix For 1D array, we can easily find the location of an element in the array. But for 2D array, it is a bit tricky. Let&amp;rsquo;s see how we can find the location of an element in a 1D or 2D or maybe a bit more dimentional array.</description>
       <content>&lt;h1 id=&#34;location-in-a-matrix&#34;&gt;Location in a matrix&lt;/h1&gt;
-&lt;p&gt;For 1D array, we can easily find the location of an element in the array. But for 2D array, it is a bit tricky. Let&amp;rsquo;s see how we can find the location of an element in a 2D array.&lt;/p&gt;
+&lt;p&gt;For 1D array, we can easily find the location of an element in the array. But for 2D array, it is a bit tricky. Let&amp;rsquo;s see how we can find the location of an element in a 1D or 2D or maybe a bit more dimentional array.&lt;/p&gt;
 </content>
     </item>
     
