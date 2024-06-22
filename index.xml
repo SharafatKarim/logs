@@ -311,6 +311,29 @@ name: C/C++ CI - MAKEFILE on: - push - pull_request jobs: build: runs-on: ubuntu
     </item>
     
     <item>
+      <title>Duplicate-music-find-and-remove</title>
+      <link>https://sharafat.is-a.dev/logs/duplicate-music-find-and-remove/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/duplicate-music-find-and-remove/</guid>
+      <description>Duplicate music find and remove I have a lot of music files in my system. I have been collecting them for a long time. I have a lot of duplicates. I want to remove them. So that&amp;rsquo;s what my concern is,
+found something interesting,
+https://codeberg.org/derat/soundalike Thinking this tool just outputs duplicates, so I&amp;rsquo;m thinking for a bash script should do the work for deletion. Or, perhaps,
+https://askubuntu.com/questions/4323/how-can-i-find-duplicate-songs </description>
+      <content>&lt;h1 id=&#34;duplicate-music-find-and-remove&#34;&gt;Duplicate music find and remove&lt;/h1&gt;
+&lt;p&gt;I have a lot of music files in my system. I have been collecting them for a long time. I have a lot of duplicates. I want to remove them. So that&amp;rsquo;s what my concern is,&lt;/p&gt;
+&lt;p&gt;found something interesting,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://codeberg.org/derat/soundalike&#34;&gt;https://codeberg.org/derat/soundalike&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thinking this tool just outputs duplicates, so I&amp;rsquo;m thinking for a bash script should do the work for deletion. Or, perhaps,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://askubuntu.com/questions/4323/how-can-i-find-duplicate-songs&#34;&gt;https://askubuntu.com/questions/4323/how-can-i-find-duplicate-songs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Getting-started-with-csharp</title>
       <link>https://sharafat.is-a.dev/logs/getting-started-with-csharp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
