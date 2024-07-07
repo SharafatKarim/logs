@@ -145,7 +145,7 @@
   <h1 class="post-title">
     <a href="https://sharafat.is-a.dev/logs/a-taste-of-tailwindcss/">A-taste-of-tailwindcss</a>
   </h1>
-  <div class="post-meta"><span class="post-reading-time">2 Min read (290 words)</span></div>
+  <div class="post-meta"><span class="post-reading-time">2 Min read (407 words)</span></div>
 
   
   
@@ -217,7 +217,41 @@
 </span></span></code></pre></div><blockquote>
 <p>I was needed to run <code>npm install</code> to install the dependencies once more.</p>
 </blockquote>
-
+<h3 id="building-css">Building css<a href="#building-css" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>For now, I changed my css file to,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#66d9ef">tailwind</span> <span style="color:#f92672">base</span>;
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">tailwind</span> <span style="color:#f92672">components</span>;
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">tailwind</span> <span style="color:#f92672">utilities</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">layer</span> <span style="color:#f92672">components</span> {
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">btn</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">@apply</span> <span style="color:#960050;background-color:#1e0010">mt-4</span> <span style="color:#960050;background-color:#1e0010">inline-block</span> <span style="color:#960050;background-color:#1e0010">bg-indigo-500</span> <span style="color:#960050;background-color:#1e0010">px-5</span> <span style="color:#960050;background-color:#1e0010">py-4</span> <span style="color:#960050;background-color:#1e0010">shadow-lg</span> <span style="color:#960050;background-color:#1e0010">rounded-lg</span> <span style="color:#960050;background-color:#1e0010">uppercase</span> <span style="color:#960050;background-color:#1e0010">tracking-wider</span> <span style="color:#960050;background-color:#1e0010">text-white</span> <span style="color:#960050;background-color:#1e0010">font-semibold</span> <span style="color:#960050;background-color:#1e0010">text-sm</span> sm:<span style="color:#66d9ef">text</span><span style="color:#f92672">-</span>base hover<span style="color:#f92672">:</span>bg-indigo-600 <span style="color:#66d9ef">transition</span> duration-300 <span style="color:#66d9ef">ease-in-out</span> <span style="color:#66d9ef">transform</span> <span style="color:#66d9ef">transition</span> hover<span style="color:#f92672">:-</span>translate-y-1 hover<span style="color:#f92672">:</span>shadow-xl
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>But I was needed to run the following command to build the css file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx tailwindcss-cli build css/tailwind.css -o build/tailwind.css
+</span></span></code></pre></div><p>So tweaked my <code>package.json</code> file to include the following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;tailwind&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;index.js&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;scripts&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;vite build&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;build-css&#34;</span>: <span style="color:#e6db74">&#34;npx tailwindcss-cli build css/tailwind.css -o build/tailwind.css&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;dev&#34;</span>: <span style="color:#e6db74">&#34;vite&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;keywords&#34;</span>: [],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;author&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;license&#34;</span>: <span style="color:#e6db74">&#34;ISC&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;devDependencies&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;autoprefixer&#34;</span>: <span style="color:#e6db74">&#34;^10.4.19&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;postcss&#34;</span>: <span style="color:#e6db74">&#34;^8.4.38&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;tailwindcss&#34;</span>: <span style="color:#e6db74">&#34;^3.4.3&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;vite&#34;</span>: <span style="color:#e6db74">&#34;^5.2.12&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
       </div></div>
 
   
