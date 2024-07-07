@@ -112,3 +112,50 @@ npm run dev
 
 > I was needed to run `npm install` to install the dependencies once more.
 
+### Building css
+
+For now, I changed my css file to,
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply mt-4 inline-block bg-indigo-500 px-5 py-4 shadow-lg rounded-lg uppercase tracking-wider text-white font-semibold text-sm sm:text-base hover:bg-indigo-600 transition duration-300 ease-in-out transform transition hover:-translate-y-1 hover:shadow-xl
+    }
+}
+```
+
+But I was needed to run the following command to build the css file.
+
+```bash
+npx tailwindcss-cli build css/tailwind.css -o build/tailwind.css
+```
+
+So tweaked my `package.json` file to include the following command.
+
+```json
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build", 
+    "build-css": "npx tailwindcss-cli build css/tailwind.css -o build/tailwind.css", 
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.12"
+  }
+}
+```
+
