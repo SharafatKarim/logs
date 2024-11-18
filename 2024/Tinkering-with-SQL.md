@@ -38,3 +38,29 @@ For the advanced commands sections, I will be covering the following topics:
 13. Union
 14. Intersect
 15. Except
+
+## Introduction
+
+## Installation
+
+## Basic
+
+### Create database
+
+### Create table
+
+#### View table
+
+- To view the table, use the following command:
+
+```sql
+DESC table_name;
+```
+
+- or, use DESCRIBE instead of DESC.
+
+```sql
+DESCRIBE table_name;
+```
+
+## Advanced
