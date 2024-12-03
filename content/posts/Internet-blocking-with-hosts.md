@@ -1,13 +1,13 @@
 +++
 title = "Internet-blocking-with-hosts"
-description = "এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে,"
+description = "এই ফাইল মূলত কোনো একটা `address (URL)` কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে `adblocking` এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা `0.0.0.0` (`localhost`) এ forward করি, এই ফরম্যাটে,"
 +++
 
 # Internet blocking with hosts
 
 ## Hostfile
 
-এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে,
+এই ফাইল মূলত কোনো একটা `address (URL)` কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে `adblocking` এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা `0.0.0.0` (`localhost`) এ forward করি, এই ফরম্যাটে,
 
 ```bash
 127.0.0.1       localhost
@@ -50,5 +50,5 @@ C:\Windows\System32\drivers\etc\hosts
 
 - <https://github.com/StevenBlack/hosts>
 
-এখানকার `hosts` নামের ফাইলটি কপি করে যদি আপনার OS অনুযায়ী সেট করেন, auto সব ad block হবে। ব্রাউজারে কোনো আলাদা extension লাগবে না। এমনিতেও বর্তমানে chrome browser, ublock origin সমর্থন করবে না (manifest v3 fact)।
+এখানকার `hosts` নামের ফাইলটি কপি করে যদি আপনার OS অনুযায়ী সেট করেন, auto সব ad block হবে। ব্রাউজারে কোনো আলাদা extension লাগবে না। এমনিতেও বর্তমানে chrome browser, ublock origin সমর্থন করবে না (`manifest` v3 fact)।
 
