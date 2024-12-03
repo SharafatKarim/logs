@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Internet-blocking-with-hosts :: Sharafat Karim | Logs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে," />
+<meta name="keywords" content="logs" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://sharafat.is-a.dev/logs/internet-blocking-with-hosts/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://sharafat.is-a.dev/logs/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+  <link rel="apple-touch-icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="sharafat2004" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Internet-blocking-with-hosts">
+<meta property="og:description" content="এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে," />
+<meta property="og:url" content="https://sharafat.is-a.dev/logs/internet-blocking-with-hosts/" />
+<meta property="og:site_name" content="Sharafat Karim | Logs" />
+
+  
+    <meta property="og:image" content="https://sharafat.is-a.dev/logs/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/logs">
+  <div class="logo">
+    Sharafat Karim | Logs
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://github.com/SharafatKarim/">GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs">Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/">My Blogs</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="https://github.com/SharafatKarim/" >GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs" >Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/" >My Blogs</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://sharafat.is-a.dev/logs/internet-blocking-with-hosts/">Internet-blocking-with-hosts</a>
+  </h1>
+  <div class="post-meta"><span class="post-reading-time">1 Min read (192 words)</span></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="internet-blocking-with-hosts">Internet blocking with hosts<a href="#internet-blocking-with-hosts" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="hostfile">Hostfile<a href="#hostfile" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>127.0.0.1       localhost
+</span></span><span style="display:flex;"><span>0.0.0.0         যাকে_ব্লক_করতে_চাই.com
+</span></span></code></pre></div><p>আরো বিস্তারিত জানতে এই link টি দেখতে পারেন,</p>
+<ul>
+<li><a href="https://man.archlinux.org/man/hosts.5">https://man.archlinux.org/man/hosts.5</a></li>
+</ul>
+<h3 id="linux">Linux<a href="#linux" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>লিনাক্স ফাইলসিস্টেমে host file এর location,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/etc/hosts
+</span></span></code></pre></div><h3 id="windows">Windows<a href="#windows" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>উইন্ডোজ ফাইলসিস্টেমে host file এর location,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>C:<span style="color:#ae81ff">\W</span>indows<span style="color:#ae81ff">\S</span>ystem32<span style="color:#ae81ff">\d</span>rivers<span style="color:#ae81ff">\e</span>tc<span style="color:#ae81ff">\h</span>osts
+</span></span></code></pre></div><blockquote>
+<p>পাশাপাশি আমি একটা batch script লিখেছি, এটাও দেখতে পারেন, সাধারণত এটা লেখা হয়েছে একটা কনটেস্ট কে সামনে রেখে (toph.co ভিন্ন বাকি অনেক সাইট, যেমন vscode extension, ব্লক করবে যা contest এর জন্য সীমাবদ্ধ)। এর দ্বিতীয় option দ্বারা hostfile পূর্বাবস্থায় নিয়ে যাওয়া যাবে।</p>
+<ul>
+<li>&laquo;<a href="https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74%3E">https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74&gt;</a></li>
+</ul>
+</blockquote>
+<h2 id="যদ-host-file-এ-delete-কর">যদি host file এ delete করি?<a href="#যদ-host-file-এ-delete-কর" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>তাহলে internet simply unblock হয়ে যাবে, as simple as that!</p>
+<h2 id="একট-বসতব-পরয়গ">একটা বাস্তব প্রয়োগ?<a href="#একট-বসতব-পরয়গ" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>এই GitHub repository টি দেখতে পারেন, এখানে বিজ্ঞাপন ও অপ্রাসঙ্গিক website গুলো ব্লক করার জন্য একটা বড়সড় collection আছে।</p>
+<ul>
+<li><a href="https://github.com/StevenBlack/hosts">https://github.com/StevenBlack/hosts</a></li>
+</ul>
+<p>এখানকার <code>hosts</code> নামের ফাইলটি কপি করে যদি আপনার OS অনুযায়ী সেট করেন, auto সব ad block হবে। ব্রাউজারে কোনো আলাদা extension লাগবে না। এমনিতেও বর্তমানে chrome browser, ublock origin সমর্থন করবে না (manifest v3 fact)।</p>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>Creative common CC-0</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/logs/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

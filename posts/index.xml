@@ -726,6 +726,48 @@ Then use git clean -xdf to execute it.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Internet-blocking-with-hosts</title>
+      <link>https://sharafat.is-a.dev/logs/internet-blocking-with-hosts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/internet-blocking-with-hosts/</guid>
+      <description>Internet blocking with hosts Hostfile এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে,
+127.0.0.1 localhost 0.0.0.0 যাকে_ব্লক_করতে_চাই.com আরো বিস্তারিত জানতে এই link টি দেখতে পারেন,
+https://man.archlinux.org/man/hosts.5 Linux লিনাক্স ফাইলসিস্টেমে host file এর location,
+/etc/hosts Windows উইন্ডোজ ফাইলসিস্টেমে host file এর location,</description>
+      <content>&lt;h1 id=&#34;internet-blocking-with-hosts&#34;&gt;Internet blocking with hosts&lt;/h1&gt;
+&lt;h2 id=&#34;hostfile&#34;&gt;Hostfile&lt;/h2&gt;
+&lt;p&gt;এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;127.0.0.1       localhost
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.0.0.0         যাকে_ব্লক_করতে_চাই.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;আরো বিস্তারিত জানতে এই link টি দেখতে পারেন,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://man.archlinux.org/man/hosts.5&#34;&gt;https://man.archlinux.org/man/hosts.5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
+&lt;p&gt;লিনাক্স ফাইলসিস্টেমে host file এর location,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/etc/hosts
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
+&lt;p&gt;উইন্ডোজ ফাইলসিস্টেমে host file এর location,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;C:&lt;span style=&#34;color:#ae81ff&#34;&gt;\W&lt;/span&gt;indows&lt;span style=&#34;color:#ae81ff&#34;&gt;\S&lt;/span&gt;ystem32&lt;span style=&#34;color:#ae81ff&#34;&gt;\d&lt;/span&gt;rivers&lt;span style=&#34;color:#ae81ff&#34;&gt;\e&lt;/span&gt;tc&lt;span style=&#34;color:#ae81ff&#34;&gt;\h&lt;/span&gt;osts
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;পাশাপাশি আমি একটা batch script লিখেছি, এটাও দেখতে পারেন, সাধারণত এটা লেখা হয়েছে একটা কনটেস্ট কে সামনে রেখে (toph.co ভিন্ন বাকি অনেক সাইট, যেমন vscode extension, ব্লক করবে যা contest এর জন্য সীমাবদ্ধ)। এর দ্বিতীয় option দ্বারা hostfile পূর্বাবস্থায় নিয়ে যাওয়া যাবে।&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;laquo;&lt;a href=&#34;https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74%3E&#34;&gt;https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;যদ-host-file-এ-delete-কর&#34;&gt;যদি host file এ delete করি?&lt;/h2&gt;
+&lt;p&gt;তাহলে internet simply unblock হয়ে যাবে, as simple as that!&lt;/p&gt;
+&lt;h2 id=&#34;একট-বসতব-পরয়গ&#34;&gt;একটা বাস্তব প্রয়োগ?&lt;/h2&gt;
+&lt;p&gt;এই GitHub repository টি দেখতে পারেন, এখানে বিজ্ঞাপন ও অপ্রাসঙ্গিক website গুলো ব্লক করার জন্য একটা বড়সড় collection আছে।&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/StevenBlack/hosts&#34;&gt;https://github.com/StevenBlack/hosts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;এখানকার &lt;code&gt;hosts&lt;/code&gt; নামের ফাইলটি কপি করে যদি আপনার OS অনুযায়ী সেট করেন, auto সব ad block হবে। ব্রাউজারে কোনো আলাদা extension লাগবে না। এমনিতেও বর্তমানে chrome browser, ublock origin সমর্থন করবে না (manifest v3 fact)।&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Journey-with-podman</title>
       <link>https://sharafat.is-a.dev/logs/journey-with-podman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -778,6 +820,28 @@ sudo pacman -S podman First pull Alpine podman pull docker.io/library/alpine Fir
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;podman ps -a
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and then,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;podman rm &amp;lt;container-id&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>Linking-multiple-container-podman</title>
+      <link>https://sharafat.is-a.dev/logs/linking-multiple-container-podman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/linking-multiple-container-podman/</guid>
+      <description>Podman linking Here&amp;rsquo;s a short guide,
+https://discussion.fedoraproject.org/t/how-to-link-a-container-podman/77108 Tldr; I think the simplest is to run the two containers in the same pod. Something like:
+podman pod create -n logicaldoc -p 8080:8080 podman run &amp;lt;other flags&amp;gt; --pod logicaldoc mysql:8.0 podman run &amp;lt;other flags&amp;gt; --pod logicaldoc logicaldoc/logicaldoc-ce </description>
+      <content>&lt;h1 id=&#34;podman-linking&#34;&gt;Podman linking&lt;/h1&gt;
+&lt;p&gt;Here&amp;rsquo;s a short guide,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://discussion.fedoraproject.org/t/how-to-link-a-container-podman/77108&#34;&gt;https://discussion.fedoraproject.org/t/how-to-link-a-container-podman/77108&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;Tldr;&lt;/h2&gt;
+&lt;p&gt;I think the simplest is to run the two containers in the same pod. Something like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;podman pod create -n logicaldoc -p 8080:8080
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;podman run &amp;lt;other flags&amp;gt; --pod logicaldoc mysql:8.0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;podman run &amp;lt;other flags&amp;gt; --pod logicaldoc logicaldoc/logicaldoc-ce
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
     </item>
     
@@ -1046,6 +1110,73 @@ A basic cmake file CMakeLists.</description>
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;set(&lt;span style=&#34;color:#e6db74&#34;&gt;CPACK_PROJECT_VERSION&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;${&lt;/span&gt;PROJECT_VERSION&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;)&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;include(&lt;span style=&#34;color:#e6db74&#34;&gt;CPack&lt;/span&gt;)&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
+      <title>Tinkering-with-SQL</title>
+      <link>https://sharafat.is-a.dev/logs/tinkering-with-sql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/tinkering-with-sql/</guid>
+      <description>It&amp;rsquo;s SQL time Overview I will be making an SQL tutorial. Here&amp;rsquo;s the overall sequence of the tutorial:
+Introduction Installation Basic commands Advanced commands Conclusion For the basic commands sections, I will be covering the following topics:
+Create database Drop database Create table Drop table Insert data Select data Update data Delete data For the advanced commands sections, I will be covering the following topics:
+Join Group by Order by Having Subquery Index View Transaction Trigger Procedure Function Cursor Union Intersect Except Introduction Installation Basic Create database Create table View table To view the table, use the following command: DESC table_name; or, use DESCRIBE instead of DESC.</description>
+      <content>&lt;h1 id=&#34;its-sql-time&#34;&gt;It&amp;rsquo;s SQL time&lt;/h1&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;I will be making an SQL tutorial. Here&amp;rsquo;s the overall sequence of the tutorial:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Introduction&lt;/li&gt;
+&lt;li&gt;Installation&lt;/li&gt;
+&lt;li&gt;Basic commands&lt;/li&gt;
+&lt;li&gt;Advanced commands&lt;/li&gt;
+&lt;li&gt;Conclusion&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For the basic commands sections, I will be covering the following topics:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create database&lt;/li&gt;
+&lt;li&gt;Drop database&lt;/li&gt;
+&lt;li&gt;Create table&lt;/li&gt;
+&lt;li&gt;Drop table&lt;/li&gt;
+&lt;li&gt;Insert data&lt;/li&gt;
+&lt;li&gt;Select data&lt;/li&gt;
+&lt;li&gt;Update data&lt;/li&gt;
+&lt;li&gt;Delete data&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For the advanced commands sections, I will be covering the following topics:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Join&lt;/li&gt;
+&lt;li&gt;Group by&lt;/li&gt;
+&lt;li&gt;Order by&lt;/li&gt;
+&lt;li&gt;Having&lt;/li&gt;
+&lt;li&gt;Subquery&lt;/li&gt;
+&lt;li&gt;Index&lt;/li&gt;
+&lt;li&gt;View&lt;/li&gt;
+&lt;li&gt;Transaction&lt;/li&gt;
+&lt;li&gt;Trigger&lt;/li&gt;
+&lt;li&gt;Procedure&lt;/li&gt;
+&lt;li&gt;Function&lt;/li&gt;
+&lt;li&gt;Cursor&lt;/li&gt;
+&lt;li&gt;Union&lt;/li&gt;
+&lt;li&gt;Intersect&lt;/li&gt;
+&lt;li&gt;Except&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;basic&#34;&gt;Basic&lt;/h2&gt;
+&lt;h3 id=&#34;create-database&#34;&gt;Create database&lt;/h3&gt;
+&lt;h3 id=&#34;create-table&#34;&gt;Create table&lt;/h3&gt;
+&lt;h4 id=&#34;view-table&#34;&gt;View table&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;To view the table, use the following command:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table_name&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;or, use DESCRIBE instead of DESC.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DESCRIBE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table_name&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;advanced&#34;&gt;Advanced&lt;/h2&gt;
+</content>
     </item>
     
     <item>
