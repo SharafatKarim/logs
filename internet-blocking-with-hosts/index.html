@@ -145,7 +145,7 @@
   <h1 class="post-title">
     <a href="https://sharafat.is-a.dev/logs/internet-blocking-with-hosts/">Internet-blocking-with-hosts</a>
   </h1>
-  <div class="post-meta"><span class="post-reading-time">1 Min read (192 words)</span></div>
+  <div class="post-meta"><span class="post-reading-time">2 Min read (225 words)</span></div>
 
   
   
@@ -159,7 +159,10 @@
 <p>এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে,</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>127.0.0.1       localhost
 </span></span><span style="display:flex;"><span>0.0.0.0         যাকে_ব্লক_করতে_চাই.com
-</span></span></code></pre></div><p>আরো বিস্তারিত জানতে এই link টি দেখতে পারেন,</p>
+</span></span></code></pre></div><blockquote>
+<p>এভাবে একটা একটা করে সাইট ব্লক করা যায়। যদি আপনি চান একটি নির্দিষ্ট সাইট ছাড়া বাকি সব ব্লক হবে তাহলে firewall rule set করতে হবে। তবে hostfile, firewall থেকে বেশী সহজ ও নিরাপদ।</p>
+</blockquote>
+<p>আরো বিস্তারিত জানতে এই link টি দেখতে পারেন,</p>
 <ul>
 <li><a href="https://man.archlinux.org/man/hosts.5">https://man.archlinux.org/man/hosts.5</a></li>
 </ul>
@@ -172,7 +175,7 @@
 </span></span></code></pre></div><blockquote>
 <p>পাশাপাশি আমি একটা batch script লিখেছি, এটাও দেখতে পারেন, সাধারণত এটা লেখা হয়েছে একটা কনটেস্ট কে সামনে রেখে (toph.co ভিন্ন বাকি অনেক সাইট, যেমন vscode extension, ব্লক করবে যা contest এর জন্য সীমাবদ্ধ)। এর দ্বিতীয় option দ্বারা hostfile পূর্বাবস্থায় নিয়ে যাওয়া যাবে।</p>
 <ul>
-<li>&laquo;<a href="https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74%3E">https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74&gt;</a></li>
+<li><a href="https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74">https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74</a></li>
 </ul>
 </blockquote>
 <h2 id="যদ-host-file-এ-delete-কর">যদি host file এ delete করি?<a href="#যদ-host-file-এ-delete-কর" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>

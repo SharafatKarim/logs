@@ -732,15 +732,16 @@ Then use git clean -xdf to execute it.&lt;/p&gt;
       
       <guid>https://sharafat.is-a.dev/logs/internet-blocking-with-hosts/</guid>
       <description>Internet blocking with hosts Hostfile এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে,
-127.0.0.1 localhost 0.0.0.0 যাকে_ব্লক_করতে_চাই.com আরো বিস্তারিত জানতে এই link টি দেখতে পারেন,
-https://man.archlinux.org/man/hosts.5 Linux লিনাক্স ফাইলসিস্টেমে host file এর location,
-/etc/hosts Windows উইন্ডোজ ফাইলসিস্টেমে host file এর location,</description>
+127.0.0.1 localhost 0.0.0.0 যাকে_ব্লক_করতে_চাই.com এভাবে একটা একটা করে সাইট ব্লক করা যায়। যদি আপনি চান একটি নির্দিষ্ট সাইট ছাড়া বাকি সব ব্লক হবে তাহলে firewall rule set করতে হবে। তবে hostfile, firewall থেকে বেশী সহজ ও নিরাপদ।</description>
       <content>&lt;h1 id=&#34;internet-blocking-with-hosts&#34;&gt;Internet blocking with hosts&lt;/h1&gt;
 &lt;h2 id=&#34;hostfile&#34;&gt;Hostfile&lt;/h2&gt;
 &lt;p&gt;এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;127.0.0.1       localhost
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.0.0.0         যাকে_ব্লক_করতে_চাই.com
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;আরো বিস্তারিত জানতে এই link টি দেখতে পারেন,&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;এভাবে একটা একটা করে সাইট ব্লক করা যায়। যদি আপনি চান একটি নির্দিষ্ট সাইট ছাড়া বাকি সব ব্লক হবে তাহলে firewall rule set করতে হবে। তবে hostfile, firewall থেকে বেশী সহজ ও নিরাপদ।&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;আরো বিস্তারিত জানতে এই link টি দেখতে পারেন,&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://man.archlinux.org/man/hosts.5&#34;&gt;https://man.archlinux.org/man/hosts.5&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -753,7 +754,7 @@ https://man.archlinux.org/man/hosts.5 Linux লিনাক্স ফাইল�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;পাশাপাশি আমি একটা batch script লিখেছি, এটাও দেখতে পারেন, সাধারণত এটা লেখা হয়েছে একটা কনটেস্ট কে সামনে রেখে (toph.co ভিন্ন বাকি অনেক সাইট, যেমন vscode extension, ব্লক করবে যা contest এর জন্য সীমাবদ্ধ)। এর দ্বিতীয় option দ্বারা hostfile পূর্বাবস্থায় নিয়ে যাওয়া যাবে।&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&amp;laquo;&lt;a href=&#34;https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74%3E&#34;&gt;https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74&amp;gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74&#34;&gt;https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;যদ-host-file-এ-delete-কর&#34;&gt;যদি host file এ delete করি?&lt;/h2&gt;
