@@ -735,7 +735,7 @@ Then use git clean -xdf to execute it.&lt;/p&gt;
 127.0.0.1 localhost 0.0.0.0 যাকে_ব্লক_করতে_চাই.com এভাবে একটা একটা করে সাইট ব্লক করা যায়। যদি আপনি চান একটি নির্দিষ্ট সাইট ছাড়া বাকি সব ব্লক হবে তাহলে firewall rule set করতে হবে। তবে hostfile, firewall থেকে বেশী সহজ ও নিরাপদ।</description>
       <content>&lt;h1 id=&#34;internet-blocking-with-hosts&#34;&gt;Internet blocking with hosts&lt;/h1&gt;
 &lt;h2 id=&#34;hostfile&#34;&gt;Hostfile&lt;/h2&gt;
-&lt;p&gt;এই ফাইল মূলত কোনো একটা address (URL) কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে adblocking এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা 0.0.0.0 (localhost) এ forward করি, এই ফরম্যাটে,&lt;/p&gt;
+&lt;p&gt;এই ফাইল মূলত কোনো একটা &lt;code&gt;address (URL)&lt;/code&gt; কে অন্য কোনো address এ redirect করতে ব্যবহৃত হয়। এর সবচেয়ে বাস্তবিক প্রয়োগ হচ্ছে &lt;code&gt;adblocking&lt;/code&gt; এর ক্ষেত্রে। যেসব website আমরা block করতে চাই, সেসব website কে আমরা &lt;code&gt;0.0.0.0&lt;/code&gt; (&lt;code&gt;localhost&lt;/code&gt;) এ forward করি, এই ফরম্যাটে,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;127.0.0.1       localhost
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;0.0.0.0         যাকে_ব্লক_করতে_চাই.com
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
@@ -764,7 +764,7 @@ Then use git clean -xdf to execute it.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/StevenBlack/hosts&#34;&gt;https://github.com/StevenBlack/hosts&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;এখানকার &lt;code&gt;hosts&lt;/code&gt; নামের ফাইলটি কপি করে যদি আপনার OS অনুযায়ী সেট করেন, auto সব ad block হবে। ব্রাউজারে কোনো আলাদা extension লাগবে না। এমনিতেও বর্তমানে chrome browser, ublock origin সমর্থন করবে না (manifest v3 fact)।&lt;/p&gt;
+&lt;p&gt;এখানকার &lt;code&gt;hosts&lt;/code&gt; নামের ফাইলটি কপি করে যদি আপনার OS অনুযায়ী সেট করেন, auto সব ad block হবে। ব্রাউজারে কোনো আলাদা extension লাগবে না। এমনিতেও বর্তমানে chrome browser, ublock origin সমর্থন করবে না (&lt;code&gt;manifest&lt;/code&gt; v3 fact)।&lt;/p&gt;
 </content>
     </item>
     
