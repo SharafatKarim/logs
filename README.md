@@ -27,3 +27,6 @@ Just bear with it, LOL.
 - [A taste of tailwindcss](./2024/A-taste-of-tailwindcss.md)
 - [Location in a matrix 1 to n](./2024/Location-in-a-matrix-1-to-n.md) 
 - [Duplicate music find and remove](./2024/Duplicate-music-find-and-remove.md) 
+- [Linking multiple container - podman](./2024/Linking-multiple-container-podman.md)
+- [Tinkering with SQL](./2024/Tinkering-with-SQL.md)
+- [Internet blocking with hosts](./2024/Internet-blocking-with-hosts.md)
