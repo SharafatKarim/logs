@@ -9,6 +9,8 @@
 0.0.0.0         যাকে_ব্লক_করতে_চাই.com
 ```
 
+> এভাবে একটা একটা করে সাইট ব্লক করা যায়। যদি আপনি চান একটি নির্দিষ্ট সাইট ছাড়া বাকি সব ব্লক হবে তাহলে firewall rule set করতে হবে। তবে hostfile, firewall থেকে বেশী সহজ ও নিরাপদ।
+
 আরো বিস্তারিত জানতে এই link টি দেখতে পারেন,
 
 - <https://man.archlinux.org/man/hosts.5>
@@ -31,7 +33,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 > পাশাপাশি আমি একটা batch script লিখেছি, এটাও দেখতে পারেন, সাধারণত এটা লেখা হয়েছে একটা কনটেস্ট কে সামনে রেখে (toph.co ভিন্ন বাকি অনেক সাইট, যেমন vscode extension, ব্লক করবে যা contest এর জন্য সীমাবদ্ধ)। এর দ্বিতীয় option দ্বারা hostfile পূর্বাবস্থায় নিয়ে যাওয়া যাবে।
 >
-> - <<https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74>
+> - <https://gist.github.com/SharafatKarim/f50f6ca40d2411689573152798198c74>
 
 ## যদি host file এ delete করি?
 
