@@ -1094,8 +1094,20 @@ ttf-agave-nerd 3.1.1-1 ttf-anonymouspro-nerd 3.1.1-1 ttf-arimo-nerd 3.1.1-1 ttf-
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://sharafat.is-a.dev/logs/podman-pds-a-brief-intro/</guid>
-      <description>Podman pds - a brief intro </description>
+      <description>Podman pds - a brief intro Automated way Simply used podman desktop for now.
+https://podman-desktop.io/docs/containers/creating-a-pod Manual way Podman pod and container https://developers.redhat.com/blog/2019/01/15/podman-managing-containers-pods#add_a_container_to_a_pod https://docs.podman.io/en/latest/markdown/podman-pod.1.html </description>
       <content>&lt;h1 id=&#34;podman-pds---a-brief-intro&#34;&gt;Podman pds - a brief intro&lt;/h1&gt;
+&lt;h2 id=&#34;automated-way&#34;&gt;Automated way&lt;/h2&gt;
+&lt;p&gt;Simply used podman desktop for now.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://podman-desktop.io/docs/containers/creating-a-pod&#34;&gt;https://podman-desktop.io/docs/containers/creating-a-pod&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;manual-way&#34;&gt;Manual way&lt;/h2&gt;
+&lt;h3 id=&#34;podman-pod-and-container&#34;&gt;Podman pod and container&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.redhat.com/blog/2019/01/15/podman-managing-containers-pods#add_a_container_to_a_pod&#34;&gt;https://developers.redhat.com/blog/2019/01/15/podman-managing-containers-pods#add_a_container_to_a_pod&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.podman.io/en/latest/markdown/podman-pod.1.html&#34;&gt;https://docs.podman.io/en/latest/markdown/podman-pod.1.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     </item>
     
