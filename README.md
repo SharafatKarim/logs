@@ -30,3 +30,4 @@ Just bear with it, LOL.
 - [Linking multiple container - podman](./2024/Linking-multiple-container-podman.md)
 - [Tinkering with SQL](./2024/Tinkering-with-SQL.md)
 - [Internet blocking with hosts](./2024/Internet-blocking-with-hosts.md)
+- [Podman pds - a brief intro](./2024/Podman-pds-a-brief-intro.md)
