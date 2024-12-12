@@ -146,6 +146,112 @@ CDN You can use tailwindcss by including the CDN in your HTML file. You can incl
     </item>
     
     <item>
+      <title>AI-by-Yasin-Arafat</title>
+      <link>https://sharafat.is-a.dev/logs/ai-by-yasin-arafat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/ai-by-yasin-arafat/</guid>
+      <description>AI guideline by Yasin Arafat নিচের লেখাটা আমাদের আরাফাত ভাই এর থেকে নেয়া। ভাই এর GitHub profile,
+GitHub আমাদের ব্যাচে অনেকেই আছে যারা Machine learning, Deep Learning, AI নিয়ে আগ্রহী। তো আমার কিছু আইডিয়া আছে, আর ফিল্ডটা যেহেতু অনেক বিশাল, তো আমি আমার লাস্ট, ২ বছরে অনেক মোটামুটি ভালোয় কিছু resource grather করেছি। আমার আসলে ইচ্ছে ছিলো Neural network নিয়ে কাজ করার, যেইটা deep learning একটা পার্ট। তো, pre requisite হিসেবে আমাকে কিছু machine learning algorithm শিখা লাগছে। তাই, আমি machine learning এর হয়তো খুব কম কিছু resource share করবো। আমার ইচ্ছে ছিলো 5sem.</description>
+      <content>&lt;h1 id=&#34;ai-guideline-by-yasin-arafat&#34;&gt;AI guideline by Yasin Arafat&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;নিচের লেখাটা আমাদের আরাফাত ভাই এর থেকে নেয়া। ভাই এর GitHub profile,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yasin-arafat-05/&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;আমাদের ব্যাচে অনেকেই আছে যারা Machine learning, Deep Learning, AI নিয়ে আগ্রহী। তো আমার কিছু আইডিয়া আছে, আর ফিল্ডটা যেহেতু অনেক বিশাল, তো আমি আমার লাস্ট, ২ বছরে অনেক মোটামুটি ভালোয় কিছু resource grather করেছি। আমার আসলে ইচ্ছে ছিলো Neural network নিয়ে কাজ করার, যেইটা deep learning একটা পার্ট। তো, pre requisite হিসেবে আমাকে কিছু machine learning algorithm শিখা লাগছে। তাই, আমি machine learning এর হয়তো খুব কম কিছু resource share করবো। আমার ইচ্ছে ছিলো 5sem. উঠে সবকিছু আর একটু সাজিয়ে ঘুছিয়ে দিব। কিন্তু, অনেকের আগ্রহ অনেক বেশি। তাই যা আছে তাই, আমি দিয়ে দিচ্ছি। তো, শুরুতে আমরা,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;python শিখবো।&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;এর পর আমরা python এর কিছু লাইব্রেরি শিখবো।&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;numpy&lt;/li&gt;
+&lt;li&gt;pandas&lt;/li&gt;
+&lt;li&gt;mathplotlib&lt;/li&gt;
+&lt;li&gt;seaborn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;এখন, কথা হচ্ছে এই লাইব্রেরি গুলোতে অনেক পড়া আছে। আসলে, তুমি যদি এইগুলো ভালো করে শেষ করতে চাও তোমার বছর খানেক লাগে যাবে। যেই ভুলটা আমার হয়েছিলো। numpy এ অনেক কিছু পড়েছিলাম কিন্ত, আমাদের এইটার use case কম। আমরা মোটামুটি ধারণা নিবো।  w3school টা follow করতে পারো। এর পর আসে pandas এর ব্যবহার মুটামুটি অনেক বেশি। w3school এর টা ফলো করতে পারো। এর পর আসে matplotlib amd seaborn এই দুইটা ব্যবহার করে আমরা গ্রাফ বানাতে পারি। তো গ্রাফ তো অনেক ধরনের থাকে। আমার, recommendation হলো,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bar plot&lt;/li&gt;
+&lt;li&gt;scatter plot&lt;/li&gt;
+&lt;li&gt;kdeplot&lt;/li&gt;
+&lt;li&gt;boxplot&lt;/li&gt;
+&lt;li&gt;histrogram&lt;/li&gt;
+&lt;li&gt;pi-chart&lt;/li&gt;
+&lt;li&gt;heat map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More than enough. ঘুরে ফিরে এইগুলো পাবেন, as far my experience। আর, matplotlib, seaborn দুইটা দিয়ে এই গ্রাফ গুলো implementation ভালো করে বুঝবেন। YouTube এ Randomly video search করলে, এই গ্রাফে ভিডিও গুলো পাবেন।&lt;/p&gt;
+&lt;p&gt;তো আমি  আমার ssc শেষ  করে আর জার্নিটা শুরু করেছিলাম। আমাকে guideline দেওয়ার মতো কেউছিলো না। আমি যখন, numpy   পড়তে গেলাম তো আমি তো matrix  পারি না, আরো অনেক লিমিটেশন ছিল আমার । এইভাবে, একাডেমিক এর সাথে synchronous করে আস্তে আস্তে এগিয়েছি। তো, pre-requisite গুলো আমার অনেক আগেই শেষ করা ছিল।&lt;/p&gt;
+&lt;p&gt;আমি পাইথন একটু একটু করে অনেক জায়গা থেকে শিখেছিলাম। তবে, একদম শেষে code with harry একদম সেই লেবেলের ছিলো।&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/gfDE2a7MKjA?feature=shared&#34;&gt;https://youtu.be/gfDE2a7MKjA?feature=shared&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;আর, Numpy, pandas, mathplotlib,seaborn&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/GPVsHOlRBBI?feature=shared&#34;&gt;https://youtu.be/GPVsHOlRBBI?feature=shared&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ওনারটা না ভালো লাগলে, WSCUVE একটা channel আছে সেইটা ফলো করতে পারেন।&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(Numpy)&lt;a href=&#34;https://youtu.be/-TYSM0CDA4c?feature=shared&#34;&gt;https://youtu.be/-TYSM0CDA4c?feature=shared&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(Pandas)&lt;a href=&#34;https://youtu.be/kQQaO5Cm5AI?feature=shared&#34;&gt;https://youtu.be/kQQaO5Cm5AI?feature=shared&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(Mathplotlib) &lt;a href=&#34;https://youtu.be/7VAFU88VGlo?feature=shared&#34;&gt;https://youtu.be/7VAFU88VGlo?feature=shared&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(Seaborn)&lt;a href=&#34;https://youtu.be/XPXYyr3eN0s?feature=shared&#34;&gt;https://youtu.be/XPXYyr3eN0s?feature=shared&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;আচ্ছা উপরের কাজ গুলো শেষে, হলে আমরা machine learning শুরু করবো। সবচেয়ে best of best resource হলো,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(100DaysML)
+&lt;a href=&#34;https://youtube.com/playlist?list=PLKnIA16_Rmvbr7zKYQuBfsVkjoLcJgxHH&amp;amp;feature=shared&#34;&gt;https://youtube.com/playlist?list=PLKnIA16_Rmvbr7zKYQuBfsVkjoLcJgxHH&amp;amp;feature=shared&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;উনি যেইভাবে পড়াচ্ছে উফ মারাত্মক। যত প্রশংসা করবো। সেইটা কম যাবে যাবে। ওনার টা বেস্ট। তো, আগেই বলেছি আমি যেহেতু, neutral network নিয়ে কাজ করার ইচ্ছে ছিলো তাই আমি machine learning কম পড়েছি। আর ওনার tutorial গুলো আমার কাছে, graphic pad দিয়ে pdf এ নোট করা আছে। তো এইগুলো আমার git এ প্রাইভেট করা ছিলো আমি এইগুলোকে আজকে public করে দিতেছি।&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(Link) &lt;a href=&#34;https://github.com/yasin-arafat-05/machine_learning&#34;&gt;https://github.com/yasin-arafat-05/machine_learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;তো, এইটাতে দুইটা ফোল্ডার পাবা। code আর note নামে ২টা। maximum pdf আমার Google drive থেকে সব public করা আছে। আবার কতগুলো direct git এ পুশ করা। হয়তো সেইগুলো openকরলে invalid দেখাবে । সেই download করলে ঠিক হয়ে যাবে।&lt;/p&gt;
+&lt;p&gt;machine learning শেষ হলে, আমরা Deep learning পড়বো। কোন একসময় (&amp;lt;2013) শুধু machine learning পড়লে, চাকরী হয়ে যেত কিন্তু এখন আর সেইটা হয় না। তো, আমাদের  deep learning পড়তে হবে।   পড়ার জন্য নিচের playlist টা অব্যশই ফলো করবেন,must।  কারণ, ওনার থেকে ভালো বুঝায় এমন কাউকে আমি পায়নি।&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(100daysDL)&lt;a href=&#34;https://youtube.com/playlist?list=PLKnIA16_RmvYuZauWaPlRTC54KxSNLtNn&amp;amp;feature=shared&#34;&gt;https://youtube.com/playlist?list=PLKnIA16_RmvYuZauWaPlRTC54KxSNLtNn&amp;amp;feature=shared&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(DeepLeaerning)&lt;a href=&#34;https://github.com/yasin-arafat-05/100DaysDL&#34;&gt;https://github.com/yasin-arafat-05/100DaysDL&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;তো উপরে link e গেলে তোমরা deep learning এর note গুলো পেয়ে যাবা। আগের মতো, এইটা note and code নামে দুইটা ফোল্ডার আছে সেখানে পেয়ে যাবা। তারপর, এখানে, আরো কয়েকটা ফোল্ডার পাবা। এইগুলো, playlists complete করার পরই দেখবা।&lt;/p&gt;
+&lt;p&gt;এখন, কথা হচ্ছে যখন আমরা deep learning পড়বো তখন, CNN(Convolutional Neural Network) পড়বা তখন আমাদের computer vision এর একটা লাইব্রেরি লাগবে। python  এ openCV আছে এইটাও শিখতে হবে। তো এওটাও আমি public  করে দিচ্ছি।&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(OpenCV)&lt;a href=&#34;https://github.com/yasin-arafat-05/openCV&#34;&gt;https://github.com/yasin-arafat-05/openCV&lt;/a&gt;
+তো এখানে, cv2CourseEnglish  নামে একটা folder আছে। তার মধ্যে, o_basic_ONE.md এর মধ্যে যেই টপিক গুলো আছে সেইগুলো পড়লে হবে। এটাও অনেক বিশাল।&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;এর পর আমরা যখন, NLP পড়বো তখন,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;(NLPPlayList) &lt;a href=&#34;https://youtube.com/playlist?list=PLKnIA16_RmvZo7fp5kkIth6nRTeQQsjfX&amp;amp;feature=shared&#34;&gt;https://youtube.com/playlist?list=PLKnIA16_RmvZo7fp5kkIth6nRTeQQsjfX&amp;amp;feature=shared&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;(My_NLP_Note) &lt;a href=&#34;https://github.com/yasin-arafat-05/NLP&#34;&gt;https://github.com/yasin-arafat-05/NLP&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Congratulation! এখন তুমি নিজেকে Data Sciencetist বলতে পারো।  কিন্তু আস্তে এখনো শেষ হয় নাই 🙄😬। Deep learning কিন্তু machine learning এর একটা পার্ট। আর deep learning এর মধ্যে NLP, Computer vision আছে। কিন্ত, chatgpt, Gemini আসার পর। এদেরকে আরেকটা ভাগে ভাগ করা হয়েছে। এরা কিন্ত, deep learning or neural network এর উপর dependent। chatgpt কে LLM বলে। 2021 এর আগে, Machine learning আর Deep learning পারলেই চাকরি পাওয়া যেত কিন্তু এখন,llm গুলোকে Fine tuning etc. কীভাবে করতে হয় সেইগুলো জানা লাগে।  তো Data sciencetist হওয়ার পর এইগুলো নিজে নিজে resources বের করে পড়তে পারবে। তাই আমি আর কিছু দিচ্ছি না। এই LLM part টাকে generative Ai বলে। তো আমাদের পরের কাজ হচ্ছে Generative AI শিখা।&lt;/p&gt;
+&lt;p&gt;তো উপরের জিনিস গুলো,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Machine learning,&lt;/li&gt;
+&lt;li&gt;Deep learning,&lt;/li&gt;
+&lt;li&gt;Generative AI
+সবাই শিখবে। নিজেকে আর একটু different করে তুলার জন্য, MLOPS টা শিখতে পারেন। Machine Learning In Operation।&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
       <title>An-article-about-Vscode-vscodium-and-code-oss</title>
       <link>https://sharafat.is-a.dev/logs/an-article-about-vscode-vscodium-and-code-oss/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
