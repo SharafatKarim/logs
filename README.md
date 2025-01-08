@@ -32,3 +32,4 @@ Just bear with it, LOL.
 - [Internet blocking with hosts](./2024/Internet-blocking-with-hosts.md)
 - [Podman pds - a brief intro](./2024/Podman-pds-a-brief-intro.md)
 - [AI by Yasin Arafat](./2024/AI-by-Yasin-Arafat.md)
+- [A moment with mongoimport](./2024/A-moment-with-mongoimport.md)
