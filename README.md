@@ -33,3 +33,4 @@ Just bear with it, LOL.
 - [Podman pds - a brief intro](./2024/Podman-pds-a-brief-intro.md)
 - [AI by Yasin Arafat](./2024/AI-by-Yasin-Arafat.md)
 - [A moment with mongoimport](./2024/A-moment-with-mongoimport.md)
+- [A moment with php](./2024/A-moment-with-php.md)
