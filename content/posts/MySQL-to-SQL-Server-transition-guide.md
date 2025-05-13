@@ -38,8 +38,6 @@ exec sp_help 'table_name';
 
 > here table_name is the name of the table you want to describe.
 
-Great! Since you're already familiar with **MySQL**, here’s a quick, clear **cheat sheet** to help you transition smoothly to **SQL Server (T-SQL)**:
-
 ---
 
 ## Differences
@@ -79,6 +77,14 @@ WHERE name = 'Alice'
 | ------------- | -------------- | ------------------------- |
 | Current date  | `CURDATE()`    | `GETDATE()`               |
 | String length | `LENGTH()`     | `LEN()`                   |
+
+- Row value constructor won't work
+
+```sql
+select * from student
+where (ID,name) in (select ID,name from student
+ where name='Duan');
+```
 
 ---
 
