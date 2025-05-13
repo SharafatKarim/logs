@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>MySQL-to-SQL-Server-transition-guide :: Sharafat Karim | Logs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MySQL and SQL Server has got some shuttle diffs in their syntax :)" />
+<meta name="keywords" content="logs" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://sharafat.is-a.dev/logs/mysql-to-sql-server-transition-guide/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://sharafat.is-a.dev/logs/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+  <link rel="apple-touch-icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="sharafat2004" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="MySQL-to-SQL-Server-transition-guide">
+<meta property="og:description" content="MySQL and SQL Server has got some shuttle diffs in their syntax :)" />
+<meta property="og:url" content="https://sharafat.is-a.dev/logs/mysql-to-sql-server-transition-guide/" />
+<meta property="og:site_name" content="Sharafat Karim | Logs" />
+
+  
+    <meta property="og:image" content="https://sharafat.is-a.dev/logs/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/logs">
+  <div class="logo">
+    Sharafat Karim | Logs
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://github.com/SharafatKarim/">GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs">Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/">My Blogs</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="https://github.com/SharafatKarim/" >GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs" >Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/" >My Blogs</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://sharafat.is-a.dev/logs/mysql-to-sql-server-transition-guide/">MySQL-to-SQL-Server-transition-guide</a>
+  </h1>
+  <div class="post-meta"><span class="post-reading-time">2 Min read (405 words)</span></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="mysql-to-sql-server-transition-guide">MySQL to SQL Server transition guide<a href="#mysql-to-sql-server-transition-guide" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>MySQL and SQL Server has got some shuttle diffs in their syntax :)
+Lem&rsquo;me point some of it out for ya!</p>
+<h2 id="core-navigation">Core navigation<a href="#core-navigation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>Show databases</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> sys.databases;
+</span></span></code></pre></div><ul>
+<li>enter into a database</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>use your_database_name;
+</span></span></code></pre></div><blockquote>
+<p>here your_database_name is the name of the database you want to enter.</p>
+</blockquote>
+<ul>
+<li>Show tables</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> sys.tables;
+</span></span></code></pre></div><ul>
+<li>describe table</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">exec</span> sp_help <span style="color:#e6db74">&#39;table_name&#39;</span>;
+</span></span></code></pre></div><blockquote>
+<p>here table_name is the name of the table you want to describe.</p>
+</blockquote>
+<p>Great! Since you&rsquo;re already familiar with <strong>MySQL</strong>, here’s a quick, clear <strong>cheat sheet</strong> to help you transition smoothly to <strong>SQL Server (T-SQL)</strong>:</p>
+<hr>
+<h2 id="differences">Differences<a href="#differences" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>No natural join! Only Join :(</li>
+<li>No space after a function and parenthesis</li>
+<li>No space after comma in group by or other stuff</li>
+<li><code>IF NOT EXISTS</code> is not directly supported</li>
+<li>Replace <code>limit</code> with ‌‌‌‌‌<code>top‌‌‍</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>MySQL</th>
+<th>SQL Server</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SELECT * FROM table LIMIT 5;</code></td>
+<td><code>SELECT TOP 5 * FROM table;</code></td>
+</tr>
+</tbody>
+</table>
+<p>For example, to get the first 10 rows from a table named <code>student</code>, you would write:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> TOP <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> student;
+</span></span></code></pre></div><ul>
+<li>SQL Server <strong>only uses single quotes</strong> for string literals.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Correct in SQL Server
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">WHERE</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Alice&#39;</span>
+</span></span></code></pre></div><ul>
+<li>AUTO INCREMENT vs IDENTITY</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>MySQL</th>
+<th>SQL Server</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id INT AUTO_INCREMENT PRIMARY KEY</code></td>
+<td><code>id INT IDENTITY(1,1) PRIMARY KEY</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Functions</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>MySQL</th>
+<th>SQL Server</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current date</td>
+<td><code>CURDATE()</code></td>
+<td><code>GETDATE()</code></td>
+</tr>
+<tr>
+<td>String length</td>
+<td><code>LENGTH()</code></td>
+<td><code>LEN()</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="examples">Examples<a href="#examples" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>Find student names and the number of law courses taken for students who have taken at least half of the available law courses. (These courses are named things like ‘Tort Law’ or ‘Environmental Law’).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> name, <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> student <span style="color:#66d9ef">as</span> st
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> takes <span style="color:#66d9ef">as</span> tt
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> st.ID <span style="color:#f92672">=</span> tt.ID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> tt.course_id <span style="color:#66d9ef">in</span> (
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">select</span> course_id
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">from</span> course
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">where</span> title <span style="color:#66d9ef">like</span> <span style="color:#e6db74">&#39;%Law%&#39;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> st.ID,st.name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">having</span> <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> (
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">select</span> <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">from</span> course
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">where</span> title <span style="color:#66d9ef">like</span> <span style="color:#e6db74">&#39;%Law%&#39;</span>
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><ul>
+<li>Find the rank and name of the 10 students who earned the most A grades (A-, A, A+). Use alphabetical order by name to break ties. Note: the browser SQLite does not support window functions.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> top <span style="color:#ae81ff">10</span> row_number() over(<span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> P.cnt <span style="color:#66d9ef">desc</span>,P.name) <span style="color:#66d9ef">as</span> rnk, P.name <span style="color:#66d9ef">from</span> ( 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">select</span> name, <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">as</span> cnt
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">from</span> student S
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">join</span> takes T <span style="color:#66d9ef">on</span> S.ID <span style="color:#f92672">=</span> T.ID
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">where</span> T.grade <span style="color:#66d9ef">in</span> (<span style="color:#e6db74">&#39;A+&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;A-&#39;</span>)
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> T.ID,S.name
+</span></span><span style="display:flex;"><span>    ) <span style="color:#66d9ef">as</span> P
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> P.cnt <span style="color:#66d9ef">desc</span>,P.name;
+</span></span></code></pre></div><blockquote>
+<p>In large university dataset, you will get something like,</p>
+<ul>
+<li>1 Neuhold</li>
+<li>2 Greene</li>
+<li>3 Hons</li>
+<li>4 Lepp</li>
+<li>5 Lingamp</li>
+<li>6 Mandviwall</li>
+<li>7 Drig</li>
+<li>8 Fabregas</li>
+<li>9 Haigh</li>
+<li>10 Heilprin</li>
+</ul>
+</blockquote>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>Creative common CC-0</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/logs/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
