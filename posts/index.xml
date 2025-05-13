@@ -1297,12 +1297,13 @@ but first systemd service&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://sharafat.is-a.dev/logs/mysql-to-sql-server-transition-guide/</guid>
-      <description>MySQL to SQL Server transition guide MySQL and SQL Server has got some shuttle diffs in their syntax :) Lem&amp;rsquo;me point some of it out for ya!
+      <description>MySQL to SQL Server transition guide MySQL and SQL Server has got some shuttle diffs in their syntax :)
+Lem&amp;rsquo;me point some of it out for ya!
 Core navigation Show databases select * from sys.databases; enter into a database use your_database_name; here your_database_name is the name of the database you want to enter.
 Show tables select * from sys.tables; describe table exec sp_help &amp;#39;table_name&amp;#39;; here table_name is the name of the table you want to describe.</description>
       <content>&lt;h1 id=&#34;mysql-to-sql-server-transition-guide&#34;&gt;MySQL to SQL Server transition guide&lt;/h1&gt;
-&lt;p&gt;MySQL and SQL Server has got some shuttle diffs in their syntax :)
-Lem&amp;rsquo;me point some of it out for ya!&lt;/p&gt;
+&lt;p&gt;MySQL and SQL Server has got some shuttle diffs in their syntax :)&lt;/p&gt;
+&lt;p&gt;Lem&amp;rsquo;me point some of it out for ya!&lt;/p&gt;
 &lt;h2 id=&#34;core-navigation&#34;&gt;Core navigation&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Show databases&lt;/li&gt;
