@@ -35,3 +35,4 @@ Just bear with it, LOL.
 - [A moment with mongoimport](./2024/A-moment-with-mongoimport.md)
 - [A moment with php](./2024/A-moment-with-php.md)
 - [Android apps list](./2025/Android-apps-list.md)
+- [MySQL to SQL Server transition guide](./2025/MySQL-to-SQL-Server-transition-guide.md)
