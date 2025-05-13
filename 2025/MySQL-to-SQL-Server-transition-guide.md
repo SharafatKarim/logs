@@ -1,6 +1,7 @@
 # MySQL to SQL Server transition guide
 
 MySQL and SQL Server has got some shuttle diffs in their syntax :)
+
 Lem'me point some of it out for ya!
 
 ## Core navigation
