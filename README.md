@@ -25,8 +25,8 @@ Just bear with it, LOL.
 - [An article about Vscode, vscodium and code oss](./2024/An-article-about-Vscode-vscodium-and-code-oss.md)
 - [Chaging dns server](./2024/Chaging-dns-server.md)
 - [A taste of tailwindcss](./2024/A-taste-of-tailwindcss.md)
-- [Location in a matrix 1 to n](./2024/Location-in-a-matrix-1-to-n.md) 
-- [Duplicate music find and remove](./2024/Duplicate-music-find-and-remove.md) 
+- [Location in a matrix 1 to n](./2024/Location-in-a-matrix-1-to-n.md)
+- [Duplicate music find and remove](./2024/Duplicate-music-find-and-remove.md)
 - [Linking multiple container - podman](./2024/Linking-multiple-container-podman.md)
 - [Tinkering with SQL](./2024/Tinkering-with-SQL.md)
 - [Internet blocking with hosts](./2024/Internet-blocking-with-hosts.md)
@@ -34,5 +34,8 @@ Just bear with it, LOL.
 - [AI by Yasin Arafat](./2024/AI-by-Yasin-Arafat.md)
 - [A moment with mongoimport](./2024/A-moment-with-mongoimport.md)
 - [A moment with php](./2024/A-moment-with-php.md)
+
+## 2025
+
 - [Android apps list](./2025/Android-apps-list.md)
 - [MySQL to SQL Server transition guide](./2025/MySQL-to-SQL-Server-transition-guide.md)
