@@ -145,7 +145,7 @@
   <h1 class="post-title">
     <a href="https://sharafat.is-a.dev/logs/mysql-to-sql-server-transition-guide/">MySQL-to-SQL-Server-transition-guide</a>
   </h1>
-  <div class="post-meta"><span class="post-reading-time">2 Min read (405 words)</span></div>
+  <div class="post-meta"><span class="post-reading-time">2 Min read (401 words)</span></div>
 
   
   
@@ -180,7 +180,6 @@ Lem&rsquo;me point some of it out for ya!</p>
 </span></span></code></pre></div><blockquote>
 <p>here table_name is the name of the table you want to describe.</p>
 </blockquote>
-<p>Great! Since you&rsquo;re already familiar with <strong>MySQL</strong>, here’s a quick, clear <strong>cheat sheet</strong> to help you transition smoothly to <strong>SQL Server (T-SQL)</strong>:</p>
 <hr>
 <h2 id="differences">Differences<a href="#differences" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
@@ -252,7 +251,13 @@ Lem&rsquo;me point some of it out for ya!</p>
 </tr>
 </tbody>
 </table>
-<hr>
+<ul>
+<li>Row value constructor won&rsquo;t work</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> student
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> (ID,name) <span style="color:#66d9ef">in</span> (<span style="color:#66d9ef">select</span> ID,name <span style="color:#66d9ef">from</span> student
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">where</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Duan&#39;</span>);
+</span></span></code></pre></div><hr>
 <h2 id="examples">Examples<a href="#examples" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li>Find student names and the number of law courses taken for students who have taken at least half of the available law courses. (These courses are named things like ‘Tort Law’ or ‘Environmental Law’).</li>

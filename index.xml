@@ -1326,7 +1326,6 @@ Lem&amp;rsquo;me point some of it out for ya!&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;here table_name is the name of the table you want to describe.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Great! Since you&amp;rsquo;re already familiar with &lt;strong&gt;MySQL&lt;/strong&gt;, here’s a quick, clear &lt;strong&gt;cheat sheet&lt;/strong&gt; to help you transition smoothly to &lt;strong&gt;SQL Server (T-SQL)&lt;/strong&gt;:&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;differences&#34;&gt;Differences&lt;/h2&gt;
 &lt;ul&gt;
@@ -1398,7 +1397,13 @@ Lem&amp;rsquo;me point some of it out for ya!&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Row value constructor won&amp;rsquo;t work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; student
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; (ID,name) &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; ID,name &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; student
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;where&lt;/span&gt; name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Duan&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Find student names and the number of law courses taken for students who have taken at least half of the available law courses. (These courses are named things like ‘Tort Law’ or ‘Environmental Law’).&lt;/li&gt;
