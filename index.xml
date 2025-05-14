@@ -1896,7 +1896,7 @@ Show tables select * from sys.tables; describe table exec sp_help &amp;#39;table
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://sharafat.is-a.dev/logs/oracle-extra-codes/</guid>
-      <description>Oracle extra codes Navigation User Show user, show user; List all users, select * from all_users; Tables &amp;amp; Views List all tables, select * from all_tables; List all views, select * from all_views; Profile List all profiles, select * from dba_profiles; display a user profile in oracle SELECT * FROM dba_profiles WHERE profile = &amp;#39;DEFAULT&amp;#39;; view the account expiration dates of all users in oracle SELECT username, account_status, expiry_date FROM dba_users ORDER BY expiry_date; just remember the dba_users table contains the account expiration dates of all users in Oracle.</description>
+      <description>Oracle extra codes Navigation User Show user, show user; List all users, select * from all_users; drop user, drop user username cascade; Tables &amp;amp; Views List all tables, select * from all_tables; List all views, select * from all_views; Drop table, drop table table_name; Profile List all profiles, select * from dba_profiles; display a user profile in oracle SELECT * FROM dba_profiles WHERE profile = &amp;#39;DEFAULT&amp;#39;; view the account expiration dates of all users in oracle SELECT username, account_status, expiry_date FROM dba_users ORDER BY expiry_date; just remember the dba_users table contains the account expiration dates of all users in Oracle.</description>
       <content>&lt;h1 id=&#34;oracle-extra-codes&#34;&gt;Oracle extra codes&lt;/h1&gt;
 &lt;h2 id=&#34;navigation&#34;&gt;Navigation&lt;/h2&gt;
 &lt;h3 id=&#34;user&#34;&gt;User&lt;/h3&gt;
@@ -1908,6 +1908,10 @@ Show tables select * from sys.tables; describe table exec sp_help &amp;#39;table
 &lt;li&gt;List all users,&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; all_users;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;drop user,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;drop&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;user&lt;/span&gt; username &lt;span style=&#34;color:#66d9ef&#34;&gt;cascade&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;tables--views&#34;&gt;Tables &amp;amp; Views&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;List all tables,&lt;/li&gt;
@@ -1917,6 +1921,10 @@ Show tables select * from sys.tables; describe table exec sp_help &amp;#39;table
 &lt;li&gt;List all views,&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; all_views;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Drop table,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;drop&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table_name&lt;/span&gt;;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;profile&#34;&gt;Profile&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;List all profiles,&lt;/li&gt;
@@ -1936,16 +1944,28 @@ Show tables select * from sys.tables; describe table exec sp_help &amp;#39;table
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;just remember the &lt;code&gt;dba_users&lt;/code&gt; table contains the account expiration dates of all users in Oracle.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&#34;triggers&#34;&gt;Triggers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;drop profile,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;drop&lt;/span&gt; profile profile_name &lt;span style=&#34;color:#66d9ef&#34;&gt;cascade&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;triggers&#34;&gt;Triggers&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;List all triggers,&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;select&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;from&lt;/span&gt; all_triggers;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;view the account expiration dates of all users in oracle&lt;/li&gt;
-&lt;li&gt;save selected data in another table in oracle&lt;/li&gt;
+&lt;li&gt;Drop trigger,&lt;/li&gt;
 &lt;/ul&gt;
-</content>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;drop&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;trigger&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;trigger_name&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;disable a trigger in oracle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;trigger&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;trigger_name&lt;/span&gt; disable;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;enable a trigger in oracle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;alter&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;trigger&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;trigger_name&lt;/span&gt; enable;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
     </item>
     
     <item>
