@@ -42,6 +42,12 @@ select * from all_views;
 drop table table_name;
 ```
 
+- description of a table,
+
+```sql
+desc table_name;
+```
+
 ### Profile
 
 - List all profiles,
