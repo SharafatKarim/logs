@@ -25,8 +25,7 @@ select name from instructor where dept_name='Comp. Sci.' and salary>70000;
 select name, course_id
 from instructor
 left join teaches
-on instructor.ID=teaches.ID
-group by name,course_id;
+on instructor.ID=teaches.ID;
 
 --6. Find the names of all instructors whose salary is greater than at least one instructor in the Biology
 --department.
@@ -75,7 +74,7 @@ where (semester='Fall' and year=2009)
  and not (semester='Spring' and year=2010);
 
 --16. Find all instructors who appear in the instructor relation with null values for salary.
-select * from instructor where salary=NULL;
+select * from instructor where salary is NULL;
 
 --17. Find the average salary of instructors in the Finance department.
 select avg(salary) from instructor where dept_name='Finance';
@@ -261,7 +260,8 @@ order by count(*) desc;
 --Sci. department by 10%.
 update instructor
 set salary = salary * 1.10;
-select * from instructor;
+select * from instructor
+where dept_name = 'Comp. Sci.';
 
 --44. Find all students who have not taken a course.
 select student.ID, name
@@ -366,19 +366,79 @@ join takes
 where grade like '%A%';
 
 --54. Find the student who takes the maximum credit from each department.
---55. Find out the student ID and grades who take a course(s) in Spring-2009 semester.
+select student.name, student.dept_name, sum(credits)
+from student 
+join takes 
+ on student.ID = takes.ID 
+join course
+ on course.course_id = takes.course_id
+group by student.dept_name
+order by sum(credits) desc;
+-- won't work in sql server!
+
+--55. Find out the student ID and grades who take a course(s) in Spring-2009 semester. 
+select student.ID, grade
+from student 
+join takes 
+ on student.ID=takes.ID 
+where semester='Spring'
+ and year=2009;
+
 --56. Find the building(s) where the student takes the course titled Image Processing.
+select building
+from section 
+join course
+ on section.course_id = course.course_id 
+where title = 'Image Processing';
+
 --57. Find the room no. and the building where the student from Fall-2009 semester can take a
 --course(s)
+select building, room_number
+from section 
+where semester = 'Fall'
+ and year = 2009;
+
 --58. Find the names of those departments whose budget is higher than that of Astronomy. List
 --them in alphabetic order
+select dept_name 
+from department
+where budget > (
+ select budget 
+ from department
+ where dept_name = 'Astronomy'
+);
+
 --59. Display a list of all instructors, showing each instructor&#39;s ID and the number of sections
 --taught. Make sure to show the number of sections as 0 for instructors who have not taught
 --any section
+select instructor.ID, count(distinct sec_id)
+from instructor 
+left join teaches
+ on instructor.ID = teaches.ID 
+group by instructor.ID;
+
 --60. For each student who has retaken a course at least twice (i.e., the student has taken the
 --course at least three times), show the course ID and the student&#39;s ID. Please display your
 --results in order of course ID and do not display duplicate rows
+select ID, course_id
+from takes
+group by ID, course_id 
+having count(*) > 2;
+
 --61. Find the names of Biology students who have taken at least 3 Accounting courses
+select name 
+from student 
+join takes 
+ on student.ID = takes.ID 
+where dept_name = 'Biology'
+ and course_id in (
+  select course_id
+  from course 
+  where dept_name = 'Accounting'
+ )
+group by student.ID, name 
+having count(*) > 2;
+
 --62. Find the sections that had maximum enrollment in Fall 2010
 select top 1
 sec_id, course_id
@@ -416,19 +476,74 @@ having count(*) > (
  where title like '%Law%'
 );
 
-
 --64. Find the rank and name of the 10 students who earned the most A grades (A-, A, A+).
 --Use alphabetical order by name to break ties.
+select top 10
+row_number() over(order by count(*) desc, name) as rank, name 
+from student 
+join takes 
+ on student.id = takes.id
+where grade in ('A-', 'A', 'A+')
+group by name, student.ID
+order by count(*) desc, name;
+
 --65. Find the titles of courses in the Comp. Sci. department that have 3 credits.
+select title 
+from course 
+where credits = 3 and dept_name = 'Comp. Sci.';
+
 --66. Find the IDs of all students who were taught by an instructor named Einstein; make sure there
 --are no duplicates in the result.
+select distinct takes.ID
+from instructor
+join teaches 
+ on teaches.ID=instructor.ID
+join takes 
+ on takes.course_id=teaches.course_id
+ and takes.sec_id=teaches.sec_id
+ and takes.semester=teaches.semester
+ and takes.year=teaches.year
+where name='Einstein';
+
 --67. Find the ID and name of each student who has taken at least one Comp. Sci. course; make sure
 --there are no duplicate names in the result.
+select distinct student.ID, name 
+from student 
+join takes 
+ on student.id = takes.id 
+where course_id in (
+ select course_id
+ from  course 
+ where dept_name = 'Comp. Sci.'
+);
+
+
 --68. Find the course id, section id, and building for each section of a Biology course.
+select section.course_id, sec_id, building
+from section
+join course 
+ on section.course_id = course.course_id 
+where dept_name = 'Biology';
+
 --69. Output instructor names sorted by the ratio of their salary to their department&#39;s budget (in
 --ascending order).
+select name 
+from instructor 
+join department
+ on instructor.dept_name = department.dept_name
+order by (salary / budget);
+
 --70. Output instructor names and buildings for each building an instructor has taught in. Include
 --instructor names who have not taught any classes (the building name should be NULL in this
 --case).
+select distinct name, building 
+from instructor 
+left join teaches
+ on instructor.ID = teaches.ID
+left join section 
+ on teaches.course_id = section.course_id
+ and teaches.sec_id = section.sec_id
+ and teaches.year = section.year
+ and teaches.semester = section.semester;
 ```
 
