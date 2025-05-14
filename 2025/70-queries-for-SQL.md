@@ -114,8 +114,21 @@ where (semester='Fall' and year=2009)
  and not (semester='Spring' and year=2010);
 
 --25. Select the names of instructors whose names are neither &lt;Mozart= nor &lt;Einstein=.
+select name from instructor
+where name != 'Mozart' and name !='Einstein';
+
 --26. Find the total number of (distinct) students who have taken course sections taught by the
 --instructor with ID 110011.
+select count(distinct takes.ID)
+from instructor
+join teaches on teaches.ID=instructor.ID
+join takes on
+ takes.course_id=teaches.course_id and
+ takes.sec_id=teaches.sec_id and
+ takes.semester=teaches.semester and
+ takes.year=teaches.year
+where instructor.ID=10101
+group by instructor.ID;
 
 --27. Find the ID and names of all instructors whose salary is greater than at least one instructor in the
 --History department.
@@ -125,38 +138,228 @@ where salary > (select min(salary)
 
 --28. Find the names of all instructors that have a salary value greater than that of each instructor in
 --the Biology department.
+select name 
+from instructor
+where salary > (
+ select min(salary)
+ from instructor
+ where dept_name='Biology'
+);
+
 --29. Find the departments that have the highest average salary.
+select top 1
+dept_name
+from instructor 
+group by dept_name
+order by avg(salary) desc;
+
 --30. Find all courses taught in both the Fall 2009 semester and in the Spring-2010 semester.
+select course_id
+from teaches
+where semester='Fall' and year=2009 
+ and semester='Spring' and year=2010;
+
 --31. Find all students who have taken all the courses offered in the Biology department.
+select student.ID, name, count(student.ID)
+from student 
+join takes 
+ on takes.ID=student.ID 
+join course 
+ on takes.course_id=course.course_id
+where course.dept_name='Biology'
+group by student.ID, name 
+having count(student.ID) = (
+ select count(*)
+ from course 
+ where dept_name='Biology'
+);
+
 --32. Find all courses that were offered at most once in 2009.
+select teaches.course_id, title
+from teaches 
+join course on course.course_id=teaches.course_id
+where year=2009
+group by teaches.course_id, title
+having count(*)=1;
+
 --33. Find all courses that were offered at least twice in 2009.
+select teaches.course_id, title
+from teaches 
+join course on course.course_id=teaches.course_id
+where year=2009
+group by teaches.course_id, title
+having count(*)>=2;
+
 --34. Find the average instructors9 salaries of those departments where the average salary is greater
 --than $42,000.
+select dept_name
+from instructor
+group by dept_name
+having AVG(salary)>42000;
+
 --35. Find the maximum across all departments of the total salary at each department.
+select top 1
+dept_name, sum(salary)
+from instructor
+group by dept_name
+order by sum(salary) desc;
+
 --36. List all departments along with the number of instructors in each department.
+select dept_name, count(*)
+from instructor
+group by dept_name;
+
 --37. Find the titles of courses in the Comp. Sci. department that has 3 credits.
+select title
+from course
+where dept_name='Comp. SCi.'
+ and credits=3;
+
 --38. Find the IDs of all students who were taught by an instructor named Einstein; make sure there
 --are no duplicates in the result.
+select distinct takes.ID
+from instructor
+join teaches 
+ on teaches.ID=instructor.ID
+join takes 
+ on takes.course_id=teaches.course_id
+ and takes.sec_id=teaches.sec_id
+ and takes.semester=teaches.semester
+ and takes.year=teaches.year
+where name='Einstein';
+
 --39. Find the highest salary of any instructor.
+select max(salary)
+from instructor;
+
 --40. Find all instructors earning the highest salary (there may be more than one with the same
 --salary).
+select ID, name
+from instructor 
+group by ID, name 
+order by sum(salary) desc;
+
 --41. Find the enrollment of each section that was offered in Autumn-2009.
+select sec_id, course_id
+from takes 
+where semester='Autumn' and year=2009;
+
 --42. Find the maximum enrollment, across all sections, in Autumn-2009.
+select top 1
+sec_id, course_id
+from takes 
+where semester='Autumn' and year=2009
+group by sec_id, course_id
+order by count(*) desc;
+
 --43. Find the salaries after the following operation: Increase the salary of each instructor in the Comp.
 --Sci. department by 10%.
+update instructor
+set salary = salary * 1.10;
+select * from instructor;
+
 --44. Find all students who have not taken a course.
+select student.ID, name
+from student 
+left join takes 
+ on student.ID=takes.ID
+where course_id is NULL;
+
 --45. List all course sections offered by the Physics department in the Fall-2009 semester, with the
 --building and room number of each section.
+select  teaches.sec_id, teaches.course_id, section.building, room_number
+from teaches 
+join course 
+ on teaches.course_id=course.course_id
+join section 
+ on teaches.course_id=section.course_id 
+ and teaches.sec_id=section.sec_id
+ and teaches.semester=section.semester
+ and teaches.year=section.year
+join department
+ on course.dept_name=department.dept_name
+where course.dept_name='Physics' 
+ and teaches.semester='Fall'
+ and teaches.year=2009
+group by teaches.sec_id, teaches.course_id, section.building, room_number;
+
 --46. Find the student names who take courses in Spring-2010 semester at Watson Building.
+select name 
+from student 
+join takes 
+ on student.ID=takes.ID 
+join section
+ on takes.course_id=section.course_id
+ and takes.sec_id=section.sec_id
+ and takes.semester=section.semester
+ and takes.year=section.year 
+where building='Watson'
+ and takes.semester='Spring'
+ and takes.year=2010;
+
 --47. List the students who take courses teaches by Brandt.
+select distinct takes.ID
+from instructor
+join teaches 
+ on teaches.ID=instructor.ID
+join takes 
+ on takes.course_id=teaches.course_id
+ and takes.sec_id=teaches.sec_id
+ and takes.semester=teaches.semester
+ and takes.year=teaches.year
+where name='Brandt';
+
 --48. Find out the average salary of the instructor in each department.
+select dept_name, avg(salary) from instructor group by dept_name;
+
 --49. Find the number of students who take the course titled 8Intro. To Computer Science.
+select count(*)
+from student 
+join takes 
+ on takes.ID=student.ID 
+join course
+ on takes.course_id=course.course_id
+where title='Intro. To Computer Science';
+
 --50. Find out the total salary of the instructors of the Computer Science department who take a
 --course(s) in Watson building.
+select sum(salary) 
+from instructor
+join teaches
+ on instructor.ID=teaches.ID 
+join section 
+ on teaches.course_id=section.course_id 
+ and teaches.sec_id=section.sec_id
+ and teaches.semester=section.semester
+ and teaches.year=section.year
+where dept_name='Comp. Sci.'
+ and building = 'Watson';
+
 --51. Find out the course titles which starts between 10:00 to 12:00.
+select title 
+from course
+join section 
+ on course.course_id=section.course_id
+join time_slot
+ on time_slot.time_slot_id=section.time_slot_id
+where start_hr = 10
+ or (start_hr > 10 and start_hr < 12)
+ or (start_hr = 12 and start_min = 0);
+
 --52. List the course names where CS-1019 is the pre-requisite course.
+select title 
+from course 
+join prereq 
+ on course.course_id=prereq.course_id
+where prereq_id = 'CS-1019';
 
 --53. List the student names who get more than B+ grades in their respective courses.
+select name 
+from student 
+join takes
+ on student.ID=takes.ID 
+where grade like '%A%';
+
 --54. Find the student who takes the maximum credit from each department.
 --55. Find out the student ID and grades who take a course(s) in Spring-2009 semester.
 --56. Find the building(s) where the student takes the course titled Image Processing.
