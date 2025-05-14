@@ -39,3 +39,5 @@ Just bear with it, LOL.
 
 - [Android apps list](./2025/Android-apps-list.md)
 - [MySQL to SQL Server transition guide](./2025/MySQL-to-SQL-Server-transition-guide.md)
+- [Oracle extra codes](./2025/Oracle-extra-codes.md)
+- [70 queries for SQL](./2025/70-queries-for-SQL.md)
