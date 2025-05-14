@@ -145,7 +145,7 @@
   <h1 class="post-title">
     <a href="https://sharafat.is-a.dev/logs/oracle-extra-codes/">Oracle-extra-codes</a>
   </h1>
-  <div class="post-meta"><span class="post-reading-time">1 Min read (43 words)</span></div>
+  <div class="post-meta"><span class="post-reading-time">1 Min read (115 words)</span></div>
 
   
   
@@ -156,6 +156,7 @@
   <div class="post-content"><div>
         <h1 id="oracle-extra-codes">Oracle extra codes<a href="#oracle-extra-codes" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <h2 id="navigation">Navigation<a href="#navigation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="user">User<a href="#user" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
 <li>Show user,</li>
 </ul>
@@ -164,7 +165,8 @@
 <li>List all users,</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> all_users;
-</span></span></code></pre></div><ul>
+</span></span></code></pre></div><h3 id="tables--views">Tables &amp; Views<a href="#tables--views" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
 <li>List all tables,</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> all_tables;
@@ -172,15 +174,35 @@
 <li>List all views,</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> all_views;
-</span></span></code></pre></div><ul>
+</span></span></code></pre></div><h3 id="profile">Profile<a href="#profile" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
 <li>List all profiles,</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> dba_profiles;
 </span></span></code></pre></div><ul>
+<li>display a user profile in oracle</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> dba_profiles
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> profile <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;DEFAULT&#39;</span>;
+</span></span></code></pre></div><ul>
+<li>view the account expiration dates of all users in oracle</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> username, account_status, expiry_date
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> dba_users
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> expiry_date;
+</span></span></code></pre></div><blockquote>
+<p>just remember the <code>dba_users</code> table contains the account expiration dates of all users in Oracle.</p>
+</blockquote>
+<h3 id="triggers">Triggers<a href="#triggers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
 <li>List all triggers,</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> all_triggers;
-</span></span></code></pre></div>
+</span></span></code></pre></div><ul>
+<li>view the account expiration dates of all users in oracle</li>
+<li>save selected data in another table in oracle</li>
+</ul>
+
       </div></div>
 
   
