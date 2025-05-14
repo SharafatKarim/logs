@@ -16,6 +16,12 @@ show user;
 select * from all_users;
 ```
 
+- drop user,
+
+```sql
+drop user username cascade;
+```
+
 ### Tables & Views
 
 - List all tables,
@@ -28,6 +34,12 @@ select * from all_tables;
 
 ```sql
 select * from all_views;
+```
+
+- Drop table,
+
+```sql
+drop table table_name;
 ```
 
 ### Profile
@@ -55,6 +67,12 @@ ORDER BY expiry_date;
 
 > just remember the `dba_users` table contains the account expiration dates of all users in Oracle.
 
+- drop profile,
+
+```sql
+drop profile profile_name cascade;
+```
+
 ### Triggers
 
 - List all triggers,
@@ -63,5 +81,20 @@ ORDER BY expiry_date;
 select * from all_triggers;
 ```
 
-- view the account expiration dates of all users in oracle
-- save selected data in another table in oracle
+- Drop trigger,
+
+```sql
+drop trigger trigger_name;
+```
+
+- disable a trigger in oracle
+
+```sql
+alter trigger trigger_name disable;
+```
+
+- enable a trigger in oracle
+
+```sql
+alter trigger trigger_name enable;
+```
