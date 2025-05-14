@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://sharafat.is-a.dev/logs/70-queries-for-sql/</loc>
+  </url><url>
     <loc>https://sharafat.is-a.dev/logs/a-bit-of-pacman/</loc>
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/a-moment-with-mongoimport/</loc>
@@ -43,6 +45,8 @@
     <loc>https://sharafat.is-a.dev/logs/mysql-or-mariadb/</loc>
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/mysql-to-sql-server-transition-guide/</loc>
+  </url><url>
+    <loc>https://sharafat.is-a.dev/logs/oracle-extra-codes/</loc>
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/pacman-delete-multiple-using-text-file/</loc>
   </url><url>
