@@ -104,3 +104,7 @@ alter trigger trigger_name disable;
 ```sql
 alter trigger trigger_name enable;
 ```
+
+---
+
+Finally special thanks to *Sadman Sensei* for coordination!
