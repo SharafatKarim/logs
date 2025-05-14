@@ -145,7 +145,7 @@
   <h1 class="post-title">
     <a href="https://sharafat.is-a.dev/logs/70-queries-for-sql/">70-queries-for-SQL</a>
   </h1>
-  <div class="post-meta"><span class="post-reading-time">10 Min read (1994 words)</span></div>
+  <div class="post-meta"><span class="post-reading-time">11 Min read (2309 words)</span></div>
 
   
   
@@ -175,8 +175,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> name, course_id
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> instructor
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">left</span> <span style="color:#66d9ef">join</span> teaches
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> instructor.ID<span style="color:#f92672">=</span>teaches.ID
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> name,course_id;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> instructor.ID<span style="color:#f92672">=</span>teaches.ID;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">--6. Find the names of all instructors whose salary is greater than at least one instructor in the Biology
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--department.
@@ -225,7 +224,7 @@
 </span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> <span style="color:#66d9ef">not</span> (semester<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Spring&#39;</span> <span style="color:#66d9ef">and</span> <span style="color:#66d9ef">year</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2010</span>);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">--16. Find all instructors who appear in the instructor relation with null values for salary.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> instructor <span style="color:#66d9ef">where</span> salary<span style="color:#f92672">=</span><span style="color:#66d9ef">NULL</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> instructor <span style="color:#66d9ef">where</span> salary <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">NULL</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">--17. Find the average salary of instructors in the Finance department.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">avg</span>(salary) <span style="color:#66d9ef">from</span> instructor <span style="color:#66d9ef">where</span> dept_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Finance&#39;</span>;
@@ -411,7 +410,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--Sci. department by 10%.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">update</span> instructor
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">set</span> salary <span style="color:#f92672">=</span> salary <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">10</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> instructor;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> instructor
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> dept_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Comp. Sci.&#39;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">--44. Find all students who have not taken a course.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> student.ID, name
@@ -516,20 +516,80 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> grade <span style="color:#66d9ef">like</span> <span style="color:#e6db74">&#39;%A%&#39;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">--54. Find the student who takes the maximum credit from each department.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--55. Find out the student ID and grades who take a course(s) in Spring-2009 semester.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--56. Find the building(s) where the student takes the course titled Image Processing.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--57. Find the room no. and the building where the student from Fall-2009 semester can take a
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> student.name, student.dept_name, <span style="color:#66d9ef">sum</span>(credits)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> student 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> takes 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> student.ID <span style="color:#f92672">=</span> takes.ID 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> course
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> course.course_id <span style="color:#f92672">=</span> takes.course_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> student.dept_name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#66d9ef">sum</span>(credits) <span style="color:#66d9ef">desc</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- won&#39;t work in sql server!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--55. Find out the student ID and grades who take a course(s) in Spring-2009 semester. 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> student.ID, grade
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> student 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> takes 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> student.ID<span style="color:#f92672">=</span>takes.ID 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> semester<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Spring&#39;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> <span style="color:#66d9ef">year</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2009</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--56. Find the building(s) where the student takes the course titled Image Processing.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> building
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> section 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> course
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> section.course_id <span style="color:#f92672">=</span> course.course_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Image Processing&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--57. Find the room no. and the building where the student from Fall-2009 semester can take a
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--course(s)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--58. Find the names of those departments whose budget is higher than that of Astronomy. List
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> building, room_number
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> section 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> semester <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Fall&#39;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> <span style="color:#66d9ef">year</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2009</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--58. Find the names of those departments whose budget is higher than that of Astronomy. List
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--them in alphabetic order
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--59. Display a list of all instructors, showing each instructor&amp;#39;s ID and the number of sections
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> dept_name 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> department
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> budget <span style="color:#f92672">&gt;</span> (
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">select</span> budget 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">from</span> department
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">where</span> dept_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Astronomy&#39;</span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--59. Display a list of all instructors, showing each instructor&amp;#39;s ID and the number of sections
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--taught. Make sure to show the number of sections as 0 for instructors who have not taught
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--any section
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--60. For each student who has retaken a course at least twice (i.e., the student has taken the
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> instructor.ID, <span style="color:#66d9ef">count</span>(<span style="color:#66d9ef">distinct</span> sec_id)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> instructor 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">left</span> <span style="color:#66d9ef">join</span> teaches
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> instructor.ID <span style="color:#f92672">=</span> teaches.ID 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> instructor.ID;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--60. For each student who has retaken a course at least twice (i.e., the student has taken the
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--course at least three times), show the course ID and the student&amp;#39;s ID. Please display your
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--results in order of course ID and do not display duplicate rows
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--61. Find the names of Biology students who have taken at least 3 Accounting courses
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--62. Find the sections that had maximum enrollment in Fall 2010
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> ID, course_id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> takes
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> ID, course_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">having</span> <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--61. Find the names of Biology students who have taken at least 3 Accounting courses
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> name 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> student 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> takes 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> student.ID <span style="color:#f92672">=</span> takes.ID 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> dept_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Biology&#39;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> course_id <span style="color:#66d9ef">in</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">select</span> course_id
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">from</span> course 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">where</span> dept_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Accounting&#39;</span>
+</span></span><span style="display:flex;"><span> )
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> student.ID, name 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">having</span> <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--62. Find the sections that had maximum enrollment in Fall 2010
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> top <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>sec_id, course_id
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> takes 
@@ -566,21 +626,76 @@
 </span></span><span style="display:flex;"><span> <span style="color:#66d9ef">where</span> title <span style="color:#66d9ef">like</span> <span style="color:#e6db74">&#39;%Law%&#39;</span>
 </span></span><span style="display:flex;"><span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">--64. Find the rank and name of the 10 students who earned the most A grades (A-, A, A+).
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--Use alphabetical order by name to break ties.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--65. Find the titles of courses in the Comp. Sci. department that have 3 credits.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--66. Find the IDs of all students who were taught by an instructor named Einstein; make sure there
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> top <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>row_number() over(<span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">desc</span>, name) <span style="color:#66d9ef">as</span> rank, name 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> student 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> takes 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> student.id <span style="color:#f92672">=</span> takes.id
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> grade <span style="color:#66d9ef">in</span> (<span style="color:#e6db74">&#39;A-&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;A+&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> name, student.ID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">desc</span>, name;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--65. Find the titles of courses in the Comp. Sci. department that have 3 credits.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> title 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> course 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> credits <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#66d9ef">and</span> dept_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Comp. Sci.&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--66. Find the IDs of all students who were taught by an instructor named Einstein; make sure there
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--are no duplicates in the result.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--67. Find the ID and name of each student who has taken at least one Comp. Sci. course; make sure
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">distinct</span> takes.ID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> instructor
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> teaches 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> teaches.ID<span style="color:#f92672">=</span>instructor.ID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> takes 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> takes.course_id<span style="color:#f92672">=</span>teaches.course_id
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> takes.sec_id<span style="color:#f92672">=</span>teaches.sec_id
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> takes.semester<span style="color:#f92672">=</span>teaches.semester
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> takes.<span style="color:#66d9ef">year</span><span style="color:#f92672">=</span>teaches.<span style="color:#66d9ef">year</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Einstein&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--67. Find the ID and name of each student who has taken at least one Comp. Sci. course; make sure
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--there are no duplicate names in the result.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--68. Find the course id, section id, and building for each section of a Biology course.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--69. Output instructor names sorted by the ratio of their salary to their department&amp;#39;s budget (in
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">distinct</span> student.ID, name 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> student 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> takes 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> student.id <span style="color:#f92672">=</span> takes.id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> course_id <span style="color:#66d9ef">in</span> (
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">select</span> course_id
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">from</span>  course 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">where</span> dept_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Comp. Sci.&#39;</span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--68. Find the course id, section id, and building for each section of a Biology course.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> section.course_id, sec_id, building
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> section
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> course 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> section.course_id <span style="color:#f92672">=</span> course.course_id 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">where</span> dept_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Biology&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--69. Output instructor names sorted by the ratio of their salary to their department&amp;#39;s budget (in
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--ascending order).
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--70. Output instructor names and buildings for each building an instructor has taught in. Include
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> name 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> instructor 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">join</span> department
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> instructor.dept_name <span style="color:#f92672">=</span> department.dept_name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> (salary <span style="color:#f92672">/</span> budget);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--70. Output instructor names and buildings for each building an instructor has taught in. Include
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--instructor names who have not taught any classes (the building name should be NULL in this
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">--case).
-</span></span></span></code></pre></div>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">distinct</span> name, building 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> instructor 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">left</span> <span style="color:#66d9ef">join</span> teaches
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> instructor.ID <span style="color:#f92672">=</span> teaches.ID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">left</span> <span style="color:#66d9ef">join</span> section 
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">on</span> teaches.course_id <span style="color:#f92672">=</span> section.course_id
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> teaches.sec_id <span style="color:#f92672">=</span> section.sec_id
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> teaches.<span style="color:#66d9ef">year</span> <span style="color:#f92672">=</span> section.<span style="color:#66d9ef">year</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">and</span> teaches.semester <span style="color:#f92672">=</span> section.semester;
+</span></span></code></pre></div>
       </div></div>
 
   
