@@ -255,7 +255,6 @@ order by count(*) desc;
 --Sci. department by 10%.
 update instructor
 set salary = salary * 1.10;
-select * from instructor
 where dept_name = 'Comp. Sci.';
 
 --44. Find all students who have not taken a course.
@@ -361,15 +360,15 @@ join takes
 where grade like '%A%';
 
 --54. Find the student who takes the maximum credit from each department.
-select student.name, student.dept_name, sum(credits)
+select top 1
+student.name, student.dept_name, sum(credits)
 from student 
 join takes 
  on student.ID = takes.ID 
 join course
  on course.course_id = takes.course_id
-group by student.dept_name
+group by student.dept_name, student.name, student.ID
 order by sum(credits) desc;
--- won't work in sql server!
 
 --55. Find out the student ID and grades who take a course(s) in Spring-2009 semester. 
 select student.ID, grade
