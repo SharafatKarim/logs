@@ -2172,6 +2172,44 @@ https://podman-desktop.io/docs/containers/creating-a-pod Manual way Podman pod a
     </item>
     
     <item>
+      <title>Send-mail-from-custom-email</title>
+      <link>https://sharafat.is-a.dev/logs/send-mail-from-custom-email/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/send-mail-from-custom-email/</guid>
+      <description>Sending mail from a custom email address Cloudflare Email Routing Cloudflare Email Routing allows you to create custom email addresses that forward emails to your existing email account. This is useful for creating professional-looking email addresses without needing a separate email hosting service.
+You can simply setup it without any issues, right fro cloudflare dashboard.
+Setting up Gmail to send from a custom email address Add your custom email address in Gmail: Go to Gmail settings by clicking on the gear icon and selecting &amp;ldquo;See all settings&amp;rdquo;.</description>
+      <content>&lt;h1 id=&#34;sending-mail-from-a-custom-email-address&#34;&gt;Sending mail from a custom email address&lt;/h1&gt;
+&lt;h2 id=&#34;cloudflare-email-routing&#34;&gt;Cloudflare Email Routing&lt;/h2&gt;
+&lt;p&gt;Cloudflare Email Routing allows you to create custom email addresses that forward emails to your existing email account. This is useful for creating professional-looking email addresses without needing a separate email hosting service.&lt;/p&gt;
+&lt;p&gt;You can simply setup it without any issues, right fro cloudflare dashboard.&lt;/p&gt;
+&lt;h2 id=&#34;setting-up-gmail-to-send-from-a-custom-email-address&#34;&gt;Setting up Gmail to send from a custom email address&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Add your custom email address in Gmail&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to Gmail settings by clicking on the gear icon and selecting &amp;ldquo;See all settings&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Navigate to the &amp;ldquo;Accounts and Import&amp;rdquo; tab.&lt;/li&gt;
+&lt;li&gt;Under &amp;ldquo;Send mail as&amp;rdquo;, click on &amp;ldquo;Add another email address&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Enter your custom email address, check &amp;lsquo;Treat it as alias&amp;rsquo; and click &amp;ldquo;Next Step&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Set SMTP server to &lt;code&gt;smtp.gmail.com&lt;/code&gt;, port to &lt;code&gt;587&lt;/code&gt;, and use your Gmail credentials.
+&lt;ul&gt;
+&lt;li&gt;Gmail credentials are your Gmail email address and password.&lt;/li&gt;
+&lt;li&gt;This password can be obtained from your Google account settings under &amp;ldquo;Security&amp;rdquo; &amp;gt; &amp;ldquo;App passwords&amp;rdquo; if you have 2FA enabled.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Leave the &amp;ldquo;Secured connection using TLS&amp;rdquo; option checked.&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Add Account&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;A verification email will be sent to your custom email address. Click the verification link in that email to complete the setup.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A tutorial link, &lt;a href=&#34;https://youtu.be/NmXWA08ly_s&#34;&gt;https://youtu.be/NmXWA08ly_s&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Tinkering-with-Cmake</title>
       <link>https://sharafat.is-a.dev/logs/tinkering-with-cmake/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
