@@ -41,3 +41,4 @@ Just bear with it, LOL.
 - [MySQL to SQL Server transition guide](./2025/MySQL-to-SQL-Server-transition-guide.md)
 - [Oracle extra codes](./2025/Oracle-extra-codes.md)
 - [70 queries for SQL](./2025/70-queries-for-SQL.md)
+- [Send mail from custom email](./2025/Send-mail-from-custom-email.md)
