@@ -1159,6 +1159,43 @@ name: C/C++ CI - MAKEFILE on: - push - pull_request jobs: build: runs-on: ubuntu
     </item>
     
     <item>
+      <title>Cisco-packet-tracer-on-Arch-Linux</title>
+      <link>https://sharafat.is-a.dev/logs/cisco-packet-tracer-on-arch-linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/cisco-packet-tracer-on-arch-linux/</guid>
+      <description>Cisco packet tracer on Arch Linux Installation Let&amp;rsquo;s acquire the package from AUR:
+git clone https://aur.archlinux.org/packettracer.git Log into Cisco Networking Academy (Skills For All / NetAcad) using your Cisco Account. Register an account if you do not have it.
+Go to the following link and download the latest version of Cisco Packet Tracer for Linux (Packet Tracer 8.2.2 Ubuntu 64bit),
+Cisco Packet Tracer Resource hub Move it to the packettracer directory.</description>
+      <content>&lt;h1 id=&#34;cisco-packet-tracer-on-arch-linux&#34;&gt;Cisco packet tracer on Arch Linux&lt;/h1&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Let&amp;rsquo;s acquire the package from AUR:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://aur.archlinux.org/packettracer.git  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Log into Cisco Networking Academy (Skills For All / NetAcad) using your Cisco Account. Register an account if you do not have it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to the following link and download the latest version of Cisco Packet Tracer for Linux (&lt;em&gt;Packet Tracer 8.2.2 Ubuntu 64bit&lt;/em&gt;),&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.netacad.com/resources/lab-downloads?courseLang=en-US&#34;&gt;Cisco Packet Tracer Resource hub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Move it to the &lt;code&gt;packettracer&lt;/code&gt; directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Inside the &lt;code&gt;packettracer&lt;/code&gt; directory, run the following command to build the package:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;makepkg -si
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Duplicate-music-find-and-remove</title>
       <link>https://sharafat.is-a.dev/logs/duplicate-music-find-and-remove/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
