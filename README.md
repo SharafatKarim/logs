@@ -43,3 +43,4 @@ Just bear with it, LOL.
 - [70 queries for SQL](./2025/70-queries-for-SQL.md)
 - [Send mail from custom email](./2025/Send-mail-from-custom-email.md)
 - [Cisco packet tracer on Arch Linux](./2025/Cisco-packet-tracer-on-Arch-Linux.md) 
+- [Keyd - a key mapping daemon](./2025/Keyd-a-key-mapping-daemon.md)
