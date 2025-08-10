@@ -1676,6 +1676,38 @@ sudo pacman -S podman First pull Alpine podman pull docker.io/library/alpine Fir
     </item>
     
     <item>
+      <title>Keyd-a-key-mapping-daemon</title>
+      <link>https://sharafat.is-a.dev/logs/keyd-a-key-mapping-daemon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/keyd-a-key-mapping-daemon/</guid>
+      <description>Keyd - a key mapping daemon Installation sudo pacman -S keyd Systemd service sudo systemctl start keyd Use sudo systemctl enable keyd to start keyd on boot.
+Config Edit the /etc/keyd/default.conf file like,
+[ids] * [main] leftshift = wakeup To know the key name and other stuff, use keyd -h.</description>
+      <content>&lt;h1 id=&#34;keyd---a-key-mapping-daemon&#34;&gt;Keyd - a key mapping daemon&lt;/h1&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo pacman -S keyd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;systemd-service&#34;&gt;Systemd service&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl start keyd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Use &lt;code&gt;sudo systemctl enable keyd&lt;/code&gt; to start keyd on boot.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;config&#34;&gt;Config&lt;/h2&gt;
+&lt;p&gt;Edit the &lt;code&gt;/etc/keyd/default.conf&lt;/code&gt; file like,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[ids]
+
+*
+
+[main]
+
+leftshift = wakeup
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;To know the key name and other stuff, use &lt;code&gt;keyd -h&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Linking-multiple-container-podman</title>
       <link>https://sharafat.is-a.dev/logs/linking-multiple-container-podman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
