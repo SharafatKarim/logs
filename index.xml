@@ -2241,6 +2241,36 @@ https://podman-desktop.io/docs/containers/creating-a-pod Manual way Podman pod a
     </item>
     
     <item>
+      <title>Python-mysqlclient-package-building-issue</title>
+      <link>https://sharafat.is-a.dev/logs/python-mysqlclient-package-building-issue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/python-mysqlclient-package-building-issue/</guid>
+      <description>Python mysqlclient package building issue While installing a python environment for django, we need a package called, mysqlclient, which uses wheel to build.
+As described in cpanel[1]
+cPanel, L.L.C. doesn’t develop or ship Python WSGI web applications,&amp;hellip; . when using pip install mysqlclient pip try to build mysqlclient package into a wheel but it is not a wheel.
+Alternative approach So, this library should be installed from the root shell system wide to solve this issue.</description>
+      <content>&lt;h1 id=&#34;python-mysqlclient-package-building-issue&#34;&gt;Python &lt;code&gt;mysqlclient&lt;/code&gt; package building issue&lt;/h1&gt;
+&lt;p&gt;While installing a python environment for django, we need a package called, &lt;code&gt;mysqlclient&lt;/code&gt;, which uses &lt;code&gt;wheel&lt;/code&gt; to build.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As described in cpanel[1]&lt;br&gt;
+cPanel, L.L.C. doesn’t develop or ship Python WSGI web applications,&amp;hellip; . when using pip install mysqlclient pip try to build mysqlclient package into a wheel but it is not a wheel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;alternative-approach&#34;&gt;Alternative approach&lt;/h1&gt;
+&lt;p&gt;So, this library should be installed from the root shell system wide to solve this issue.&lt;/p&gt;
+&lt;h2 id=&#34;for-debian-ubuntu&#34;&gt;For Debian/ Ubuntu&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;for-red-hat-centos&#34;&gt;For Red Hat/ CentOS&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo yum install python3-devel mysql-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;If this approach doesn&amp;rsquo;t work, we will really appreciate it if we get &lt;code&gt;docker&lt;/code&gt; container support or, shell access support in cpannel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;p&gt;[1] - &lt;a href=&#34;https://stackoverflow.com/questions/76430550/error-while-install-mysqlclient-package-cpanel-terminal&#34;&gt;https://stackoverflow.com/questions/76430550/error-while-install-mysqlclient-package-cpanel-terminal&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Send-mail-from-custom-email</title>
       <link>https://sharafat.is-a.dev/logs/send-mail-from-custom-email/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
