@@ -44,3 +44,4 @@ Just bear with it, LOL.
 - [Send mail from custom email](./2025/Send-mail-from-custom-email.md)
 - [Cisco packet tracer on Arch Linux](./2025/Cisco-packet-tracer-on-Arch-Linux.md) 
 - [Keyd - a key mapping daemon](./2025/Keyd-a-key-mapping-daemon.md)
+- [Python `mysqlclient` package building issue](./2025/Python-mysqlclient-package-building-issue.md)
