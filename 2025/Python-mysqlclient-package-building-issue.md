@@ -7,7 +7,7 @@ While installing a python environment for django, we need a package called, `mys
 
 # Alternative approach
 
-So, this library should be installed from the root shell system wide to solve this issue.
+So, this library should be installed from the root shell system wide to solve this issue. 
 
 ## For Debian/ Ubuntu
 
@@ -21,8 +21,8 @@ sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
 sudo yum install python3-devel mysql-devel
 ```
 
-> If this approach doesn't work, we will really appreciate it if we get `docker` container support or, shell access support in cpannel.
+> If this approach doesn't work, we will really appreciate it if we get `docker` container support or, shell access support in cpannel. 
 
 # References
 
-[1] - <https://stackoverflow.com/questions/76430550/error-while-install-mysqlclient-package-cpanel-terminal>
+[1] - https://stackoverflow.com/questions/76430550/error-while-install-mysqlclient-package-cpanel-terminal 
