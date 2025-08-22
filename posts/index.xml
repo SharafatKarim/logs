@@ -1196,6 +1196,21 @@ Cisco Packet Tracer Resource hub Move it to the packettracer directory.</descrip
     </item>
     
     <item>
+      <title>Django-wsgi</title>
+      <link>https://sharafat.is-a.dev/logs/django-wsgi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/django-wsgi/</guid>
+      <description>Django + WSGI Links https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/ </description>
+      <content>&lt;h1 id=&#34;django--wsgi&#34;&gt;Django + WSGI&lt;/h1&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/&#34;&gt;https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Duplicate-music-find-and-remove</title>
       <link>https://sharafat.is-a.dev/logs/duplicate-music-find-and-remove/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
