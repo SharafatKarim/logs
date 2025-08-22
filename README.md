@@ -45,3 +45,4 @@ Just bear with it, LOL.
 - [Cisco packet tracer on Arch Linux](./2025/Cisco-packet-tracer-on-Arch-Linux.md) 
 - [Keyd - a key mapping daemon](./2025/Keyd-a-key-mapping-daemon.md)
 - [Python `mysqlclient` package building issue](./2025/Python-mysqlclient-package-building-issue.md)
+- [Django + wsgi](./2025/Django-wsgi.md)
