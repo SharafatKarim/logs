@@ -1201,11 +1201,24 @@ Cisco Packet Tracer Resource hub Move it to the packettracer directory.</descrip
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://sharafat.is-a.dev/logs/django-wsgi/</guid>
-      <description>Django + WSGI Links https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/ </description>
+      <description>Django + WSGI Static files Deployment Set STATIC_ROOT to the directory from which you want to serve collected static files: STATIC_ROOT = &amp;#34;/var/www/example.com/static/&amp;#34; Collect static files into STATIC_ROOT: python manage.py collectstatic This copies all files from your app/static and other static locations into STATIC_ROOT. Serve the resulting files with your chosen web server (nginx, Apache, CDN, etc.).
+References Django static files how-to: https://docs.djangoproject.com/en/3.2/howto/static-files/ Django WSGI deployment: https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/ </description>
       <content>&lt;h1 id=&#34;django--wsgi&#34;&gt;Django + WSGI&lt;/h1&gt;
-&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;h2 id=&#34;static-files&#34;&gt;Static files&lt;/h2&gt;
+&lt;h3 id=&#34;deployment&#34;&gt;Deployment&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Set STATIC_ROOT to the directory from which you want to serve collected static files:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;STATIC_ROOT &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/var/www/example.com/static/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Collect static files into STATIC_ROOT:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python manage.py collectstatic
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This copies all files from your app/static and other static locations into STATIC_ROOT. Serve the resulting files with your chosen web server (nginx, Apache, CDN, etc.).&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/&#34;&gt;https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Django static files how-to: &lt;a href=&#34;https://docs.djangoproject.com/en/3.2/howto/static-files/&#34;&gt;https://docs.djangoproject.com/en/3.2/howto/static-files/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Django WSGI deployment: &lt;a href=&#34;https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/&#34;&gt;https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </item>
