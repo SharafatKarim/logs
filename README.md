@@ -46,3 +46,4 @@ Just bear with it, LOL.
 - [Keyd - a key mapping daemon](./2025/Keyd-a-key-mapping-daemon.md)
 - [Python `mysqlclient` package building issue](./2025/Python-mysqlclient-package-building-issue.md)
 - [Django + wsgi](./2025/Django-wsgi.md)
+- [PostgreSQL with podman](./2025/PostgreSQL-with-podman.md)
