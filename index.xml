@@ -2269,6 +2269,27 @@ https://podman-desktop.io/docs/containers/creating-a-pod Manual way Podman pod a
     </item>
     
     <item>
+      <title>PostgreSQL-with-podman</title>
+      <link>https://sharafat.is-a.dev/logs/postgresql-with-podman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/postgresql-with-podman/</guid>
+      <description>PostgreSQL with podman Install podman run -d \ --name postgresql \ -e POSTGRES_USER=user \ -e POSTGRES_PASSWORD=tree \ -e POSTGRES_DB=postgres_db \ -p 5432:5432 \ docker.io/library/postgres:latest Connect podman exec -it postgresql psql -U user -d postgres_db </description>
+      <content>&lt;h1 id=&#34;postgresql-with-podman&#34;&gt;PostgreSQL with podman&lt;/h1&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;podman run -d &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  --name postgresql &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  -e POSTGRES_USER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;user &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  -e POSTGRES_PASSWORD&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;tree &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  -e POSTGRES_DB&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;postgres_db &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  -p 5432:5432 &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  docker.io/library/postgres:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;connect&#34;&gt;Connect&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;podman exec -it postgresql psql -U user -d postgres_db
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+    <item>
       <title>Python-mysqlclient-package-building-issue</title>
       <link>https://sharafat.is-a.dev/logs/python-mysqlclient-package-building-issue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
