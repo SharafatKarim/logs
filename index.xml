@@ -1001,6 +1001,19 @@ Full list 1.1.1.1 1DM 991EX Acode AIMP Alaap AnkiDroid Authenticator (ms) Bangla
     </item>
     
     <item>
+      <title>Arch-Tricks</title>
+      <link>https://sharafat.is-a.dev/logs/arch-tricks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/arch-tricks/</guid>
+      <description>Arch tricks Adaptifier A kde widget to remind me when to update my arch! pacman-contrib is required.</description>
+      <content>&lt;h1 id=&#34;arch-tricks&#34;&gt;Arch tricks&lt;/h1&gt;
+&lt;h2 id=&#34;adaptifier&#34;&gt;Adaptifier&lt;/h2&gt;
+&lt;p&gt;A kde widget to remind me when to update my arch! &lt;code&gt;pacman-contrib&lt;/code&gt; is required.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Chaging-dns-server</title>
       <link>https://sharafat.is-a.dev/logs/chaging-dns-server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
