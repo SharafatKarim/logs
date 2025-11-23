@@ -48,3 +48,4 @@ Just bear with it, LOL.
 - [Django + wsgi](./2025/Django-wsgi.md)
 - [PostgreSQL with podman](./2025/PostgreSQL-with-podman.md)
 - [Arch Tricks](./2025/Arch-Tricks.md)
+- [Checksum of a google drive file](./2025/Checksum-of-a-google-drive-file.md)
