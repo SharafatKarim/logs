@@ -1036,6 +1036,49 @@ https://adguard.com/en/blog/adguard-comment-on-dns-over-https-firefox-cloudflare
     </item>
     
     <item>
+      <title>Checksum-of-a-google-drive-file</title>
+      <link>https://sharafat.is-a.dev/logs/checksum-of-a-google-drive-file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/checksum-of-a-google-drive-file/</guid>
+      <description>Checksum of a Google Drive File A checksum (hash) lets you verify a file has not been altered or corrupted. Common use: confirm a downloaded ISO matches the publisher’s SHA-256 hash.
+1. Open Google Colab Go to https://colab.research.google.com and create a new Python notebook.
+2. Connect to Google Drive Run:
+from google.colab import drive drive.mount(&amp;#39;/content/drive&amp;#39;) Approve the auth prompt. Your Drive files appear under /content/drive/MyDrive/.
+3. Locate the File Path In the left sidebar (folder icon):</description>
+      <content>&lt;h1 id=&#34;checksum-of-a-google-drive-file&#34;&gt;Checksum of a Google Drive File&lt;/h1&gt;
+&lt;p&gt;A checksum (hash) lets you verify a file has not been altered or corrupted. Common use: confirm a downloaded ISO matches the publisher’s SHA-256 hash.&lt;/p&gt;
+&lt;h2 id=&#34;1-open-google-colab&#34;&gt;1. Open Google Colab&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href=&#34;https://colab.research.google.com&#34;&gt;https://colab.research.google.com&lt;/a&gt; and create a new Python notebook.&lt;/p&gt;
+&lt;h2 id=&#34;2-connect-to-google-drive&#34;&gt;2. Connect to Google Drive&lt;/h2&gt;
+&lt;p&gt;Run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; google.colab &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; drive
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;drive&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mount(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/content/drive&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Approve the auth prompt. Your Drive files appear under &lt;code&gt;/content/drive/MyDrive/&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;3-locate-the-file-path&#34;&gt;3. Locate the File Path&lt;/h2&gt;
+&lt;p&gt;In the left sidebar (folder icon):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Navigate to the file.&lt;/li&gt;
+&lt;li&gt;Right‑click the file and choose &amp;ldquo;Copy path&amp;rdquo; (or manually note its path).
+Example path: &lt;code&gt;/content/drive/MyDrive/DATA/iso/Win11_24H2_English_x64_Custom_Optimized.iso&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-compute-the-sha256-checksum&#34;&gt;4. Compute the SHA‑256 Checksum&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;sha256sum&lt;/code&gt; (installed by default in Colab):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;!&lt;/span&gt;sha256sum &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;content&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;drive&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;MyDrive&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;DATA&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;iso&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;Win11_24H2_English_x64_Custom_Optimized&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iso
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Output format:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;sha256_hash&amp;gt;  &amp;lt;file_path&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-verify-against-known-hash&#34;&gt;5. Verify Against Known Hash&lt;/h2&gt;
+&lt;p&gt;Compare the printed hash with the official one from the source website. They must match exactly. If not, the file may be incomplete or tampered with.&lt;/p&gt;
+&lt;h2 id=&#34;common-issues&#34;&gt;Common Issues&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;File not found: Confirm the path (case sensitive).&lt;/li&gt;
+&lt;li&gt;Large files: Hashing can take time; wait for completion.&lt;/li&gt;
+&lt;li&gt;Different algorithm needed: Replace with &lt;code&gt;!md5sum&lt;/code&gt; or &lt;code&gt;!sha1sum&lt;/code&gt; (only if required; SHA‑256 is stronger).&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
       <title>CI-CD-with-GitHub-Actions</title>
       <link>https://sharafat.is-a.dev/logs/ci-cd-with-github-actions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Checksum-of-a-google-drive-file :: Sharafat Karim | Logs</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A checksum (hash) lets you verify a file has not been altered or corrupted. Common use: confirm a downloaded ISO matches the publisher’s SHA-256 hash." />
+<meta name="keywords" content="logs" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="https://sharafat.is-a.dev/logs/checksum-of-a-google-drive-file/" />
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://sharafat.is-a.dev/logs/styles.css">
+
+
+
+
+
+
+
+  <link rel="shortcut icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+  <link rel="apple-touch-icon" href="https://sharafat.is-a.dev/logs/img/theme-colors/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="sharafat2004" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Checksum-of-a-google-drive-file">
+<meta property="og:description" content="A checksum (hash) lets you verify a file has not been altered or corrupted. Common use: confirm a downloaded ISO matches the publisher’s SHA-256 hash." />
+<meta property="og:url" content="https://sharafat.is-a.dev/logs/checksum-of-a-google-drive-file/" />
+<meta property="og:site_name" content="Sharafat Karim | Logs" />
+
+  
+    <meta property="og:image" content="https://sharafat.is-a.dev/logs/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/logs">
+  <div class="logo">
+    Sharafat Karim | Logs
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="https://github.com/SharafatKarim/">GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs">Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/">My Blogs</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="https://github.com/SharafatKarim/" >GitHub Profile</a></li>
+        
+      
+        
+          <li><a href="https://github.com/SharafatKarim/logs" >Logs Repository</a></li>
+        
+      
+        
+          <li><a href="https://sharafat.pages.dev/" >My Blogs</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="https://sharafat.is-a.dev/logs/checksum-of-a-google-drive-file/">Checksum-of-a-google-drive-file</a>
+  </h1>
+  <div class="post-meta"><span class="post-reading-time">1 Min read (177 words)</span></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="checksum-of-a-google-drive-file">Checksum of a Google Drive File<a href="#checksum-of-a-google-drive-file" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>A checksum (hash) lets you verify a file has not been altered or corrupted. Common use: confirm a downloaded ISO matches the publisher’s SHA-256 hash.</p>
+<h2 id="1-open-google-colab">1. Open Google Colab<a href="#1-open-google-colab" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Go to <a href="https://colab.research.google.com">https://colab.research.google.com</a> and create a new Python notebook.</p>
+<h2 id="2-connect-to-google-drive">2. Connect to Google Drive<a href="#2-connect-to-google-drive" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> google.colab <span style="color:#f92672">import</span> drive
+</span></span><span style="display:flex;"><span>drive<span style="color:#f92672">.</span>mount(<span style="color:#e6db74">&#39;/content/drive&#39;</span>)
+</span></span></code></pre></div><p>Approve the auth prompt. Your Drive files appear under <code>/content/drive/MyDrive/</code>.</p>
+<h2 id="3-locate-the-file-path">3. Locate the File Path<a href="#3-locate-the-file-path" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>In the left sidebar (folder icon):</p>
+<ul>
+<li>Navigate to the file.</li>
+<li>Right‑click the file and choose &ldquo;Copy path&rdquo; (or manually note its path).
+Example path: <code>/content/drive/MyDrive/DATA/iso/Win11_24H2_English_x64_Custom_Optimized.iso</code></li>
+</ul>
+<h2 id="4-compute-the-sha256-checksum">4. Compute the SHA‑256 Checksum<a href="#4-compute-the-sha256-checksum" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Use <code>sha256sum</code> (installed by default in Colab):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>sha256sum <span style="color:#f92672">/</span>content<span style="color:#f92672">/</span>drive<span style="color:#f92672">/</span>MyDrive<span style="color:#f92672">/</span>DATA<span style="color:#f92672">/</span>iso<span style="color:#f92672">/</span>Win11_24H2_English_x64_Custom_Optimized<span style="color:#f92672">.</span>iso
+</span></span></code></pre></div><p>Output format:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;sha256_hash&gt;  &lt;file_path&gt;
+</span></span></code></pre></div><h2 id="5-verify-against-known-hash">5. Verify Against Known Hash<a href="#5-verify-against-known-hash" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Compare the printed hash with the official one from the source website. They must match exactly. If not, the file may be incomplete or tampered with.</p>
+<h2 id="common-issues">Common Issues<a href="#common-issues" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>File not found: Confirm the path (case sensitive).</li>
+<li>Large files: Hashing can take time; wait for completion.</li>
+<li>Different algorithm needed: Replace with <code>!md5sum</code> or <code>!sha1sum</code> (only if required; SHA‑256 is stronger).</li>
+</ul>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>Creative common CC-0</span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/logs/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
