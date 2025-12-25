@@ -145,7 +145,7 @@
   <h1 class="post-title">
     <a href="https://sharafat.is-a.dev/logs/hyprland-testing/">hyprland-testing</a>
   </h1>
-  <div class="post-meta"><span class="post-reading-time">1 Min read (19 words)</span></div>
+  <div class="post-meta"><span class="post-reading-time">2 Min read (242 words)</span></div>
 
   
   
@@ -155,10 +155,82 @@
 
   <div class="post-content"><div>
         <h1 id="hyprland-testing">Hyprland Testing<a href="#hyprland-testing" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="dotfile">Dotfile?<a href="#dotfile" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Just got curious and tested hyprland, hehe, but messed up really badly. The interesting dotfile,</p>
 <ul>
 <li><a href="https://ii.clsty.link/en/">https://ii.clsty.link/en/</a></li>
 <li><a href="https://github.com/end-4/dots-hyprland">https://github.com/end-4/dots-hyprland</a></li>
+</ul>
+<p>Personally I liked and tested aboce dotfiles. Another interesting ones were,</p>
+<ul>
+<li><a href="https://github.com/typecraft-dev/dotfiles">https://github.com/typecraft-dev/dotfiles</a></li>
+<li>And the <code>jakool...</code> one from the hyprland websites showcasing&hellip;</li>
+</ul>
+<h3 id="and">And,<a href="#and" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>some extra config I did,</p>
+<pre tabindex="0"><code># Put general config stuff here
+# Here&#39;s a list of every variable: https://wiki.hyprland.org/Configuring/Variables/
+
+# monitor=,addreserved, 0, 0, 0, 0 # Custom reserved area
+monitor=eDP-1,preferred,0x0,1.0
+
+# HDMI port: mirror display. To see device name, use `hyprctl monitors`
+
+# Input settings
+input {
+    kb_layout = us,bd
+    kb_options = grp:win_space_toggle
+    numlock_by_default = true
+    repeat_delay = 250
+    repeat_rate = 35
+
+    follow_mouse = 1
+    off_window_axis_events = 2
+
+    touchpad {
+        natural_scroll = yes
+        disable_while_typing = true
+        clickfinger_behavior = true
+        scroll_factor = 0.7
+    }
+}
+# Put general config stuff here
+# Here&#39;s a list of every variable: https://wiki.hyprland.org/Configuring/Variables/
+
+# monitor=,addreserved, 0, 0, 0, 0 # Custom reserved area
+
+# HDMI port: mirror display. To see device name, use `hyprctl monitors`
+
+# Input settings
+input {
+    kb_layout = us,bd
+    kb_options = grp:win_space_toggle
+    numlock_by_default = true
+    repeat_delay = 250
+    repeat_rate = 35
+
+    follow_mouse = 1
+    off_window_axis_events = 2
+
+    touchpad {
+        natural_scroll = yes
+        disable_while_typing = true
+        clickfinger_behavior = true
+        scroll_factor = 0.7
+    }
+}
+</code></pre><p>It was to add my bangla keyboard and monitor scaling, no big deal ;)</p>
+<h2 id="update-user-directory">Update user directory<a href="#update-user-directory" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Creating entries for the directories.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xdg-user-dirs-update
+</span></span></code></pre></div><h2 id="time-and-date">Time and Date<a href="#time-and-date" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Using <code>timedatectl</code> to update time and date.</p>
+<ul>
+<li><a href="https://www.wikihow.com/Change-the-Timezone-in-Linux">https://www.wikihow.com/Change-the-Timezone-in-Linux</a></li>
+</ul>
+<h2 id="apps">Apps<a href="#apps" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>speech dispatcher service</li>
 </ul>
 
       </div></div>
