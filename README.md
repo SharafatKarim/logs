@@ -1,7 +1,7 @@
 # Logs
 
 Will be weird long logs I guess!
-Just bear with it, LOL.
+Just bear with it, LOL ;)
 
  > You can also read it from [here](http://sharafat.is-a.dev/logs/). (LIVE WEBSITE!)
 
