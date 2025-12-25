@@ -7,6 +7,11 @@ Just got curious and tested hyprland, hehe, but messed up really badly. The inte
 - <https://ii.clsty.link/en/>
 - <https://github.com/end-4/dots-hyprland>
 
+Personally I liked and tested aboce dotfiles. Another interesting ones were,
+
+- <https://github.com/typecraft-dev/dotfiles>
+- And the `jakool...` one from the hyprland websites showcasing...
+
 ### And,
 
 some extra config I did,
