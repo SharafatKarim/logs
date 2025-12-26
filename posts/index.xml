@@ -669,7 +669,7 @@ https://www.php.net/manual/en/features.commandline.webserver.php DB For MySQL, w
 Update tracker Adaptifier gets you covered!
 https://store.kde.org/p/2135796/ https://github.com/exequtic/apdatifier - [HOMEPAGE] Theming Check darkly
 https://aur.archlinux.org/packages/darkly-bin Icon For icon packs, papirus does a great job, I guess :)
-Check&amp;hellip; Login manager sddm-git, also check,
+Login manager sddm-git, also check,
 https://wiki.archlinux.org/title/SDDM If you are facing issues like, configuration file of greeter is not writable, then execute the following line,</description>
       <content>&lt;h1 id=&#34;a-new-kde&#34;&gt;A New Kde&lt;/h1&gt;
 &lt;p&gt;Things in this file are not organized properly, so maybe I will cover it in the blog site :)&lt;/p&gt;
@@ -686,7 +686,6 @@ https://wiki.archlinux.org/title/SDDM If you are facing issues like, configurati
 &lt;/ul&gt;
 &lt;h2 id=&#34;icon&#34;&gt;Icon&lt;/h2&gt;
 &lt;p&gt;For icon packs, &lt;code&gt;papirus&lt;/code&gt; does a great job, I guess :)&lt;/p&gt;
-&lt;h1 id=&#34;check&#34;&gt;Check&amp;hellip;&lt;/h1&gt;
 &lt;h2 id=&#34;login-manager&#34;&gt;Login manager&lt;/h2&gt;
 &lt;p&gt;sddm-git, also check,&lt;/p&gt;
 &lt;ul&gt;
@@ -697,6 +696,8 @@ configuration file of greeter is not writable,
 then execute the following line,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo chown -R sddm:sddm /var/lib/sddm/.config
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and &lt;code&gt;reboot&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;do-no-disturb-in-fullscreen&#34;&gt;Do no disturb in fullscreen&lt;/h2&gt;
+&lt;p&gt;By default, it will be enabled. To disable it, go to system settigns, notifications, and uncheck the option.&lt;/p&gt;
 &lt;h2 id=&#34;office&#34;&gt;Office&lt;/h2&gt;
 &lt;p&gt;Libreoffice or only office is recommended from me, pick whatever you feel comfortable with :)&lt;/p&gt;
 &lt;h2 id=&#34;media-player&#34;&gt;Media player&lt;/h2&gt;
