@@ -85,5 +85,7 @@
     <loc>https://sharafat.is-a.dev/logs/tkinter/</loc>
   </url><url>
     <loc>https://sharafat.is-a.dev/logs/tkinter2/</loc>
+  </url><url>
+    <loc>https://sharafat.is-a.dev/logs/windows-container-with-podman/</loc>
   </url>
 </urlset>
