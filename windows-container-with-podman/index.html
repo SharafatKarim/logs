@@ -145,7 +145,7 @@
   <h1 class="post-title">
     <a href="https://sharafat.is-a.dev/logs/windows-container-with-podman/">Windows-container-with-podman</a>
   </h1>
-  <div class="post-meta"><span class="post-reading-time">3 Min read (458 words)</span></div>
+  <div class="post-meta"><span class="post-reading-time">3 Min read (489 words)</span></div>
 
   
   
@@ -206,8 +206,16 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e"># group_add:      # uncomment this line and the next one for using rootless podman containers</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>    <span style="color:#75715e">#   - keep-groups # to make /dev/kvm work with podman. needs &#34;crun&#34; installed, &#34;runc&#34; will not work! Add your user to the &#39;kvm&#39; group or another that can access /dev/kvm.</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><h2 id="starting-the-container">Starting the container<a href="#starting-the-container" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman-compose --file ./windows.yaml up
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>podman-compose --file /home/sharafat/.sharafat/containers/windows.yaml up -d
+</span></span></code></pre></div><h3 id="web-interface">Web interface<a href="#web-interface" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>And navigate to <a href="http://localhost:8006">http://localhost:8006</a> to access the VNC web interface.</p>
+<h3 id="rdp">RDP<a href="#rdp" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Simply use <code>krdc</code>, with the following connection string:</p>
+<pre tabindex="0"><code>URL; localhost
+Username; sharafat
+Password; 1234  
+domain; (leave blank)
+</code></pre>
       </div></div>
 
   

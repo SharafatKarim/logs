@@ -2991,8 +2991,16 @@ Join Group by Order by Having Subquery Index View Transaction Trigger Procedure 
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# group_add:      # uncomment this line and the next one for using rootless podman containers&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#   - keep-groups # to make /dev/kvm work with podman. needs &amp;#34;crun&amp;#34; installed, &amp;#34;runc&amp;#34; will not work! Add your user to the &amp;#39;kvm&amp;#39; group or another that can access /dev/kvm.&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;starting-the-container&#34;&gt;Starting the container&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;podman-compose --file ./windows.yaml up
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;podman-compose --file /home/sharafat/.sharafat/containers/windows.yaml up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;web-interface&#34;&gt;Web interface&lt;/h3&gt;
+&lt;p&gt;And navigate to &lt;a href=&#34;http://localhost:8006&#34;&gt;http://localhost:8006&lt;/a&gt; to access the VNC web interface.&lt;/p&gt;
+&lt;h3 id=&#34;rdp&#34;&gt;RDP&lt;/h3&gt;
+&lt;p&gt;Simply use &lt;code&gt;krdc&lt;/code&gt;, with the following connection string:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;URL; localhost
+Username; sharafat
+Password; 1234  
+domain; (leave blank)
+&lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     
   </channel>
