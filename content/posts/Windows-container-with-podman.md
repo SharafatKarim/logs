@@ -62,6 +62,21 @@ services:
 ## Starting the container
 
 ```bash
-podman-compose --file ./windows.yaml up
+podman-compose --file /home/sharafat/.sharafat/containers/windows.yaml up -d
+```
+
+### Web interface
+
+And navigate to <http://localhost:8006> to access the VNC web interface.
+
+### RDP
+
+Simply use `krdc`, with the following connection string:
+
+```
+URL; localhost
+Username; sharafat
+Password; 1234  
+domain; (leave blank)
 ```
 
