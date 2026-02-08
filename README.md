@@ -52,3 +52,6 @@ Just bear with it, LOL ;)
 - [Hyprland testing](./2025/hyprland-testing.md)
 - [A New Kde](./2025/a-new-kde.md)
 - [Windows container with podman](./2025/Windows-container-with-podman.md)
+
+## 2023
+- [Kahoot! - App Review](./2026/kahoot-review.md)
