@@ -53,5 +53,7 @@ Just bear with it, LOL ;)
 - [A New Kde](./2025/a-new-kde.md)
 - [Windows container with podman](./2025/Windows-container-with-podman.md)
 
-## 2023
+## 2026
+
 - [Kahoot! - App Review](./2026/kahoot-review.md)
+- [Kahoot alternative - dev requirements](./2026/kahoot-alternative-dev-requirements.md)
