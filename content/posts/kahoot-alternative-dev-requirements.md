@@ -110,3 +110,12 @@ Average 9000 BDT to 15000 BDT per whole project. References,
 
 * <https://www.fiverr.com/search/gigs?query=classroom%20management%20website%20nextjs&search_in=everywhere&search-autocomplete-original-term=classroom%20management%20website%20nextjs>
 
+## References
+
+* Fastest benchmark report,
+  * <https://sharkbench.dev/web>
+  * <https://github.com/rolldown/benchmarks>
+
+* Resouce calculations,
+  * <https://calculator.aws/#/createCalculator/ec2-enhancement>
+
