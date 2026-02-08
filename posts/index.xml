@@ -1919,6 +1919,64 @@ sudo pacman -S podman First pull Alpine podman pull docker.io/library/alpine Fir
     </item>
     
     <item>
+      <title>kahoot-alternative-dev-requirements</title>
+      <link>https://sharafat.is-a.dev/logs/kahoot-alternative-dev-requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/kahoot-alternative-dev-requirements/</guid>
+      <description>Kahoot Alternative - Dev Requirements Preferred Tech Stack Component Preferred Technology Frontend Next.js (typescript language) Backend Express.js (typescript language) Styling Tailwind CSS + Shadcn/UI Runtime Bun (fastest js runtime) Database PostgreSQL ORM Drizzle/ Prisma State Management Jotai/ Zustand CDN/ Storage S3 compatible (MinIO/ Supabase) Websocket Socket.IO </description>
+      <content>&lt;h1 id=&#34;kahoot-alternative---dev-requirements&#34;&gt;Kahoot Alternative - Dev Requirements&lt;/h1&gt;
+&lt;h2 id=&#34;preferred-tech-stack&#34;&gt;Preferred Tech Stack&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Component&lt;/th&gt;
+&lt;th&gt;Preferred Technology&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Frontend&lt;/td&gt;
+&lt;td&gt;Next.js (typescript language)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Backend&lt;/td&gt;
+&lt;td&gt;Express.js (typescript language)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Styling&lt;/td&gt;
+&lt;td&gt;Tailwind CSS + Shadcn/UI&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Runtime&lt;/td&gt;
+&lt;td&gt;Bun (fastest js runtime)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Database&lt;/td&gt;
+&lt;td&gt;PostgreSQL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ORM&lt;/td&gt;
+&lt;td&gt;Drizzle/ Prisma&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;State Management&lt;/td&gt;
+&lt;td&gt;Jotai/ Zustand&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CDN/ Storage&lt;/td&gt;
+&lt;td&gt;S3 compatible (MinIO/ Supabase)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Websocket&lt;/td&gt;
+&lt;td&gt;Socket.IO&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content>
+    </item>
+    
+    <item>
       <title>kahoot-review</title>
       <link>https://sharafat.is-a.dev/logs/kahoot-review/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
