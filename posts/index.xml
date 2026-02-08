@@ -1919,6 +1919,53 @@ sudo pacman -S podman First pull Alpine podman pull docker.io/library/alpine Fir
     </item>
     
     <item>
+      <title>kahoot-review</title>
+      <link>https://sharafat.is-a.dev/logs/kahoot-review/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharafat.is-a.dev/logs/kahoot-review/</guid>
+      <description>Kahoot! - App Review URLs Homepage Android app Teachers web app Students web app Free Features 10 participant limit Multiple Choice and True/False questions Classic Live game mode Access to community-created kahoots Basic mobile study tools (flashcards) Premium Features Up to 2,000+ participants Advanced questions (Puzzle, Type Answer, Word Cloud, Open-ended, Polls) AI Question Generator (from URLs, PDFs, or prompts) Slide imports (PowerPoint/Google Slides) Detailed analytics and progress reports Custom themes and branding Team mode and tournament hosting DFD Screenshots Teacher Student </description>
+      <content>&lt;h1 id=&#34;kahoot---app-review&#34;&gt;Kahoot! - App Review&lt;/h1&gt;
+&lt;h2 id=&#34;urls&#34;&gt;URLs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://kahoot.com/&#34;&gt;Homepage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=no.mobitroll.kahoot.android&#34;&gt;Android app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://create.kahoot.it/&#34;&gt;Teachers web app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kahoot.it/&#34;&gt;Students web app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;free-features&#34;&gt;Free Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;10 participant limit&lt;/li&gt;
+&lt;li&gt;Multiple Choice and True/False questions&lt;/li&gt;
+&lt;li&gt;Classic Live game mode&lt;/li&gt;
+&lt;li&gt;Access to community-created kahoots&lt;/li&gt;
+&lt;li&gt;Basic mobile study tools (flashcards)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;premium-features&#34;&gt;Premium Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Up to 2,000+ participants&lt;/li&gt;
+&lt;li&gt;Advanced questions (Puzzle, Type Answer, Word Cloud, Open-ended, Polls)&lt;/li&gt;
+&lt;li&gt;AI Question Generator (from URLs, PDFs, or prompts)&lt;/li&gt;
+&lt;li&gt;Slide imports (PowerPoint/Google Slides)&lt;/li&gt;
+&lt;li&gt;Detailed analytics and progress reports&lt;/li&gt;
+&lt;li&gt;Custom themes and branding&lt;/li&gt;
+&lt;li&gt;Team mode and tournament hosting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dfd&#34;&gt;DFD&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/sharafat/image/upload/v1770555826/imagebin/ynm0xmjzbyeyp7taetyj.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+&lt;h3 id=&#34;teacher&#34;&gt;Teacher&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/sharafat/image/upload/v1770555143/imagebin/t2p1wfutrepl791ao5aj.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/sharafat/image/upload/v1770555180/imagebin/h3s90ita6h70eysbclho.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/sharafat/image/upload/v1770555236/imagebin/zld5sxcuwwnmgjd3qplv.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/sharafat/image/upload/v1770555219/imagebin/spz4mo5gtucdfisoyerl.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;student&#34;&gt;Student&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/sharafat/image/upload/v1770555262/imagebin/l9ojyqdo7xlqeakx6p9l.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.cloudinary.com/sharafat/image/upload/v1770555281/imagebin/khf7fcvvxtbwwfnmzr13.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Keyd-a-key-mapping-daemon</title>
       <link>https://sharafat.is-a.dev/logs/keyd-a-key-mapping-daemon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
