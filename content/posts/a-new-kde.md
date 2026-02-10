@@ -84,3 +84,6 @@ Check this article,
 
 For mirror ranking, `rate-mirrors` from AUR does the job just fine.
 
+## Virtual Machine
+
+- <https://christitus.com/setup-qemu-in-archlinux/>
