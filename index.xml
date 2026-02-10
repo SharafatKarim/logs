@@ -724,6 +724,10 @@ then execute the following line,&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;mirror-ranking&#34;&gt;Mirror Ranking&lt;/h2&gt;
 &lt;p&gt;For mirror ranking, &lt;code&gt;rate-mirrors&lt;/code&gt; from AUR does the job just fine.&lt;/p&gt;
+&lt;h2 id=&#34;virtual-machine&#34;&gt;Virtual Machine&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://christitus.com/setup-qemu-in-archlinux/&#34;&gt;https://christitus.com/setup-qemu-in-archlinux/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
     </item>
     
