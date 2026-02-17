@@ -145,7 +145,7 @@
   <h1 class="post-title">
     <a href="https://sharafat.is-a.dev/logs/kahoot-alternative-dev-requirements/">kahoot-alternative-dev-requirements</a>
   </h1>
-  <div class="post-meta"><span class="post-reading-time">2 Min read (413 words)</span></div>
+  <div class="post-meta"><span class="post-reading-time">4 Min read (714 words)</span></div>
 
   
   
@@ -248,56 +248,90 @@
 </tbody>
 </table>
 <h2 id="server-requirements">Server Requirements<a href="#server-requirements" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="recommended-production-setup"><strong>Recommended Production Setup</strong><a href="#recommended-production-setup" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <table>
 <thead>
 <tr>
 <th>Component</th>
-<th>Min CPU</th>
-<th>Min RAM</th>
+<th>Specifications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Processor</strong></td>
+<td>Intel Xeon E-2436 (6 Core / 12 Thread)</td>
+</tr>
+<tr>
+<td><strong>Memory</strong></td>
+<td>32 GB DDR5 RAM</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>3x 2.4TB SAS HDD (7.2TB Total)</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td>Onboard Dual 1GbE</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service-allocation-single-server"><strong>Service Allocation (Single Server)</strong><a href="#service-allocation-single-server" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>CPU Cores</th>
+<th>RAM</th>
 <th>Storage</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Frontend Server</td>
-<td>1 vCPU</td>
-<td>1 GB</td>
-<td>1 GB SSD</td>
+<td>Frontend Server (Next.js)</td>
+<td>2</td>
+<td>4 GB</td>
+<td>50 GB</td>
 </tr>
 <tr>
-<td>Backend Server</td>
-<td>2 vCPU</td>
-<td>2 GB</td>
-<td>1 GB SSD</td>
+<td>Backend Server (Express.js + Bun)</td>
+<td>2</td>
+<td>8 GB</td>
+<td>50 GB</td>
 </tr>
 <tr>
 <td>Database (PostgreSQL)</td>
-<td>1 vCPU</td>
-<td>1 GB</td>
-<td>1 GB SSD</td>
+<td>1</td>
+<td>12 GB</td>
+<td>2000+ GB</td>
 </tr>
 <tr>
 <td>Object Storage (MinIO)</td>
-<td>1 vCPU</td>
-<td>512 MB</td>
-<td>50 GB SSD</td>
+<td>1</td>
+<td>4 GB</td>
+<td>3000+ GB</td>
 </tr>
 <tr>
-<td>&mdash;-</td>
-<td>&mdash;</td>
-<td>&mdash;</td>
-<td>&mdash;</td>
-</tr>
-<tr>
-<td>Overall</td>
-<td>2 vCPU</td>
+<td>Cache (Redis - Optional)</td>
+<td>0.5</td>
 <td>2 GB</td>
-<td>55+ GB SSD</td>
+<td>20 GB</td>
+</tr>
+<tr>
+<td>OS &amp; Utilities</td>
+<td>0.5</td>
+<td>2 GB</td>
+<td>50 GB</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>6+ Cores</strong></td>
+<td><strong>32 GB</strong></td>
+<td><strong>5000+ GB</strong></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>Redis (cache server) is optional for caching but can be added later if needed.</p>
+<p><strong>Note:</strong> Redis (cache server) is optional for caching but can be added later if needed for performance optimization.</p>
 </blockquote>
 <h2 id="architecture-overview">Architecture Overview<a href="#architecture-overview" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <h3 id="offline-first-is-preferred-but-real-time-features-will-require-websockets">Offline-first is preferred, but real-time features will require WebSockets<a href="#offline-first-is-preferred-but-real-time-features-will-require-websockets" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
@@ -407,10 +441,229 @@
 </tbody>
 </table>
 <h2 id="estimated-costs">Estimated Costs<a href="#estimated-costs" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
-<p>Average 9000 BDT to 15000 BDT per whole project. References,</p>
-<ul>
-<li><a href="https://www.fiverr.com/search/gigs?query=classroom%20management%20website%20nextjs&amp;search_in=everywhere&amp;search-autocomplete-original-term=classroom%20management%20website%20nextjs">https://www.fiverr.com/search/gigs?query=classroom%20management%20website%20nextjs&amp;search_in=everywhere&amp;search-autocomplete-original-term=classroom%20management%20website%20nextjs</a></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Sr. No.</th>
+<th>Particulars / Details</th>
+<th>Est. Hrs.</th>
+<th>Rate (BDT)</th>
+<th>Amount (BDT)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td><strong>Phase 1: Architecture &amp; Backend Core (Critical)</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Server Setup (Dell PowerEdge R360 Configuration, Ubuntu, RAID)</td>
+<td>15</td>
+<td>500</td>
+<td>7,500</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Database Schema Design (PostgreSQL + Drizzle ORM)</td>
+<td>15</td>
+<td>500</td>
+<td>7,500</td>
+</tr>
+<tr>
+<td>3</td>
+<td>WebSocket Engine Architecture (Socket.IO + Performance Tuning)</td>
+<td>25</td>
+<td>500</td>
+<td>12,500</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Authentication &amp; Security (SSO, Role-Based Access Control)</td>
+<td>20</td>
+<td>500</td>
+<td>10,000</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td><strong>Phase 2: Frontend &amp; Real-Time UI</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>UI Layout &amp; Design (Shadcn/UI + Tailwind CSS)</td>
+<td>30</td>
+<td>250</td>
+<td>7,500</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Host Dashboard Dev (Quiz Creation, Lobby Management)</td>
+<td>40</td>
+<td>250</td>
+<td>10,000</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Player Interface Dev (Mobile Responsiveness, Join Logic)</td>
+<td>25</td>
+<td>250</td>
+<td>6,250</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Real-time State Synchronization</strong> (Redux/Zustand Complexity)</td>
+<td>35</td>
+<td>500</td>
+<td>17,500</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td><strong>Phase 3: Advanced Features</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Slide/PDF Conversion Engine</strong> (Backend File Processing)</td>
+<td>40</td>
+<td>500</td>
+<td>20,000</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>AI Quiz Generator</strong> (External API Integration &amp; Prompt Eng.)</td>
+<td>20</td>
+<td>500</td>
+<td>10,000</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Grading System &amp; Analytics Export (CSV/Excel)</td>
+<td>15</td>
+<td>250</td>
+<td>3,750</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td><strong>Phase 4: Testing &amp; Deployment</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Load Testing</strong> (Simulating 50+ Concurrent Users)</td>
+<td>15</td>
+<td>500</td>
+<td>7,500</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Final Deployment (Intranet DNS, Firewall Config)</td>
+<td>10</td>
+<td>500</td>
+<td>5,000</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Documentation (Admin Manual, User Guide, API Docs)</td>
+<td>10</td>
+<td>250</td>
+<td>2,500</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td><strong>Infrastructure Costs (Hardware &amp; Capital)</strong></td>
+<td><strong>Qty</strong></td>
+<td><strong>Unit Cost</strong></td>
+<td><strong>Total</strong></td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>Dell PowerEdge R360 Rack Server</strong></td>
+<td>1</td>
+<td>430,000</td>
+<td>430,000</td>
+</tr>
+<tr>
+<td></td>
+<td><em>Specs: Intel Xeon E-2436 (6 Core), 32GB DDR5 RAM, 3x2.4TB SAS HDD</em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Domain Name / Static IP Allocation (Estimated)</td>
+<td>1</td>
+<td>1,000</td>
+<td>1,000</td>
+</tr>
+<tr>
+<td>17</td>
+<td>API Credits (OpenAI/Gemini for AI Generator - 1 Year)</td>
+<td>1</td>
+<td>2,000</td>
+<td>2,000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Sub-Total (Labor Component)</strong></td>
+<td><strong>315</strong></td>
+<td></td>
+<td><strong>127,500</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Sub-Total (Hardware Component)</strong></td>
+<td></td>
+<td></td>
+<td><strong>433,000</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Grand Total</strong></td>
+<td></td>
+<td></td>
+<td><strong>560,500</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Contingency (5% for price fluctuations)</strong></td>
+<td></td>
+<td></td>
+<td><strong>28,025</strong></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>TOTAL PROJECT ESTIMATE</strong></td>
+<td></td>
+<td></td>
+<td><strong>588,525 BDT</strong></td>
+</tr>
+</tbody>
+</table>
 <h2 id="references">References<a href="#references" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <ul>
 <li>
