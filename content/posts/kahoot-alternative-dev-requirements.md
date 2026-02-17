@@ -68,16 +68,28 @@ description = "**University Engagement Platform**"
 
 ## Server Requirements
 
-| Component | Min CPU | Min RAM | Storage |
-|-----------|----------------------|----------------------|----------------------|
-| Frontend Server | 1 vCPU | 1 GB | 1 GB SSD |
-| Backend Server | 2 vCPU | 2 GB | 1 GB SSD |
-| Database (PostgreSQL) | 1 vCPU | 1 GB | 1 GB SSD |
-| Object Storage (MinIO) | 1 vCPU | 512 MB | 50 GB SSD |
-| ---- | --- | --- | --- |
-| Overall | 2 vCPU | 2 GB | 55+ GB SSD |
+### **Recommended Production Setup**
 
-> Redis (cache server) is optional for caching but can be added later if needed.
+| Component | Specifications |
+|-----------|---|
+| **Processor** | Intel Xeon E-2436 (6 Core / 12 Thread) |
+| **Memory** | 32 GB DDR5 RAM |
+| **Storage** | 3x 2.4TB SAS HDD (7.2TB Total) |
+| **Network** | Onboard Dual 1GbE |
+
+### **Service Allocation (Single Server)**
+
+| Service | CPU Cores | RAM | Storage |
+|---------|-----------|-----|---------|
+| Frontend Server (Next.js) | 2 | 4 GB | 50 GB |
+| Backend Server (Express.js + Bun) | 2 | 8 GB | 50 GB |
+| Database (PostgreSQL) | 1 | 12 GB | 2000+ GB |
+| Object Storage (MinIO) | 1 | 4 GB | 3000+ GB |
+| Cache (Redis - Optional) | 0.5 | 2 GB | 20 GB |
+| OS & Utilities | 0.5 | 2 GB | 50 GB |
+| **Total** | **6+ Cores** | **32 GB** | **5000+ GB** |
+
+> **Note:** Redis (cache server) is optional for caching but can be added later if needed for performance optimization.
 
 ## Architecture Overview
 
@@ -106,9 +118,38 @@ Example timeline,
 
 ## Estimated Costs
 
-Average 9000 BDT to 15000 BDT per whole project. References,
-
-* <https://www.fiverr.com/search/gigs?query=classroom%20management%20website%20nextjs&search_in=everywhere&search-autocomplete-original-term=classroom%20management%20website%20nextjs>
+| Sr. No. | Particulars / Details | Est. Hrs. | Rate (BDT) | Amount (BDT) |
+| --- | --- | --- | --- | --- |
+| **A** | **Phase 1: Architecture & Backend Core (Critical)** |  |  |  |
+| 1 | Server Setup (Dell PowerEdge R360 Configuration, Ubuntu, RAID) | 15 | 500 | 7,500 |
+| 2 | Database Schema Design (PostgreSQL + Drizzle ORM) | 15 | 500 | 7,500 |
+| 3 | WebSocket Engine Architecture (Socket.IO + Performance Tuning) | 25 | 500 | 12,500 |
+| 4 | Authentication & Security (SSO, Role-Based Access Control) | 20 | 500 | 10,000 |
+| **B** | **Phase 2: Frontend & Real-Time UI** |  |  |  |
+| 5 | UI Layout & Design (Shadcn/UI + Tailwind CSS) | 30 | 250 | 7,500 |
+| 6 | Host Dashboard Dev (Quiz Creation, Lobby Management) | 40 | 250 | 10,000 |
+| 7 | Player Interface Dev (Mobile Responsiveness, Join Logic) | 25 | 250 | 6,250 |
+| 8 | **Real-time State Synchronization** (Redux/Zustand Complexity) | 35 | 500 | 17,500 |
+| **C** | **Phase 3: Advanced Features** |  |  |  |
+| 9 | **Slide/PDF Conversion Engine** (Backend File Processing) | 40 | 500 | 20,000 |
+| 10 | **AI Quiz Generator** (External API Integration & Prompt Eng.) | 20 | 500 | 10,000 |
+| 11 | Grading System & Analytics Export (CSV/Excel) | 15 | 250 | 3,750 |
+| **D** | **Phase 4: Testing & Deployment** |  |  |  |
+| 12 | **Load Testing** (Simulating 50+ Concurrent Users) | 15 | 500 | 7,500 |
+| 13 | Final Deployment (Intranet DNS, Firewall Config) | 10 | 500 | 5,000 |
+| 14 | Documentation (Admin Manual, User Guide, API Docs) | 10 | 250 | 2,500 |
+|  |  |  |  |  |
+| **E** | **Infrastructure Costs (Hardware & Capital)** | **Qty** | **Unit Cost** | **Total** |
+| 15 | **Dell PowerEdge R360 Rack Server** | 1 | 430,000 | 430,000 |
+|  | *Specs: Intel Xeon E-2436 (6 Core), 32GB DDR5 RAM, 3x2.4TB SAS HDD* |  |  |  |
+| 16 | Domain Name / Static IP Allocation (Estimated) | 1 | 1,000 | 1,000 |
+| 17 | API Credits (OpenAI/Gemini for AI Generator - 1 Year) | 1 | 2,000 | 2,000 |
+|  |  |  |  |  |
+|  | **Sub-Total (Labor Component)** | **315** |  | **127,500** |
+|  | **Sub-Total (Hardware Component)** |  |  | **433,000** |
+|  | **Grand Total** |  |  | **560,500** |
+|  | **Contingency (5% for price fluctuations)** |  |  | **28,025** |
+|  | **TOTAL PROJECT ESTIMATE** |  |  | **588,525 BDT** |
 
 ## References
 
