@@ -57,6 +57,10 @@ kate/ zeditor - or vscode
 
 # System
 
+## Pacman auto cleanup
+
+- `pacman-cleanup-hook` from AUR is a great option for auto cleanup after every update.
+
 ## Fonts
 
 `ttf-ms-fonts` - microsoft fonts
