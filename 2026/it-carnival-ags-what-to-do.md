@@ -2,7 +2,7 @@
 
 ## For every event
 
-provide the following information for the IT carnival AGS event:
+provide the following information for events:
 
 ### Event Details
 
@@ -22,17 +22,19 @@ provide the following information for the IT carnival AGS event:
   * **2nd Runner-Up**: Certificate of merit
 
 * **Registration Process**:
+* **Contact Coordinator**: example, Rajesh Biswas (IUPC Coordinator · CSE Club, PSTU) — Phone: 01400234847, Email: <rajesh18@cse.pstu.ac.bd>
 
-1. Pre-register your team online for free to get an instant registration ID.
-2. Wait for the committee to review and publish confirmed slots university-wise after pre-registration closes.
-3. Complete the final registration along with the ৳3,000 entry fee once your slot is confirmed.
-
-* **Contact Coordinator**: Rajesh Biswas (IUPC Coordinator · CSE Club, PSTU) — Phone: 01400234847, Email: <rajesh18@cse.pstu.ac.bd>
+* এছাড়া যা কিছু বলা দরকার সব লিখে দিতে হবে
 
 ### Event Registration page
 
+* কি কি তথ্য নিতে হবে user দের থেকে (যেমনঃ নাম, ফোন নাম্বার, ইমেইল, ইত্যাদি)
 * Team/ individual 
 * Team size
 * Registration fee
-* Phone number to receive payment 
-* কি কি তথ্য নিতে হবে user দের থেকে
+* Phone number to receive payment
+* admin mail (যে verify করবে payment)
+
+### ছবি
+
+বিগত বছরের যা কিছু ছবি আছে
