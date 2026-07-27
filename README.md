@@ -57,3 +57,4 @@ Just bear with it, LOL ;)
 
 - [Kahoot! - App Review](./2026/kahoot-review.md)
 - [Kahoot alternative - dev requirements](./2026/kahoot-alternative-dev-requirements.md)
+- [IT carnival AGS - what to do?](./2026/it-carnival-ags-what-to-do.md)
