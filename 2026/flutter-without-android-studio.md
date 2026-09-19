@@ -16,7 +16,7 @@ sudo pacman -S base-devel git unzip wget jdk17-openjdk android-udev
 
 *(Note: `android-udev` helps your system recognize physical Android devices when plugged in via USB).*
 
-2. **Set Up the Android SDK Directory:**
+1. **Set Up the Android SDK Directory:**
 The Android SDK expects a very specific folder structure to work properly. Let's create the base folder and the specific path where the command-line tools will live.
 
 ```bash
@@ -25,7 +25,7 @@ cd ~/Android/Sdk/cmdline-tools
 
 ```
 
-3. **Download the Android Command Line Tools:**
+1. **Download the Android Command Line Tools:**
 Instead of Android Studio, we will download Google's bare-metal CLI tools.
 
 - Go to the [Android Studio Downloads page](https://developer.android.com/studio#command-tools) in your browser.
@@ -44,7 +44,7 @@ rm commandlinetools-linux-*_latest.zip
 
 ```
 
-4. **Download Flutter SDK:** Via Git.
+1. **Download Flutter SDK:** Via Git.
 Next, let's grab the Flutter SDK directly from its stable GitHub branch. Placing it in a `~/development` folder is standard practice.
 
 ```bash
@@ -54,7 +54,7 @@ git clone https://github.com/flutter/flutter.git -b stable
 
 ```
 
-5. **Configure Environment Variables:**
+1. **Configure Environment Variables:**
 You need to tell your shell where to find these new tools. Open your shell configuration file (usually `~/.bashrc` or `~/.zshrc`) in your preferred text editor:
 
 ```bash
@@ -83,32 +83,31 @@ source ~/.bashrc
 
 ```
 
-6. **Install the required SDK and Build Tools:**
+1. **Install the required SDK and Build Tools:**
 Run the `sdkmanager` command to download SDK 36 and the specific build tools Flutter is missing. It is best to grab both the API 36 build tools and the legacy 28.0.3 version it complains about.
 
 ```bash
-sdkmanager "platforms;android-36" "build-tools;36.0.0" "build-tools;28.0.3"
+android sdk install "platforms;android-36" "build-tools;36.0.0"
 
 ```
 
-Once the download finishes, you must accept the Android licenses. Run this command and press `y` for each prompt:
+Install the platform tools as well, which are necessary for ADB and other command-line utilities.
 
 ```bash
-sdkmanager --licenses
-
+android sdk install platform-tools
 ```
 
-7. **Accept the new licenses:**
+1. **Accept the new licenses:**
 Whenever you download new SDK components, you must agree to the associated Google licenses.
 
 ```bash
-flutter doctor --android-licenses
+android sdk install doctor --android-licenses
 
 ```
 
 Press `y` to accept any unapproved licenses.
 
-8. **Verify the fix:**
+1. **Verify the fix:**
 Run the doctor command again to confirm the Android toolchain is fully resolved.
 
 ```bash
